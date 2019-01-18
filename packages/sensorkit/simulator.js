@@ -20,13 +20,12 @@ goog.provide('Blockly.JavaScript.sensorkit');
 
 goog.require('Blockly.JavaScript');
 
-Blockly.JavaScript['sensorkit_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     if (pin.startsWith('Pin')) {
         var getValue = '.value'
-    }
-    else if (pin.startsWith('ADC')) {
+    } else if (pin.startsWith('ADC')) {
         var getValue = '.read'
     }
 
@@ -36,7 +35,7 @@ Blockly.JavaScript['sensorkit_get_value'] = function (block) {
 };
 
 
-Blockly.JavaScript['sensorkit_led_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_led_set_value'] = function(block) { //digital pin number
     var pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -46,7 +45,7 @@ Blockly.JavaScript['sensorkit_led_set_value'] = function (block) { //digital pin
     return code;
 };
 
-Blockly.JavaScript['sensorkit_pin_switch'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_pin_switch'] = function(block) { //digital pin number
     var pin_switch = block.getFieldValue('pin_switch');
 
     var code = '';
@@ -56,7 +55,7 @@ Blockly.JavaScript['sensorkit_pin_switch'] = function (block) { //digital pin nu
 
 
 
-Blockly.JavaScript['sensorkit_pin_colour'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_pin_colour'] = function(block) { //digital pin number
     var colour = block.getFieldValue('colour');
 
     var code = '';
@@ -72,7 +71,203 @@ Blockly.JavaScript['sensorkit_pin_colour'] = function (block) { //digital pin nu
 //     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 // };
 
-Blockly.JavaScript['sensorkit_active_buzzer_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_active_buzzer_set_value'] = function(block) { //digital pin number
+    var SIG = Blockly.
+        /*
+         * var text_name = block.getFieldValue('NAME');
+         * var number_name = block.getFieldValue('NAME');
+         * var angle_name = block.getFieldValue('NAME');
+         * var dropdown_name = block.getFieldValue('NAME');
+         * var checkbox_name = block.getFieldValue('NAME') == 'TRUE';
+         * var colour_name = block.getFieldValue('NAME');
+         * var variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
+         * var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+         * var statement_name = Blockly.JavaScript.statementToCode(block, 'statement');
+         *
+         * For statement: return code
+         * For output: return [code, Blockly.JavaScript.ORDER_ATOMIC];
+         */
+
+    'use strict';
+
+    goog.provide('Blockly.JavaScript.sensorkit');
+
+    goog.require('Blockly.JavaScript');
+
+
+    Blockly.JavaScript['sensorkit_led_module_set_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
+
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+        var code = '';
+        code += 'LEDModule_set_value(' + pin + ', ' + value + ')\n';
+        return code;
+    };
+
+    Blockly.JavaScript['sensorkit_rgb_set_value'] = function(block) {
+        var pin_r = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
+        var pin_g = Blockly.JavaScript.valueToCode(block, 'G', Blockly.JavaScript.ORDER_ATOMIC);
+        var pin_b = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_ATOMIC);
+        var color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_ATOMIC);
+
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+        var code = '';
+        code += 'RGBLED_set_value(' + pin_r + ', ' + pin_g + ', ' + pin_b + ', ' + color + ')\n';
+        return code;
+    };
+
+    Blockly.JavaScript['sensorkit_button_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Button_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_tiltswitch_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'TiltSwitch_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_vibrationswitch_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'VibrationSwitch_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_buzzer_set_value'] = function(block) {
+        //digital pin number
+        var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        var note = Blockly.JavaScript.valueToCode(block, 'note', Blockly.JavaScript.ORDER_ATOMIC);
+        var beat = Blockly.JavaScript.valueToCode(block, 'beat', Blockly.JavaScript.ORDER_ATOMIC);
+
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Buzzer_play(' + SIG + ', ' + note + ', ' + beat + ')\n';
+        return code;
+    };
+
+    Blockly.JavaScript['sensorkit_joystick_get_value'] = function(block) {
+        var Xpin = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+        var Ypin = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+        var BTnpin = Blockly.JavaScript.valueToCode(block, 'Btn', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Joystick_get_value(' + Xpin + ', ' + Ypin + ', ' + BTnpin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_joystick_get_status'] = function(block) {
+        var Xpin = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
+        var Ypin = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
+        var BTnpin = Blockly.JavaScript.valueToCode(block, 'Btn', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Joystick_get_status(' + Xpin + ', ' + Ypin + ', ' + BTnpin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_potentiometer_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Potentiometer_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_soundsensor_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'SoundSensor_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_photoresistor_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Photoresistor_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_touchswitch_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'TouchSwitch_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    Blockly.JavaScript['sensorkit_ultrasonic_get_value'] = function(block) {
+        var pin_trig = Blockly.JavaScript.valueToCode(block, 'Trig', Blockly.JavaScript.ORDER_ATOMIC);
+        var pin_echo = Blockly.JavaScript.valueToCode(block, 'Echo', Blockly.JavaScript.ORDER_ATOMIC);
+
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+        var code = '';
+        var code = 'UltrasonicSensor_get_value(' + pin_trig + ', ' + pin_echo + ')';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    Blockly.JavaScript['sensorkit_ds18b20_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'DS18B20_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    Blockly.JavaScript['sensorkit_servo_set_angle'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        var angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'Servo_set_value(' + pin + ', ' + angle + ')\n';
+        return code;
+    };
+
+    Blockly.JavaScript['sensorkit_moisture_sensor_get_value'] = function(block) {
+        var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'MoistureSensor_get_value(' + pin + ')';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+
+    Blockly.JavaScript['sensorkit_adxl345_get_value'] = function(block) {
+        Blockly.JavaScript.definitions_['import_sensorkit'] = 'from sensorkit import *';
+
+        var code = '';
+        code += 'ADXL345_get_value()';
+        return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
+    var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
+
+    var code = '';
+    code += SIG + '.value(' + value + ')\n';
+    return code;
+};
+
+Blockly.JavaScript['sensorkit_passive_buzzer_set_value'] = function(block) { //digital pin number
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -81,17 +276,8 @@ Blockly.JavaScript['sensorkit_active_buzzer_set_value'] = function (block) { //d
     return code;
 };
 
-Blockly.JavaScript['sensorkit_passive_buzzer_set_value'] = function (block) { //digital pin number
-    var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
-    var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
-    var code = '';
-    code += SIG + '.value(' + value + ')\n';
-    return code;
-};
-
-
-Blockly.JavaScript['sensorkit_rgb_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_rgb_set_value'] = function(block) { //digital pin number
     var pin_r = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_g = Blockly.JavaScript.valueToCode(block, 'G', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_b = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_ATOMIC);
@@ -108,7 +294,7 @@ Blockly.JavaScript['sensorkit_rgb_set_value'] = function (block) { //digital pin
     return code;
 };
 
-Blockly.JavaScript['sensorkit_autoflash_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_autoflash_set_value'] = function(block) { //digital pin number
     var R = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -117,7 +303,7 @@ Blockly.JavaScript['sensorkit_autoflash_set_value'] = function (block) { //digit
     return code;
 };
 
-Blockly.JavaScript['sensorkit_relay_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_relay_set_value'] = function(block) { //digital pin number
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -126,7 +312,7 @@ Blockly.JavaScript['sensorkit_relay_set_value'] = function (block) { //digital p
     return code;
 };
 
-Blockly.JavaScript['sensorkit_laser_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_laser_set_value'] = function(block) { //digital pin number
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -140,7 +326,7 @@ Blockly.JavaScript['sensorkit_laser_set_value'] = function (block) { //digital p
     return code;
 };
 
-Blockly.JavaScript['sensorkit_dual_color_led_set_value'] = function (block) { //digital pin number
+Blockly.JavaScript['sensorkit_dual_color_led_set_value'] = function(block) { //digital pin number
     var pin_r = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_g = Blockly.JavaScript.valueToCode(block, 'G', Blockly.JavaScript.ORDER_ATOMIC);
     var color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_ATOMIC);
@@ -175,7 +361,7 @@ Blockly.JavaScript['sensorkit_photoresistor_get_value'] = Blockly.JavaScript['se
 
 Blockly.JavaScript['sensorkit_irobstacle_get_value'] = Blockly.JavaScript['sensorkit_get_value']
 
-Blockly.JavaScript['sensorkit_flame_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_flame_get_value'] = function(block) {
     var SIGSIG = Blockly.JavaScript.valueToCode(block, 'SIGSIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -183,7 +369,7 @@ Blockly.JavaScript['sensorkit_flame_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_touchswitch_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_touchswitch_get_value'] = function(block) {
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -191,7 +377,7 @@ Blockly.JavaScript['sensorkit_touchswitch_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_ds18b20_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_ds18b20_get_value'] = function(block) {
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -199,7 +385,7 @@ Blockly.JavaScript['sensorkit_ds18b20_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_rotary_encoder_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_rotary_encoder_get_value'] = function(block) {
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -207,7 +393,7 @@ Blockly.JavaScript['sensorkit_rotary_encoder_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_tracking_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_tracking_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -215,7 +401,7 @@ Blockly.JavaScript['sensorkit_tracking_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_ultrasonic_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_ultrasonic_get_value'] = function(block) {
     var pin_trig = Blockly.JavaScript.valueToCode(block, 'Trig', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_echo = Blockly.JavaScript.valueToCode(block, 'Echo', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -225,7 +411,7 @@ Blockly.JavaScript['sensorkit_ultrasonic_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_flame_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_flame_get_value'] = function(block) {
     var DO = Blockly.JavaScript.valueToCode(block, 'DO', Blockly.JavaScript.ORDER_ATOMIC);
     var AO = Blockly.JavaScript.valueToCode(block, 'AO', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -234,7 +420,7 @@ Blockly.JavaScript['sensorkit_flame_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_gassensor_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_gassensor_get_value'] = function(block) {
     var DO = Blockly.JavaScript.valueToCode(block, 'DO', Blockly.JavaScript.ORDER_ATOMIC);
     var AO = Blockly.JavaScript.valueToCode(block, 'AO', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -248,7 +434,7 @@ Blockly.JavaScript['sensorkit_gassensor_get_value'] = function (block) {
 
 Blockly.JavaScript['sensorkit_analoghallswitch_get_value'] = Blockly.JavaScript['adGetValue'];
 
-Blockly.JavaScript['sensorkit_hallswitch_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_hallswitch_get_value'] = function(block) {
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     Blockly.JavaScript.definitions_['import_modules_hallswitch'] = 'from modules import HallSwitch';
@@ -258,7 +444,7 @@ Blockly.JavaScript['sensorkit_hallswitch_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_analogtemperature_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_analogtemperature_get_value'] = function(block) {
     var DO = Blockly.JavaScript.valueToCode(block, 'DO', Blockly.JavaScript.ORDER_ATOMIC);
     var AO = Blockly.JavaScript.valueToCode(block, 'AO', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -269,7 +455,7 @@ Blockly.JavaScript['sensorkit_analogtemperature_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_thermistor_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_thermistor_get_value'] = function(block) {
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     Blockly.JavaScript.definitions_['import_modules_thermistor'] = 'from modules importh Termistor';
@@ -279,7 +465,7 @@ Blockly.JavaScript['sensorkit_thermistor_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_joystick_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_joystick_get_value'] = function(block) {
     var X = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
     var Y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
     var BT = Blockly.JavaScript.valueToCode(block, 'BT', Blockly.JavaScript.ORDER_ATOMIC);
@@ -291,7 +477,7 @@ Blockly.JavaScript['sensorkit_joystick_get_value'] = function (block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sensorkit_dht11_get_value'] = function (block) {
+Blockly.JavaScript['sensorkit_dht11_get_value'] = function(block) {
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     Blockly.JavaScript.definitions_['import_modules_dht11'] = 'from modules importh DHT11';
