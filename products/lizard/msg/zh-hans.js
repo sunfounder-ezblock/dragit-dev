@@ -1,0 +1,20 @@
+Local['zh-hans'].MSG.catLizard = "蜥蜴";
+Local['zh-hans'].MSG.lizard_description = "蜥蜴机器人";
+
+Local['zh-hans'].LIZARD_WALK_FORWARD_TITLE1 = "前进";
+Local['zh-hans'].LIZARD_WALK_FORWARD_TITLE2 = "步";
+Local['zh-hans'].LIZARD_WALK_FORWARD_TITLE3 = "速度";
+Local['zh-hans'].LIZARD_WALK_BACKWARD_TITLE1 = "后退";
+Local['zh-hans'].LIZARD_WALK_BACKWARD_TITLE2 = "步";
+Local['zh-hans'].LIZARD_WALK_BACKWARD_TITLE3 = "速度";
+Local['zh-hans'].LIZARD_TURN_LEFT_TITLE1 = "左转";
+Local['zh-hans'].LIZARD_TURN_LEFT_TITLE2 = "步";
+Local['zh-hans'].LIZARD_TURN_LEFT_TITLE3 = "速度";
+Local['zh-hans'].LIZARD_TURN_RIGHT_TITLE1 = "右转";
+Local['zh-hans'].LIZARD_TURN_RIGHT_TITLE2 = "步";
+Local['zh-hans'].LIZARD_TURN_RIGHT_TITLE3 = "速度";
+Local['zh-hans'].LIZARD_SET_OFFSET_TITLE = "设置偏差值";
+Local['zh-hans'].LIZARD_SET_OFFSET_TITLE1 = "前腿";
+Local['zh-hans'].LIZARD_SET_OFFSET_TITLE2 = "腰部";
+Local['zh-hans'].LIZARD_SET_OFFSET_TITLE3 = "后退";
+Local['zh-hans'].LIZARD_WALK_FOEWARD_TOOLTIP = "蜥蜴前进";

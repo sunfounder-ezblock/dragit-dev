@@ -1,0 +1,20 @@
+Local['en'].MSG.catLizard = "Lizard";
+Local['en'].MSG.lizard_description = "Lizard Robot";
+
+Local['en'].LIZARD_WALK_FORWARD_TITLE1          = "walk forward";
+Local['en'].LIZARD_WALK_FORWARD_TITLE2          = "step";
+Local['en'].LIZARD_WALK_FORWARD_TITLE3          = "speed";
+Local['en'].LIZARD_WALK_BACKWARD_TITLE1          = "walk backward";
+Local['en'].LIZARD_WALK_BACKWARD_TITLE2          = "step";
+Local['en'].LIZARD_WALK_BACKWARD_TITLE3          = "speed";
+Local['en'].LIZARD_TURN_LEFT_TITLE1          = "turn left";
+Local['en'].LIZARD_TURN_LEFT_TITLE2          = "step";
+Local['en'].LIZARD_TURN_LEFT_TITLE3          = "speed";
+Local['en'].LIZARD_TURN_RIGHT_TITLE1          = "turn right";
+Local['en'].LIZARD_TURN_RIGHT_TITLE2          = "step";
+Local['en'].LIZARD_TURN_RIGHT_TITLE3          = "speed";
+Local['en'].LIZARD_SET_OFFSET_TITLE          = "set offset";
+Local['en'].LIZARD_SET_OFFSET_TITLE1         = "foreleg";
+Local['en'].LIZARD_SET_OFFSET_TITLE2          = "waist";
+Local['en'].LIZARD_SET_OFFSET_TITLE3          = "hind leg";
+Local['en'].LIZARD_WALK_FOEWARD_TOOLTIP         = "Lizard walk forward some steps";
