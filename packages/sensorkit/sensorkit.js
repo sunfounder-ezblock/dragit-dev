@@ -3,6 +3,7 @@
 var SensorKit = {
     'name': 'Sensor Kit',
     'id': 'sensorkit',
+    'simulator': {},
     'modules': {
         "led-module": {
             'id': 0,
@@ -17,7 +18,7 @@ var SensorKit = {
             ],
             'img': 'led-module.png',
             'simulator': {
-                "type": "digitalOutput",
+                "type": "ValueOutput",
                 "onHigh": "dual-color-led_on.png",
                 "onLow": "dual-color-led_off.png"
             },
@@ -56,7 +57,7 @@ var SensorKit = {
             'name': 'RGB LED',
             'blocks': ['<block type="sensorkit_rgb_set_value"> ' +
                 '<value name="color"> ' +
-                '<shadow type="colour_picker"> ' +
+                '<shadow type="colour_led_picker"> ' +
                 '   <field name="COLOUR">#ff0000</field> ' +
                 '</shadow> ' +
                 '</value> ' +
@@ -115,7 +116,7 @@ var SensorKit = {
             'blocks': ['<block type="sensorkit_button_get_value"></block> '],
             'img': 'button.png',
             'simulator': {
-                "type": "digitalInput",
+                "type": "ValueInput",
                 "mode": 'toggle',
                 "initValue": 0,
                 "pin": "SIG",
@@ -157,7 +158,7 @@ var SensorKit = {
             'blocks': ['<block type="sensorkit_tiltswitch_get_value"> </block> '],
             'img': 'tilt-switch.png',
             'simulator': {
-                "type": "digitalInput",
+                "type": "ValueInput",
                 "pin": 'SIG',
                 "mode": 'click',
                 "initValue": 0
@@ -439,7 +440,7 @@ var SensorKit = {
             'blocks': ['<block type="sensorkit_touchswitch_get_value"></block> '],
             'img': 'touch-switch.png',
             'simulator': {
-                "type": "digitalInput",
+                "type": "ValueInput",
                 "pin": 'SIG',
                 "mode": 'click',
                 "initValue": 0
