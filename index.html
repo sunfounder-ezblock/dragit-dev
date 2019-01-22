@@ -894,7 +894,6 @@
 					<li class="homeContent_sliderMenu_item" style="position:relative;">
 						<div class="homeContent_sliderMenu_item_icon dropdown-toggle" data-toggle="dropdown" id="set" aria-haspopup="true" aria-expanded="false">
 							<img src="./img/home_menu_white.png" alt="">
-							<img src="./img/home_menu_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_menu}</p>
 						</div>
 						<ul class="dropdown-menu dropdown-menu-right dropdown-language" id="ListConf">
@@ -904,35 +903,30 @@
 					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_login" data-toggle="modal">
 						<div class="homeContent_sliderMenu_item_icon">
 							<img src="./img/home_login_white.png" alt="">
-							<img src="./img/home_login_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_login}</p>
 						</div>
 					</li>
 					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_myproject">
 						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('myProject')">
 							<img src="./img/home_myproject_white.png" alt="">
-							<img src="./img/home_myproject_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_my_project}</p>
 						</div>
 					</li>
 					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_newproject">
 						<div class="homeContent_sliderMenu_item_icon" onclick="MyProject.openProjectName()">
 							<img src="./img/home_newproject_white.png" alt="">
-							<img src="./img/home_newproject_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_new_project}</p>
 						</div>
 					</li>
 					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_tutorial">
 						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('tutorialsProject')">
 							<img src="./img/home_tutorials_white.png" alt="">
-							<img src="./img/home_tutorials_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_tutorial}</p>
 						</div>
 					</li>
 					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_example">
 						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('examplesProject')">
 							<img src="./img/home_example_white.png" alt="">
-							<img src="./img/home_example_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_example}</p>
 						</div>
 					</li>
@@ -1273,7 +1267,7 @@
 					<img class="selectImg" />
 					<div class="clearfix dconbtn">
 						<div class="applyButton">
-							<button class="iotbtn dis_none" onclick="EzBlock.renderPage('internetOfThings')" type="button">
+							<button class="iotbtn" onclick="EzBlock.renderPage('internetOfThings')" type="button">
 								<img src="./img/IOT.png" />
 							</button>
 							<button class="remotebtn" onclick="EzBlock.renderPage('remote')">
@@ -1489,54 +1483,49 @@
 						<img src="./img/close.png" class="dis_none">
 					</button>
 				</div>
-				<div class="see hidden-sm hidden-md hidden-lg dis_none">
-					<div class="boardSmallName">Raspberry Pi</div>
-				</div>
-
-				<div class="board_see hidden-sm hidden-md hidden-lg dis_none">
-					<div>
-						<button class="smallBoard_back">
-							<img src="./img/返回.png">
-						</button>
-					</div>
-
-					<div>
-						<button class="expansion visible-xs downbutton">
-							<img src="./img/下载.png">
-						</button>
-					</div>
-					<div>
-						<button class="read visible-xs connectRead">
-							<img src="./img/连接.png">
-						</button>
-					</div>
-				</div>
-				<div class="see_read hidden-sm hidden-md hidden-lg" style="display: block;">
-					read
-
-				</div>
 			</div>
 		</div>
-		<div class="dragfooter-xs visible-xs" style="background: rgb(255,202,75);">
-			<div class="text-align:center;">
-				<button>
-					<img src="./img/close-xs.png" alt="">
-				</button>
-				<button>
-					<img src="./img/IOT.png" alt="">
-				</button>
-				<button>
-					<img src="./img/电路.png" alt="">
-				</button>
-				<button>
-					<img src="./img/蓝牙遥控.png" alt="">
-				</button>
-				<button>
-					<img src="./img/蓝牙未连接.png" alt="">
-				</button>
-				<button>
-					<img src="./img/播放.png" alt="">
-				</button>
+		<div class="dragfooter-xs dis_none hidden-sm hidden-md hidden-lg" style="background: rgb(255,202,75);">
+			<div class="dragfooter-xs-btn">
+				<div class="dragfooter-xs-common">
+					<button class="footer-expand">
+						<img src="./img/close-xs.png" alt="close" class="close-xs">
+						<img src="./img/open-xs.png" class="dis_none open-xs" alt="open">
+					</button>
+					<button class="footer-iotbtn" onclick="EzBlock.renderPage('internetOfThings')" type="button">
+						<img src="./img/IOT.png" alt="">
+					</button>
+				</div>
+				<div class="board-message-xs dis_none">
+						<p></p>
+						<img src="" alt="">
+					</div>
+				<div class="dragfooter-xs-common">
+					<button class="footer-routingbtn" onclick="EzBlock.renderPage('routing')">
+						<img src="./img/电路.png" alt="">
+					</button>
+					<button class="footer-remotebtn" onclick="EzBlock.renderPage('remote')">
+						<img src="./img/蓝牙遥控.png" alt="">
+					</button>
+				</div>
+				<div class="dragfooter-xs-common">
+					<button class="footer-bluetoothbtn" onclick="Coding.connect()">
+						<img class="disconnected" src="./img/bluetooth-disconnected.png">
+						<img class="connected dis_none" src="./img/bluetooth-connected.png">
+					</button>
+					<button class="footer-playbtn" onclick="Simulator.runEvent()" type="button">
+						<img src="./img/播放.png" alt="">
+					</button>
+				</div>
+				<div class="dragfooter-xs-common">
+					<button class="footer-flash">
+						<img src="./img/下载.png" alt="">
+					</button>
+					<button class="footer-reset">
+						<img src="./img/恢复.png" alt="">
+					</button>
+				</div>
+			
 			</div>
 
 		</div>
