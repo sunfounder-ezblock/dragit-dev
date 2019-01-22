@@ -1,5 +1,5 @@
 Local['zh-hans'].MSG.catRaspberryPi = "树莓派";
-Local['zh-hans'].MSG.catSenssorKitForPi = "树莓派传感器套件";
+Local['zh-hans'].MSG.catSensorKitForPi = "树莓派传感器套件";
 
 Local['zh-hans'].MSG.raspberrypi_description = "是一款基于Linux的单片机计算机。它由英国的树莓派基金会所开发";
 
