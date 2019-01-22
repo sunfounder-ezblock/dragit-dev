@@ -1,0 +1,354 @@
+.box {
+    width: 2.04rem;
+    height: 2rem;
+    background: #cccccc;
+    border-radius: 15px;
+    padding: 24px 20px 10px 20px;
+    margin-bottom: 30px;
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.flexBox {
+    width: 94%;
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 20px;
+}
+.iotName{
+    width: 70%;
+}
+
+#borkenMain{
+    width: 500px; 
+    height: 300px
+}
+.iotDebug .iotTopic,.debugPrompt .debugTopic{
+    background: rgb(255,202,75);
+    height: 40px;
+    line-height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.iotDebug .iotTopic button:nth-of-type(1),.debugPrompt .debugTopic button:nth-of-type(1){
+    float: left;
+    background: rgba(0,0,0,.2);
+    border: none;
+    border-radius: 5px; 
+    color:white; 
+    margin-left: 15px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 3px;
+}
+.iotDebug .iotTopic button:nth-of-type(2),.debugPrompt .debugTopic button:nth-of-type(2){
+    float:right;
+    background:none;
+    border: none;
+    outline: none;
+    height: 40px;
+    line-height: 40px; 
+    margin-right: 15px;
+}
+.iotDebug .iotTopic button:nth-of-type(2) img:nth-of-type(1),.debugPrompt .debugTopic button:nth-of-type(2) img:nth-of-type(1){
+    margin-top: -4px;
+}
+.iotDebug .iotTopic button:nth-of-type(2) img:nth-of-type(2),.debugPrompt .debugTopic button:nth-of-type(2) img:nth-of-type(2){
+    display: none;
+    margin-top: -6px;
+}
+.iotFlash .text_msg{
+    text-align: center; 
+    font-size: 22px;
+}
+.iotGetmessage,.remoteGetmessage{
+    border:1px solid lightgray;
+    min-height:100px;
+    max-height: 150px;
+    overflow: auto;
+    background: white;
+}
+.temperature-text {
+    color: #8b8a8a;
+    font-size: 18px;
+}
+#progressModal .progress_modal h1{
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+#progressModal .progress_modal .progress{
+    margin-bottom: 10px;
+}
+#progressModal .progress_modal .progress-bar{
+    width:0;
+}
+.number span:nth-child(1) {
+    font-size: 60px;
+}
+
+.number span:nth-child(2) {
+    position: relative;
+    top: -43px;
+    left: 0px;
+}
+
+.number span:nth-child(3) {
+    position: relative;
+    top: -34px;
+    left: -10px;
+}
+
+.temp {
+    float: right;
+    position: relative;
+    top: -30px;
+    left: -5px;
+}
+
+.temperature-close {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    display: none;
+}
+
+.humidity-text {
+    color: #8b8a8a;
+    font-size: 18px;
+}
+
+.number span:nth-child(1) {
+    font-size: 60px;
+}
+
+.humidity-number span:nth-child(2) {
+    position: relative;
+    top: -2px;
+    left: 0px;
+}
+
+.humi {
+    float: right;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.humidity-close {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    display: none;
+}
+#message .modal-body .msg_modal{
+    text-align: center; 
+    font-size: 22px;
+}
+
+.default-text {
+    color: #8b8a8a;
+    font-size: 18px;
+}
+
+.number span:nth-child(1) {
+    font-size: 60px;
+}
+
+.default-number span:nth-child(2) {
+    position: relative;
+    top: -2px;
+    left: 0px;
+}
+
+.defa {
+    float: right;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.default-close {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    display: none;
+}
+
+.imgBox {
+    text-align: center;
+    margin-top: 16px;
+}
+.lamp {
+    margin: 0 auto;
+}
+.switch-block {
+    margin-top: 30px;
+}
+
+.flag {
+    margin: 0 auto;
+}
+
+.button-text {
+    color: #8b8a8a;
+    font-size: 18px;
+}
+
+.switch-text {
+    color: #8b8a8a;
+    font-size: 18px;
+}
+
+.slider-text {
+    color: #8b8a8a;
+    font-size: 18px;
+}
+
+.slider-box {
+    width: 200px;
+}
+.ui-widget.ui-widget-content {
+    border-radius: 15px;
+}
+.slider-space {
+    height: 50px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.35em;
+}
+.ui-slider .ui-slider-handle {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50px;
+}
+.appendBox {
+    background: url("../img/append.png") no-repeat center;
+    background-color: #cccccc; 
+}
+
+
+.appendIot-header {
+    background: rgb(255, 202, 75);
+}
+
+.appendIot-body {
+    height: 400px;
+}
+
+.choose-type {
+    width: 100%;
+    display: flex;
+}
+
+.choose-name {
+    width: 70%;
+}
+
+.show-image {
+    width: 2.04rem;
+    height: 2rem;
+}
+
+.choose-name-text, .choose-type-text {
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.choose-type-text {
+    display: inline-block;
+    width: 52px;
+    font-size: 16px;
+}
+
+.choose-name-input {
+    height: 35px;
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    background: #fff;
+}
+
+.choose-name-box {
+    margin-top: 30px;
+}
+
+.choose-name-position {
+    position: relative;
+    left: 10px;
+    margin-top: 30px;
+}
+
+.appendIot-body {
+    padding: 40px;
+}
+
+.choose-type-select-input {
+    position: relative;
+    left: 11px;
+}
+
+.show-image {
+    border-radius: 20px;
+    background: #cccccc;
+}
+
+.choose-type-select {
+    margin-top: 20px;
+    position: relative;
+    left: 10px;
+}
+
+.sendBtn {
+    text-align: center;
+    margin-top: 85px;
+}
+
+.borken-header {
+    background: rgb(255,202,75);
+}
+
+.borken-body {
+    height: 315px;
+    padding: 5px;
+}
+
+.appendIot-content {
+    margin: 24% auto!important;
+}
+
+.type-menu {
+    left: 83px;
+    min-width: 326px;
+}
+
+.input-menu {
+    top: 90%;
+    left: 82px;
+    min-width: 326px;
+}
+
+.iot-close {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    display: none;
+}
+
+.iotRotate {
+    position: relative;
+    top: 0px;
+    left: -26px;
+    transform: rotate(90deg);
+}
+.noLeft {
+    left: -15px;
+    top: -6px;
+}
+#appendIot .choose-type-select .iotRotate{
+    left: -14px;
+}

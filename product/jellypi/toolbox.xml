@@ -1,0 +1,27 @@
+<xml>
+  <category name="%{BKY_CATJELLYPI}" colour='#CF5889'>
+    <block type="jellypi_input_port"></block>
+    <block type="jellypi_output_port"></block>
+    <block type="jellypi_i2c_port"></block>
+    <!-- <block type="jellypi_device_pin"></block> -->
+
+    <!-- <block type="jellypi_pin_set_value">
+      <value name="pin">
+        <shadow type="raspberrypi_digital_pin">
+        </shadow>
+      </value>
+      <value name="value">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block> -->
+
+
+
+
+  </category>
+
+  
+  <sep></sep>
+</xml>

@@ -1,0 +1,395 @@
+
+.remoteContent
+{
+	display: none;
+	position: relative;
+	z-index: 10000;
+}
+.remoteContent .arrow-left {
+	position: absolute;
+    top: 30%;
+	left:92%;
+	z-index:99;
+}
+.remoteContent .kitClear{
+	position:absolute;
+	top:70px;
+	left:75%;
+	z-index: 100;
+}
+.remoteContent .clearTitle{
+	background: rgb(255,202,75);
+    width: 200px;
+    text-align: center;
+    color: #775415;
+    font-size: 18px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgb(255,202,75);
+    border-bottom: none;
+}
+.remoteContent .clearRemoteButton{
+	height: 40px;
+    background: white;
+    height: 60px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.remoteContent .kitYes{
+	/*border: 1px solid rgb(153,153,153);*/
+    float: left;
+    border: none;
+    margin-left: 25px;
+    padding: 0 5px;
+    height: 40px;
+    margin-top: 10px;
+    width: 50px;
+    border-radius: 5px;
+    background:#e6e6e6;
+    color: rgb(153,153,153);
+}
+.remoteContent .kitNo{
+	border: none;
+    float: right;
+    margin-right: 25px;
+    padding: 0 5px;
+    height: 40px;
+    margin-top: 10px;
+    width: 50px;
+    background:#e6e6e6;
+    border-radius: 5px;
+    color: rgb(153,153,153);
+}
+
+.remoteContent #products {
+
+	position: absolute;
+    left: 0px;
+    background: #fff;
+    overflow:auto;
+    height: 100%;
+    width: 300px;
+    border-left: 1px solid #cccccc;
+    padding: 0px 20px;
+    z-index: 99;
+    top: 0px;
+    opacity: 1;
+}
+.remoteContent .move{
+	transform: translateX(0px);
+}
+.remoteContent #products ul{
+	list-style: none;
+	/*min-height:600px;*/
+}
+
+.remoteContent #products ul li{
+    padding: 5px 15%;
+    /*text-align: center;*/
+}
+.remoteContent #products ul li:first-child{
+	padding: 20px 20%;
+}
+#li-remoteButton{
+	padding: 20px 20%!important;
+}
+.remoteContent #products ul li h3{
+	font-size: 20px;
+	text-align: center;
+	color: rgb(153,153,153);
+}
+.dpad_title{
+	position: relative;
+	/*top: 210px;*/
+}
+.amount_title,.amount{
+	color: rgb(153,153,153)
+}
+.dis{
+	display: block;
+
+}
+
+.remoteContent #cart {
+	width: 100%;
+}
+.remoteToggle{
+	padding: 10px;
+    width: 50px;
+    height: 50px;
+    background:  rgb(255,202,75);
+    border-top-right-radius: 5px;
+    text-align:  center;
+    font-size: 35px;
+    line-height: 30px;
+    vertical-align: middle;
+    color: #775415;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+.remoteContent .relative{
+	position:relative;
+	z-index:999;
+}
+.slider{
+	/*margin-left: 20%;*/
+}
+/* 定义列表样式，以便最大化 droppable */
+
+.remoteContent #cart .contain_remote {
+	margin: 0;
+	background:rgb(240,244,245);
+	box-shadow: 2px 2px 19px rgb(245,246,250);
+	-o-box-shadow: 2px 2px 19px rgb(245,246,250);
+	-webkit-box-shadow: 2px 2px 19px rgb(245,246,250);
+	-moz-box-shadow: 2px 2px 19px rgb(245,246,250);
+	-moz-border-radius: 0.5em;
+}
+
+.remoteContent #slider{
+	margin: 2px 0 5px 0;
+	width:186px;
+	background: rgb(255,202,75);
+    opacity: 1;
+	height: 20px;
+	box-shadow: 2px 2px 19px #aaa;
+}
+
+.ui-slider.ui-state-disabled .ui-slider-handle,.ui-widget-content .ui-state-default
+{
+	background: #f0f4f5;
+	outline: none;
+	border: 1px solid lightgray;
+}
+.ui-slider-horizontal .ui-slider-range{
+	background: rgb(255,202,75);
+}
+.remoteContent .circle_one {
+	border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    background: black;
+    position: relative;
+    top: 0%;
+    /*left: 23%;*/
+    background: rgb(255,202,75);
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+}
+.joystick{
+	/*margin-top: 60px;*/
+	/*padding: 20px 20%;*/
+}
+.remote-names{
+	text-align: center;
+    margin-top: 10px;
+    color: rgb(153,153,153);
+    font-size: 20px;
+    border: 1px solid white;
+	border-radius: 10px;
+    background: white;
+    padding: 3px;
+}
+.remoteContent #cart .remote-node .button + .remote-names{
+	margin:170px 0 0 30px;
+}
+.remoteContent .circle_two {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: white;
+	position: absolute;
+	/*top:50px;*/
+	/*left:50%;*/
+	top: 45px;
+	left: 45px;
+	/*margin-left: -25px;*/
+	/*background: #f0f4f5;*/
+	border: 1px solid rgb(255,202,75);
+	/*margin-top: -25px;*/
+	/*margin-left: -25px;*/ 
+}
+
+.remoteContent .remote-node {
+	z-index: 24;
+	cursor: pointer;
+	position: absolute;
+}
+.remoteButtons
+{
+	background: none;
+    outline: none;
+    border: none;
+    color: white;
+    top:0.3rem;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.remoteButtons button{
+	background: none;
+    border: none;
+    outline: none;
+}
+.remoteButtons img{
+	width: 1rem;
+}
+.remote-btn{
+	position: relative;
+	z-index: 999;
+}
+.remote-btn h3{
+	position: absolute;
+	top: 200px;
+}
+.dpad{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	/* box-shadow: 2px 7px 19px #aaa;
+	-o-box-shadow:2px 7px 19px #aaa;
+	-webkit-box-shadow:2px 7px 19px #aaa;
+	transform: translateY(7px);
+	-webkit-transform: translateY(7px);
+	-ms-transform: translateY(7px); */
+	/*left:20%;*/
+}
+.dpad img{
+	filter: drop-shadow(2px 7px 8px #aaaaaa);
+	-webkit-filter: drop-shadow(2px 7px 8px #aaaaaa);
+	-ms-filter: drop-shadow(2px 7px 8px #aaaaaa);
+	-o-filter: drop-shadow(2px 7px 8px #aaaaaa);
+}
+ .up{
+	position: absolute;
+    transform: translate(-50%, -50%);
+    top: 20px;
+    left: 50%;
+}
+ .down{
+	position: absolute;
+    transform: translate(-50%,-50%) rotate(180deg);
+    bottom: -20px;
+    left: 50%;
+}
+ .left{
+	position: absolute;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    top: 50%;
+    left: 20px;
+}
+ .right{
+	position: absolute;
+	transform: translate(-50%,-50%) rotate(90deg);
+    top: 50%;
+    left: 130px;
+}
+ .up img, .down img, .left img, .right img{
+	width: 90px;
+}
+/* {
+	width: 40px;
+} */
+.up img:last-child,.down img:last-child,.left img:last-child,.right img:last-child{
+	display: none;
+	filter: drop-shadow(0px 2px 4px #aaaaaa);
+	-webkit-filter: drop-shadow(0px 2px 4px #aaaaaa);
+	-ms-filter: drop-shadow(0px 2px 4px #aaaaaa);
+	-o-filter: drop-shadow(0px 2px 4px #aaaaaa);
+	transform: translateY(2px);
+	-webkit-transform: translateY(2px);
+	-ms-transform: translateY(2px);
+}
+.remote-center{
+	position: absolute;
+	transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 85px;
+    height: 85px;
+    background:none;
+    border-radius: 50%;
+}
+.remoteContent #products .button,.remoteContent #cart .remote-node .button{
+	position: relative;
+	/* width: 140px; */
+	/* height: 140px; */
+}
+.btnTwo{
+	background: rgb(255,202,75);
+	content: '';
+	display: block;
+	position: absolute;
+	width:140px;
+	height:140px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	left: -2px;
+	top: 12px;
+	border-radius: 50%;
+	box-shadow: 2px 7px 19px #aaa;
+	-o-box-shadow:2px 7px 19px #aaa;
+	-webkit-box-shadow:2px 7px 19px #aaa;
+	/* transform: translateY(2px);
+	-webkit-transform: translateY(2px);
+	-ms-transform: translateY(2px); */
+}
+.remoteButtonActive{
+	box-shadow:0px 2px 19px #aaa;
+	-o-box-shadow:0px 2px 19px #aaa;
+	-webkit-box-shadow:0px 2px 19px #aaa;
+	transform:translateY(5px); 
+	-webkit-transform: translateY(5px);
+	-ms-transform: translateY(5px);        
+}
+.remoteContent #products ul li:nth-child(4){
+	padding: 20px 70px 5px 50px;
+}
+.remoteContent #products ul li:nth-child(4) h3{
+	/* margin-top: 40px; */
+	position: absolute;
+    top: 180px;
+    left: 35%;
+}
+#li-button{
+	position: relative;
+}
+.switch{
+	width: 120px;
+    height: 42px;
+    border: 1px solid rgb(255,202,75);
+    border-radius: 20px;
+    position: relative;
+    /* left: 30px; */
+    background: rgb(255,202,75);
+}
+.switchBtn{
+	position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    outline: none;
+    color: rgb(153,153,153);
+	font-size: 15px;
+	line-height: 40px;
+	text-align: center;
+}
+.switchOn{
+	transform: translate(78px,0);
+}
+#li-switch{
+	margin: 230px 0 0 20px;
+}
+#li-switch h3{
+	margin-left: -30px;
+}

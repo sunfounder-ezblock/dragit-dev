@@ -58,7 +58,6 @@
 	<link rel="stylesheet" type="text/css" href="./src/css/faq.css">
 	<link rel="stylesheet" type="text/css" href="./src/css/tutorials.css">
 
-	<script src="./node_modules/@babel/polyfill/dist/polyfill.min.js"></script>
 	<script src="./src/js/main/independentfunc.js"></script>
 	<script src="./src/js/main/global.js"></script>
 	<script src="./src/js/main/choice.js"></script>
@@ -86,37 +85,36 @@
 	<script src="./src/js/main/swiftCode.js"></script>
 	<script src="./blockly/packages/basic/block.js"></script>
 	<script src="./blockly/packages/basic/generator.js"></script>
+	<script src="./blockly/packages/basic/simulator.js"></script>
 	<script src="./blockly/packages/music/block.js"></script>
 	<script src="./blockly/packages/music/generator.js"></script>
+	<script src="./blockly/packages/music/simulator.js"></script>
 	<script src="./blockly/packages/time/block.js"></script>
 	<script src="./blockly/packages/time/generator.js"></script>
+	<script src="./blockly/packages/time/simulator.js"></script>
 	<script src="./blockly/packages/remote/block.js"></script>
 	<script src="./blockly/packages/remote/generator.js"></script>
+	<script src="./blockly/packages/remote/simulator.js"></script>
 	<script src="./blockly/packages/IOT/block.js"></script>
 	<script src="./blockly/packages/IOT/generator.js"></script>
+	<script src="./blockly/packages/IOT/simulator.js"></script>
 	<script src="./packages/jelly/block.js"></script>
 	<script src="./packages/jelly/generator.js"></script>
 	<script src="./packages/jelly/jelly.js"></script>
+	<script src="./packages/jelly/simulator.js"></script>
 	<script src="./packages/switchbot/block.js"></script>
 	<script src="./packages/switchbot/generator.js"></script>
+	<script src="./packages/switchbot/simulator.js"></script>
 	<script src="./packages/switchbot/switchbot.js"></script>
 	<script src="./packages/sensorkit/block.js"></script>
 	<script src="./packages/sensorkit/generator.js"></script>
+	<script src="./packages/sensorkit/simulator.js"></script>
 	<script src="./packages/sensorkit/sensorkit.js"></script>
 	<script src="./src/js/main/blockCode.js"></script>
 	<script src="./src/js/main/webble.js"></script>
 	<script src="./src/js/main/coding.js"></script>
 	<script src="./src/js/main/pInformation.js"></script>
 	<script src="./src/js/main/simulator.js"></script>
-	<script src="./blockly/packages/basic/simulator.js"></script>
-	<script src="./blockly/packages/music/simulator.js"></script>
-	<script src="./blockly/packages/time/simulator.js"></script>
-	<script src="./blockly/packages/remote/simulator.js"></script>
-	<script src="./blockly/packages/IOT/simulator.js"></script>
-	<script src="./packages/jelly/simulator.js"></script>
-	<script src="./packages/switchbot/simulator.js"></script>
-	<script src="./packages/sensorkit/simulator.js"></script>
-
 	<script src="./src/js/main/routing.js"></script>
 	<script src="./src/js/main/controllers.js"></script>
 	<script src="./src/js/main/remote.js"></script>
@@ -197,18 +195,19 @@
 	 -->
 
     <!-- dev -->
+
     <script src="./packages/jelly/block.js"></script>
     <script src="./packages/jelly/generator.js"></script>
     <script src="./packages/jelly/jelly.js"></script>
+    <script src="./packages/jelly/simulator.js"></script>
     <script src="./packages/switchbot/block.js"></script>
     <script src="./packages/switchbot/generator.js"></script>
+    <script src="./packages/switchbot/simulator.js"></script>
     <script src="./packages/switchbot/switchbot.js"></script>
     <script src="./packages/sensorkit/block.js"></script>
     <script src="./packages/sensorkit/generator.js"></script>
-    <script src="./packages/sensorkit/sensorkit.js"></script>
-    <script src="./packages/jelly/simulator.js"></script>
-    <script src="./packages/switchbot/simulator.js"></script>
     <script src="./packages/sensorkit/simulator.js"></script>
+    <script src="./packages/sensorkit/sensorkit.js"></script>
     <script src="./products/raspberrypi/block.js"></script>
     <script src="./products/raspberrypi/generator.js"></script>
     <script src="./products/raspberrypi/simulator.js"></script>
@@ -873,7 +872,6 @@
         </div>
         <button class="ytp">
 		</button>
-<<<<<<< HEAD
         <div id="miniVideo" class="mini-video">
             <div id="player"></div>
         </div>
@@ -941,69 +939,6 @@
                     <h1 class="homeContent_device_header_title">%{products_recent}</h1>
                     <div class="homeContent_device_header_btn_block">
                         <button class="homeContent_device_header_btn" onclick="EzBlock.renderPage('selectBoard')">%{home_products}
-=======
-		<div id="miniVideo" class="mini-video">
-			<div id="player"></div>
-		</div>
-	</div>
-
-	<div class="ezblockContent">
-		<!--Choice-->
-		<div class="home homeContent dis_none">
-			<div class="homeContent_sliderMenu">
-				<ul class="homeContent_sliderMenu_list">
-					<li class="homeContent_sliderMenu_item_first background_logo">
-						<div class="homeContent_sliderMenu_item_icon">
-							<img src="./img/logo_ezblock_title_wrap.png" alt="">
-						</div>
-					</li>
-					<li class="homeContent_sliderMenu_item" style="position:relative;">
-						<div class="homeContent_sliderMenu_item_icon dropdown-toggle" data-toggle="dropdown" id="set" aria-haspopup="true" aria-expanded="false">
-							<img src="./img/home_menu_white.png" alt="">
-							<p class="homeContent_sliderMenu_item_text">%{home_menu}</p>
-						</div>
-						<ul class="dropdown-menu dropdown-menu-right dropdown-language" id="ListConf">
-
-						</ul>
-					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_login" data-toggle="modal">
-						<div class="homeContent_sliderMenu_item_icon">
-							<img src="./img/home_login_white.png" alt="">
-							<p class="homeContent_sliderMenu_item_text">%{home_login}</p>
-						</div>
-					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_myproject">
-						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('myProject')">
-							<img src="./img/home_myproject_white.png" alt="">
-							<p class="homeContent_sliderMenu_item_text">%{home_my_project}</p>
-						</div>
-					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_newproject">
-						<div class="homeContent_sliderMenu_item_icon" onclick="MyProject.openProjectName()">
-							<img src="./img/home_newproject_white.png" alt="">
-							<p class="homeContent_sliderMenu_item_text">%{home_new_project}</p>
-						</div>
-					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_tutorial">
-						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('tutorialsProject')">
-							<img src="./img/home_tutorials_white.png" alt="">
-							<p class="homeContent_sliderMenu_item_text">%{home_tutorial}</p>
-						</div>
-					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_example">
-						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('examplesProject')">
-							<img src="./img/home_example_white.png" alt="">
-							<p class="homeContent_sliderMenu_item_text">%{home_example}</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="homeContent_device">
-				<div class="homeContent_device_header">
-					<h1 class="homeContent_device_header_title">%{products_recent}</h1>
-					<div class="homeContent_device_header_btn_block">
-						<button class="homeContent_device_header_btn" onclick="EzBlock.renderPage('selectBoard')">%{home_products}
->>>>>>> cc478363002472754014ffa62e84f7d239e23e72
 							<img src="./img/切换箭头.png" alt="">
 						</button>
                     </div>
@@ -1103,7 +1038,6 @@
 								<img src="img/default-headshot.png" alt="" class="photoUpload">
 								<!-- 上传头像 -->
 								<span>%{uploadPhoto}</span>
-<<<<<<< HEAD
                             <input type="file" accept="image/*" onchange="PInformation.previewFile(this)">
                             </span>
                         </div>
@@ -1336,240 +1270,6 @@
                     <div class="clearfix dconbtn">
                         <div class="applyButton">
                             <button class="iotbtn dis_none" onclick="EzBlock.renderPage('internetOfThings')" type="button">
-=======
-								<input type="file" accept="image/*" onchange="PInformation.previewFile(this)">
-							</span>
-						</div>
-						<div class="clearfix">
-							<ul class="essentialInformationSpan">
-								<li class="p_username dis_none">
-									<span>%{username}:</span>
-								</li>
-								<li class="p_sex clearfix dis_none">
-									<span>%{sex}：</span>
-								</li>
-								<li class="p_age dis_none">
-									<span>%{age}：</span>
-								</li>
-								<li class="p_country dis_none">
-									<span>%{country}：</span>
-								</li>
-								<li class="p_work dis_none">
-									<span>%{work}：</span>
-								</li>
-								<li class="p_email dis_none">
-									<span>%{email}：</span>
-								</li>
-								<li class="p_password dis_none">
-									<span>%{password}：</span>
-								</li>
-							</ul>
-							<ul class="essentialInformationIpt">
-								<li class="p_username dis_none">
-									<!-- 用户名 -->
-									<input type="text" placeholder="%{enterUsername}">
-								</li>
-								<li class="p_sex clearfix dis_none">
-									<!-- 性别 -->
-									<input type="radio" value="male" name="sex" class="manIpt">
-									<span class="manSpan">%{male}</span>
-									<input type="radio" value="female" name="sex" class="femanIpt">
-									<span class="femanSpan">%{female}</span>
-									<span class="selectSex"></span>
-								</li>
-								<li class="p_age dis_none">
-									<!-- 年龄 -->
-									<input type="text" placeholder="%{enterAge}" />
-								</li>
-								<li class="p_country dis_none">
-									<!-- 国家 -->
-									<input type="text" placeholder="%{enterCountry}">
-								</li>
-								<li class="p_work dis_none">
-									<!-- 工作 -->
-									<input type="text" placeholder="%{enterWork}">
-								</li>
-								<li class="p_email dis_none">
-									<input type="text" placeholder='' style="border: none;">
-									<button class="identiBtn" onclick="PInformation.enterEmailAuthentPage();">%{changeEmail}</button>
-								</li>
-								<li class="p_password dis_none">
-									<input type="password" placeholder="%{enterPassword}">
-								</li>
-							</ul>
-						</div>
-						<p class="p_errorMsg"></p>
-						<p class="p_saveMsg"></p>
-						<div class="save_msg">
-							<!-- 保存信息 -->
-							<button onclick="PInformation.setUserInfo()" class="_save dis_none">%{saveInformation}</button>
-							<!-- 编辑信息 -->
-							<button onclick="PInformation.edit()" class="edit">%{editInformation}</button>
-							<!-- 退出登录 -->
-							<button class="leave_out dis_none" onclick="PInformation.deleteUsertoken()">%{exit}</button>
-						</div>
-					</div>
-				</div>
-				<div class="e_authentication %{width} dis_none">
-					<div class="clearfix">
-						<ul class="e_authentication_span">
-							<li class="emailMessage">
-								<span>%{email}：</span>
-							</li>
-							<li class="verificationCode">
-								<span>%{verificationCode}：</span>
-							</li>
-						</ul>
-						<ul class="e_authentication_ipt">
-							<li class="emailMessage">
-								<!-- 邮箱号  -->
-								<input type="text" placeholder="%{enterEmail}">
-								<!-- 发送验证码 -->
-								<button onclick="PInformation.getIdentiCode()">%{verification}</button>
-
-							</li>
-							<li class="verificationCode">
-								<!-- 验证码 -->
-								<input type="text" placeholder="%{enterVerificationCode}">
-							</li>
-						</ul>
-					</div>
-					<p class="e_errorMsg"></p>
-					<button class="e_back" onclick="PInformation.verificationCodeBack();">%{back}</button>
-					<button class="e_confirm" onclick="PInformation.changeEmailAddress();">%{confirm}</button>
-
-				</div>
-				<div id="e_authentication_shadow">
-					<div class="loading"></div>
-				</div>
-				<div class="changePwd %{width} dis_none">
-					<div class="clearfix">
-						<ul class="changePwdSpan">
-							<li class="e_oldpwd">
-								<!-- 原密码 -->
-								<span>%{oldPwd}：</span>
-							</li>
-							<li class="e_newpwd">
-								<!-- 新密码 -->
-								<span>%{newPwd}：</span>
-							</li>
-							<li class="e_test">
-								<!-- 邮箱认证 -->
-								<span>%{email}：</span>
-							</li>
-						</ul>
-						<ul class="changePwdIpt">
-							<li class="e_oldpwd">
-								<!-- 原密码 -->
-								<input type="password" placeholder="%{enterOldPwd}">
-							</li>
-							<li class="e_newpwd">
-								<!-- 新密码 -->
-								<input type="password" placeholder="%{enterNewPwd}">
-							</li>
-							<li class="e_test">
-								<!-- 邮箱认证 -->
-								<input type="text" placeholder="%{enterEmail}">
-							</li>
-						</ul>
-					</div>
-
-					<p class="pwd_error"></p>
-					<!-- 确认 -->
-					<div class="e_pwd_confirm %{confirmLeft}">
-						<button onclick="PInformation.changePwd()">%{confirm}</button>
-					</div>
-				</div>
-				<div class="deleteUser dis_none">
-					<div class="clearfix">
-						<ul class="deleteUserSpan">
-							<li class="d_username">
-								<!-- 用户名 -->
-								<span>%{username}：</span>
-							</li>
-							<li class="d_password">
-								<!-- 密码 -->
-								<span>%{password}：</span>
-							</li>
-						</ul>
-						<ul class="deleteUserIpt">
-							<li class="d_username">
-								<!-- 用户名 -->
-								<input type="text" placeholder="%{enterUsername}">
-							</li>
-							<li class="d_password">
-								<!-- 密码 -->
-								<input type="password" placeholder="%{enterPassword}">
-							</li>
-						</ul>
-					</div>
-
-					<p class="delete_error"></p>
-					<!-- 确认 -->
-					<div class="delete_confirm %{delete_left}">
-						<button onclick="PInformation.cancelUser();">%{confirm}</button>
-					</div>
-				</div>
-				<div class="system_msg dis_none">
-					<div class="sMessage">
-						<h1>系统消息</h1>
-						<hr />
-					</div>
-					<ul></ul>
-					<div class="pager">
-						<button class="prevMsg" onclick="PInformation.changePageNo(--PInformation.pageno)">上一页</button>
-						<span class="pageNum">1</span>
-						<button class="nextMsg" onclick="PInformation.changePageNo(++PInformation.pageno)">下一页</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- myProjectContent -->
-		<div class="myProjectContent dis_none">
-			<div class="myProject-header">
-				<div class="myProject-header-menu">
-					<div class="draw">
-						<img src="./img/大图标展示.png" alt="">
-					</div>
-					<div class="tableList">
-						<img src="./img/列表.png" alt="">
-					</div>
-				</div>
-				<div class="searchFile">
-					<input class="searchFileInput" type="text" placeholder="Search Files...">
-				</div>
-			</div>
-			<div class="myProject-main">
-			</div>
-		</div>
-
-		<!-- 教程项目页面 -->
-		<div class="tutorialsContent dis_none">
-
-		</div>
-
-		<!-- IOT页面 -->
-		<div class="internetOfThingsContent dis_none">
-			<div class="flexBox">
-				<div class="appendBox box">
-				</div>
-			</div>
-		</div>
-
-
-		<!--Coding-->
-		<div class="codingContent dis_none">
-			<div class="col-sm-4 col-lg-3 board hidden-xs">
-				<div class="boardmove">
-					<div class="render_page">
-						<img class="boardname">
-					</div>
-					<img class="selectImg" />
-					<div class="clearfix dconbtn">
-						<div class="applyButton">
-							<button class="iotbtn" onclick="EzBlock.renderPage('internetOfThings')" type="button">
->>>>>>> cc478363002472754014ffa62e84f7d239e23e72
 								<img src="./img/IOT.png" />
 							</button>
                             <button class="remotebtn" onclick="EzBlock.renderPage('remote')">
@@ -1784,7 +1484,6 @@
 						<img src="./img/open.png">
 						<img src="./img/close.png" class="dis_none">
 					</button>
-<<<<<<< HEAD
                 </div>
                 <div class="see hidden-sm hidden-md hidden-lg dis_none">
                     <div class="boardSmallName">Raspberry Pi</div>
@@ -1847,88 +1546,6 @@
                 </div>
             </div>
         </div>
-=======
-				</div>
-			</div>
-		</div>
-		<div class="dragfooter-xs dis_none hidden-sm hidden-md hidden-lg" style="background: rgb(255,202,75);">
-			<div class="dragfooter-xs-btn">
-				<div class="dragfooter-xs-common">
-					<button class="footer-expand">
-						<img src="./img/close-xs.png" alt="close" class="close-xs">
-						<img src="./img/open-xs.png" class="dis_none open-xs" alt="open">
-					</button>
-					<button class="footer-iotbtn" onclick="EzBlock.renderPage('internetOfThings')" type="button">
-						<img src="./img/IOT.png" alt="">
-					</button>
-				</div>
-				<div class="board-message-xs dis_none">
-						<p></p>
-						<img src="" alt="">
-					</div>
-				<div class="dragfooter-xs-common">
-					<button class="footer-routingbtn" onclick="EzBlock.renderPage('routing')">
-						<img src="./img/电路.png" alt="">
-					</button>
-					<button class="footer-remotebtn" onclick="EzBlock.renderPage('remote')">
-						<img src="./img/蓝牙遥控.png" alt="">
-					</button>
-				</div>
-				<div class="dragfooter-xs-common">
-					<button class="footer-bluetoothbtn" onclick="Coding.connect()">
-						<img class="disconnected" src="./img/bluetooth-disconnected.png">
-						<img class="connected dis_none" src="./img/bluetooth-connected.png">
-					</button>
-					<button class="footer-playbtn" onclick="Simulator.runEvent()" type="button">
-						<img src="./img/播放.png" alt="">
-					</button>
-				</div>
-				<div class="dragfooter-xs-common">
-					<button class="footer-flash">
-						<img src="./img/下载.png" alt="">
-					</button>
-					<button class="footer-reset">
-						<img src="./img/恢复.png" alt="">
-					</button>
-				</div>
-			
-			</div>
-
-		</div>
-		<div id="shadow">
-			<div class="loading"></div>
-		</div>
-		<div class="tutorials_block">
-			<div>
-				<button class="tutorials_back">返回</button>
-			</div>
-			<div id="tutorials_tips" class="tutorials_tips_text"></div>
-			<div>
-				<button class="tutorials_next">下一步</button>
-			</div>
-			<ul class="dot">
-
-			</ul>
-		</div>
-		<div id="tutorials_modal" class="modal fade">
-			<div class="modal-dialog tutorials_modal_dialog">
-				<div class="modal-content">
-					<div class="modal-header package-header projectName-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-					</div>
-					<div class="modal-body tutorials_modal_body">
-						<div class="tutorials_modal_msg"></div>
-						<div class="tutorials_modal_img">
-							<img src="./img/pythoncode.png" alt="">
-						</div>
-						<div class="tutorials_modal_btn_block">
-							<button class="tutorials_modal_btn">OK</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
->>>>>>> cc478363002472754014ffa62e84f7d239e23e72
 </body>
 
 <script>

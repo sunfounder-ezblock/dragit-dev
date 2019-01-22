@@ -1,0 +1,95 @@
+.tutorials_block {
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+    z-index: 999999;
+    box-shadow: 0px 0px 5px 0px #aeaaa0;
+}
+
+.tutorials_back, .tutorials_next {
+    height: 100%;
+    width: 100px;
+    border: none;
+    background: rgb(255,202,75);
+}
+#shadow{
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 99999;  
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    background:rgba(0,0,0,.5)
+}
+.tutorials_back {
+    border-radius: 8px 0 0 8px;
+}
+
+.tutorials_next {
+    border-radius: 0 8px 8px 0;
+}
+
+.tutorials_tips_text {
+    width: 75%;
+    height: 100%;
+    text-align: left;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    position: absolute;
+    padding: 15px;
+    top: -45px;;
+    left: 50%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 99999;
+}
+
+.dot_item {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #cccccc;
+    margin: 0 4px;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.dot_item_animation {
+    width: 30px;
+    height: 30px;
+}
+.tutorials_modal .tutorials_modal_msg{
+    text-align: center; 
+    font-size: 22px;
+}
+.tutorials_modal .tutorials_modal_img{
+    text-align: center;
+}
+.tutorials_modal_dialog {
+    width: 700px!important;
+}
+
+.tutorials_modal_btn_block {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.tutorials_modal_btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(255,202,75);
+}

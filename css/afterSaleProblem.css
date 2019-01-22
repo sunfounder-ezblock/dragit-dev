@@ -1,0 +1,70 @@
+.afterSaleProblemContent{
+    padding: 30px 10%;
+    position: relative;
+}
+#problemText{
+    /* width: 300px; */
+    height: 360px;
+    float: left;
+    margin-left: 2%;
+    width: 88%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 9px;
+    outline: none;
+    color: rgb(102,102,102);
+}
+.sender,.receiver,.theme,.mainPart{
+    position: relative;
+}
+.sender span,.receiver span,.theme span,.mainPart span{
+    position: absolute;
+    top: 10px;
+    left: 13.2%;
+    color: red;
+}
+.sender div, .theme div,.mainPart div{
+    float: left;
+    width: 10%;
+    text-align:right;
+    height: 45px;
+    line-height: 45px;
+    color: rgb(102,102,102);
+}
+.sender input, .theme input,.receiver input{
+    border-radius: 5px;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 9px;
+    margin-left: 2%;
+    width: 88%;
+    outline: none;
+    float: left;
+    color: rgb(102,102,102);
+}
+.receiver{
+    margin: 10px 0 -10px 0;
+}
+.receiver div:first-child{
+    float: left;
+    width: 10%;
+    text-align: right;
+    height: 45px;
+    line-height: 45px;
+    color: rgb(102,102,102);
+}
+.afterSaleProblemContent .theme,.afterSaleProblemContent .mainPart{
+    margin: 30px 0;
+}
+.afterSaleProblemContent .send{
+    height: 45px;
+    line-height: 45px;
+    background: rgb(255,202,75);
+    border: 1px solid rgb(255,202,75);
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+	outline: none;
+	width: 110px;
+}

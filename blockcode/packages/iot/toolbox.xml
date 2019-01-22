@@ -1,0 +1,8 @@
+<category name="%{BKY_CATIOT}" colour='#58ce6a'>
+
+  <block type="iot_get_value"></block>
+  <block type="iot_post_value"></block>
+  
+
+</category>
+

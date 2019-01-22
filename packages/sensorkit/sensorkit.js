@@ -3,7 +3,6 @@
 var SensorKit = {
     'name': 'Sensor Kit',
     'id': 'sensorkit',
-    'simulator': {},
     'modules': {
         "led-module": {
             'id': 0,
@@ -18,7 +17,7 @@ var SensorKit = {
             ],
             'img': 'led-module.png',
             'simulator': {
-                "type": "ValueOutput",
+                "type": "digitalOutput",
                 "onHigh": "dual-color-led_on.png",
                 "onLow": "dual-color-led_off.png"
             },
@@ -57,7 +56,7 @@ var SensorKit = {
             'name': 'RGB LED',
             'blocks': ['<block type="sensorkit_rgb_set_value"> ' +
                 '<value name="color"> ' +
-                '<shadow type="colour_led_picker"> ' +
+                '<shadow type="colour_picker"> ' +
                 '   <field name="COLOUR">#ff0000</field> ' +
                 '</shadow> ' +
                 '</value> ' +
@@ -116,10 +115,11 @@ var SensorKit = {
             'blocks': ['<block type="sensorkit_button_get_value"></block> '],
             'img': 'button.png',
             'simulator': {
-                "type": "ValueInput",
+                "type": "digitalInput",
                 "mode": 'toggle',
-                "initValue": 1,
+                "initValue": 0,
                 "pin": "SIG",
+
             },
             'pins': {
                 'SIG': {
@@ -157,7 +157,7 @@ var SensorKit = {
             'blocks': ['<block type="sensorkit_tiltswitch_get_value"> </block> '],
             'img': 'tilt-switch.png',
             'simulator': {
-                "type": "ValueInput",
+                "type": "digitalInput",
                 "pin": 'SIG',
                 "mode": 'click',
                 "initValue": 0
@@ -439,7 +439,7 @@ var SensorKit = {
             'blocks': ['<block type="sensorkit_touchswitch_get_value"></block> '],
             'img': 'touch-switch.png',
             'simulator': {
-                "type": "ValueInput",
+                "type": "digitalInput",
                 "pin": 'SIG',
                 "mode": 'click',
                 "initValue": 0
@@ -589,7 +589,7 @@ var SensorKit = {
                 'x': 0.3,
                 'y': 1,
                 'isSource': true,
-                'property': ['din'],
+                'property': ['ain'],
                 'type': 'analog'
             }, {
                 'id': 1,

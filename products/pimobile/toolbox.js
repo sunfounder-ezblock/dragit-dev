@@ -61,31 +61,11 @@ PiMobile.toolboxText =
     '        </value> ' +
     '    </block> ' +
     '    <block type="pimobile_motor"> ' +
-    '        <value name="speed"> ' +
-    '            <shadow type="math_number"> ' +
-    '                <field name="NUM">4095</field> ' +
-    '            </shadow> ' +
-    '        </value> ' +
     '        <value name="value"> ' +
     '            <shadow type="math_number"> ' +
     '                <field name="NUM">0</field> ' +
     '            </shadow> ' +
     '        </value> ' +
     '    </block> ' +
-
-    '   <block type="pimobile_motor_direction_calibration"></block>' +
-
-    '   <block type="pimobile_motor_speed_calibration"> ' +
-    '       <value name="speed"> ' +
-    '           <shadow type="math_number"> ' +
-    '           </shadow> ' +
-    '       </value> ' +
-    '       <value name="value"> ' +
-    '           <shadow type="math_number"> ' +
-    '               <field name="NUM">0</field> ' +
-    '           </shadow> ' +
-    '       </value> ' +
-    '   </block> ' +
-
     '  </category>' +
     '  <sep></sep>'

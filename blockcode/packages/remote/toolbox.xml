@@ -1,0 +1,10 @@
+<category name="%{BKY_CATREMOTE}" colour='#58ce6a'>
+  <!-- <block type="remote_start"></block> -->
+  <block type="remote_joystick_get_value"></block>
+  <block type="remote_slider_get_value"></block>
+  <block type="remote_dpad_get_value"></block>
+  <block type="remote_button_get_value"></block>
+  <!-- <block type="remote_button_on_press"></block>
+  <block type="remote_button_off_press"></block> -->
+</category>
+

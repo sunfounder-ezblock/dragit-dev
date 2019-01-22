@@ -1,5 +1,5 @@
 Local['zh-hans'].MSG.catRaspberryPi = "树莓派";
-Local['zh-hans'].MSG.catSzh - hanssorKitForPi = "树莓派传感器套件";
+Local['zh-hans'].MSG.catSensorKitForPi = "树莓派传感器套件";
 
 Local['zh-hans'].MSG.raspberrypi_description = "是一款基于Linux的单片机计算机。它由英国的树莓派基金会所开发";
 
@@ -39,7 +39,7 @@ Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TITLE1 = "添加事件监测";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TITLE2 = "引脚";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TITLE3 = "中断触发";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TITLE4 = "执行";
-Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TOOLTIP = "The evzh-hanst_detected() function is designed to be used in a loop with other things, \n\
+Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TOOLTIP = "The event_detected() function is designed to be used in a loop with other things, \n\
         but unlike polling it is not going to miss the change in state of an input while the CPU is busy working on other things. ";
 
 
@@ -52,15 +52,15 @@ Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE1 = "连接WiFi"
 Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE2 = "国家"
 Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE3 = "账号"
 Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE4 = "密码"
-Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TOOLTIP = "连接WIFI，请输入国家的缩写（两个大写的英文字母），参考链接: https://zh-hans.wikipedia.org/wiki/ISO_3166-1_alpha-2";
+Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TOOLTIP = "连接WIFI，请输入国家的缩写（两个大写的英文字母），参考链接: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2";
 
 
-Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE1 = "设置舵机"
-Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE2 = "的角度"
-Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE3 = "time"
-Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TOOLTIP = "Sets the angle of the servo:\n\
+Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE1        = "设置舵机"
+Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE2        = "的角度"
+Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE3        = "time"
+Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TOOLTIP       = "Sets the angle of the servo:\n\
      angle is the angle to move to in degrees.\n\
-     time is the number of milliseconds to take to get to the specified angle. If omitted, thzh-hans the servo moves as quickly as possible to its new position."
+     time is the number of milliseconds to take to get to the specified angle. If omitted, then the servo moves as quickly as possible to its new position."
 
 
 Local['zh-hans'].RASPBERRYPI_I2C_TITLE1 = "读I2C  地址";
@@ -102,14 +102,3 @@ Local['zh-hans'].RASPBERRYPI_I2C_MEM_READ_TITLE1 = "在I2C设备的内存中读�
 Local['zh-hans'].RASPBERRYPI_I2C_MEM_READ_TITLE2 = "地址";
 Local['zh-hans'].RASPBERRYPI_I2C_MEM_READ_TITLE3 = "从机地址";
 Local['zh-hans'].RASPBERRYPI_I2C_MEM_READ_TOOLTIP = "在I2C设备的内存中读取，并返回读取值。 ";
-
-
-
-Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE1 = "PWM设置";
-Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE2 = "脉冲宽度的值为";
-Local['zh-hans'].RASPBERRYPI_SPI_TOOLTIP = "设置PWM脉冲宽度的值为（0 ~ 4095）.";
-
-Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM设置";
-Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "脉冲宽度的百分比为";
-Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2 = "%";
-Local['zh-hans'].RASPBERRYPI_SPI_TOOLTIP = "设置PWM脉冲宽度的百分比为(0% ~ 100%).";

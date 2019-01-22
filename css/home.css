@@ -1,0 +1,242 @@
+.home {
+    /*margin-top:1.1rem;*/
+    overflow: hidden;
+}
+
+.home-flexBox {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 40px;
+}
+
+.new-project, .my-project {
+    width: 344px;
+    height: 336px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px #888888;
+    text-align: center;
+}
+
+.append, .mine {
+    width: 50%;
+    height: 50%;
+    margin-top: 21%;
+}
+
+.text {
+    margin-top: 0.4rem;
+    font-size: 22px;
+    color: rgb(153,153,153);
+}
+
+.projectName-header,.kit-header,.kit-btn-header{
+    border-radius: 5px 5px 0 0;
+    height: 55px;
+}
+
+.projectName-body{
+    height: 250px;
+    text-align: center;
+}
+
+.ensure {
+    width: 100%;
+    text-align: center;
+}
+
+.nameInput {
+    margin-top: 65px;
+    border: 1px solid rgb(255, 202, 75);
+    height: 50px;
+    width: 320px;
+    text-align: center;
+    border-radius: 38px;
+    font-size: 25px;
+    outline: none;
+}
+
+.ensure {
+    margin-top: 45px;
+}
+
+.ensureBtn {
+    border: none;
+    width: 120px;
+    height: 50px;
+    background: rgb(255, 202, 75);
+    border-radius: 35px;
+    font-size: 25px;
+    outline: none;
+}
+.saveAsNameInput {
+    margin-top: 65px;
+    border: 1px solid rgb(255, 202, 75);
+    height: 50px;
+    width: 320px;
+    text-align: center;
+    border-radius: 38px;
+    font-size: 25px;
+    outline: none;
+}
+
+.saveAsBtn {
+    border: none;
+    width: 120px;
+    height: 50px;
+    background: rgb(255, 202, 75);
+    border-radius: 35px;
+    font-size: 25px;
+    outline: none;
+}
+
+.homeContent_sliderMenu {
+    height: 100%;
+    width: 1.36rem;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+.homeContent_device {
+    width: -webkit-calc(100% - 136px);
+    height: 100%;
+    float: left;
+    padding: 0 48px 0 48px;
+    background: #f5f6fa;
+}
+
+.homeContent_sliderMenu_item {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homeContent_sliderMenu_login .homeContent_sliderMenu_item_icon img{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.homeContent_sliderMenu_item_icon {
+    text-align: center;
+}
+
+.homeContent_sliderMenu_item_text {
+    margin-top: 15px;
+    color: #b1b1b1;
+}
+
+.background_logo {
+    background: rgb(255,202,75);
+}
+
+.homeContent_device_header {
+    height: 130px;
+    width: 100%;
+    border-bottom: 2px solid #cccccc;
+}
+
+.homeContent_device_header_title {
+    float: left;
+    font-size: 30px;
+    color: #727272;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+.homeContent_device_header_btn_block {
+    float: right;
+    margin-top: 75px;
+}
+
+.homeContent_device_header_btn {
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 24px;
+    background: rgb(255,202,75);
+    color: #ffffff;
+    border: none;
+    letter-spacing: 1.2px;
+    outline: none;
+}
+
+.homeContent_device_header_btn img {
+    position: relative;
+    top: -2px;
+    left: 6px;
+}
+
+.homeContent_device_choice {
+    width: 100%;
+    height: -webkit-calc(100% - 174px);
+    margin-top: 44px;
+}
+
+.homeContent_device_choice_device {
+    width: 60%;
+    height: 422px;
+    float: left;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background: #ffffff;
+    position: relative;
+}
+.homeContent_device_choice_device img
+{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 3.2rem;
+}
+
+.homeContent_device_choice_float {
+    width: 36%;
+    float: left;
+    margin-left: 22px;
+}
+
+.homeContent_device_choice_series, .homeContent_device_choice_plaform {
+    /* width: 100%; */
+    min-width: 300px;
+    height: 200px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.homeContent_device_choice_series_img, .homeContent_device_choice_plaform_img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.homeContent_device_choice_series_name, .homeContent_device_choice_plaform_name {
+    font-size: 22px;
+    color: #727272;
+}
+
+.homeContent_device_choice_plaform {
+    margin-top: 22px;
+}
+
+.homeContent_device_choice_plaform_img {
+    position: relative;
+    top: 0px;
+    left:0px;
+}
+
+.homeContent_sliderMenu_item > .dropdown-menu {
+    top: 0;
+    right: -164px;
+} 

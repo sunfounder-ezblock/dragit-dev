@@ -5,14 +5,14 @@ goog.provide('Blockly.Python.pimobile');
 goog.require('Blockly.Python');
 
 
-Blockly.Python['pimobile_digital_pin'] = function(block) { // digital pin number
+Blockly.Python['pimobile_digital_pin'] = function(block) {  // digital pin number
     var pin = block.getFieldValue('pin');
 
     var code = '';
     code += pin;
     return [code, Blockly.Python.ORDER_ATOMIC];
 };
-Blockly.Python['pimobile_analog_pin'] = function(block) { // digital pin number
+Blockly.Python['pimobile_analog_pin'] = function(block) {  // digital pin number
     var pin = block.getFieldValue('pin');
 
     var code = '';
@@ -21,7 +21,7 @@ Blockly.Python['pimobile_analog_pin'] = function(block) { // digital pin number
 };
 
 Blockly.Python['pimobile_device_pin'] = function(
-    block) { // digital pin number
+        block) {  // digital pin number
     var pin = block.getFieldValue('pin');
 
     var code = '';
@@ -29,7 +29,7 @@ Blockly.Python['pimobile_device_pin'] = function(
     return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
-Blockly.Python['pimobile_pwm_pin'] = function(block) { // digital pin number
+Blockly.Python['pimobile_pwm_pin'] = function(block) {  // digital pin number
     var pin = block.getFieldValue('pin');
 
     var code = '';
@@ -104,24 +104,4 @@ Blockly.Python['pimobile_motor'] = function(block) {
     var code = ' ';
     code = 'pimobile.set_motor_speed(' + motor + ', ' + value + ')\n';
     return code;
-};
-
-Blockly.Python['pimobile_motor_direction_calibration'] = function(block) {
-    Blockly.Python.definitions_['import_pimobile'] = 'import pimobile';
-
-    var code = ' ';
-    code = 'Motor_direction_calibration()\n';
-    return code;
-};
-
-
-Blockly.Python['pimobile_motor_speed_calibration'] = function(block) {
-    var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
-    var value = Blockly.Python.valueToCode(block, 'value', Blockly.Python.ORDER_ATOMIC);
-
-    Blockly.Python.definitions_['import_pimobile'] = 'import pimobile';
-
-    var code = ' ';
-    code = 'Motor_speed_calibration(' + speed + ', ' + value + ')';
-    return [code, Blockly.Python.ORDER_ATOMIC];
 };

@@ -21,10 +21,6 @@ RaspberryPi.examplesHasKit = {};
 RaspberryPi.tutorials = {};
 RaspberryPi.tutorialsHasKit = {};
 
-RaspberryPi.VOLTAGE_LEVEL_THRESHOLD = 1.5;
-RaspberryPi.pwmReference = 4095;
-RaspberryPi.adcReference = 4095;
-
 RaspberryPi.avalibleKits = {
     'sensorkit': SensorKit,
     'switchbot': SwitchBot,
@@ -39,7 +35,7 @@ RaspberryPi.functions = [
 ]
 
 RaspberryPi.routingOffset = {
-    x: 1.9,
+    x: 2.3,
     y: 2.2,
 }
 

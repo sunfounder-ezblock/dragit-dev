@@ -1,0 +1,413 @@
+.register-width {
+    width: 4.16rem;
+}
+.findPwd-width{
+    width: 5.16rem;
+}
+.setPwd-width{
+    width: 4.16rem;
+}
+.register-height {
+    height: 570px;
+}
+
+.register-body {
+    text-align: center;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+    margin-left: -14px;
+}
+
+.register-title {
+    font-size: 30px;
+    color: rgb(255,202,75);
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.find_verCode{
+    color: #775415!important;
+    height: 45px;
+    line-height: 45px;
+    background: rgb(255,202,75);
+    border: 1px solid rgb(255,202,75);
+    border-radius: 20px;
+    margin-left: 30px;
+    outline: none;
+    width: 110px;
+    text-align: center;
+}
+.findPwdConfirm,.setPwdConfirm{
+    height: 45px;
+    line-height: 45px;
+    background: rgb(255,202,75);
+    border: 1px solid rgb(255,202,75);
+    border-radius:20px;
+    margin-left: 30px;
+    outline: none;
+    width: 110px;
+    text-align: center;
+    color: #775415;
+}
+.findPwdBack,.setPwdBack{
+    height: 45px;
+    line-height: 45px;
+    background: rgb(255,202,75);
+    border: 1px solid rgb(255,202,75);
+    border-radius: 20px;
+    margin-left: 30px;
+    outline: none;
+    width: 110px;
+    text-align: center;
+    color: #775415;
+}
+.findPwd-height{
+    height: 450px;
+}
+.setPwd-height{
+    height: 360px;
+}
+.inputSize {
+    width: 300px;
+    border: 1px solid rgb(255, 202, 75);
+    height: 45px;
+    border-radius: 20px;
+    color: gray;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    outline: none;
+}
+#set_password,#set_repassword{
+    width: 90%;
+}
+.marTopTen{
+    margin: 10px 0 0 0;
+}
+.register-btn {
+    width: 125px;
+    height: 45px;
+    border: 1px solid rgb(255, 202, 75);
+    background: rgb(255, 202, 75);
+    border-radius: 20px;
+    font-size: 25px;
+    color: #775415;
+    font-size: 18px;
+    font-weight: bolder;
+    outline: none;
+    outline: none;
+}
+#findPwdCode{
+    width: 90%;
+    margin-left: 20px;
+    padding-left: 0px; 
+    text-align: center;
+}
+.findPwd-title{
+    font-size: 30px;
+    color: rgb(255,202,75);
+    margin-bottom: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+.findPwd-label{
+    color: rgb(255,202,75);
+}
+.login-text{
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    top: 5px;
+    left: 0px;
+    background: #fff;
+    color: rgb(153,153,153);
+}
+.setPwd-title{
+    font-size: 30px;
+    color: rgb(255,202,75);
+    margin-bottom: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+#login .register-btn{
+    margin: 0 0 20px 0;
+}
+#register .register-btn{
+    margin: 0 0 20px 0;
+}
+.close-this,.close-abvoe,.login-in{
+    width: 80%;
+}
+.have-account{
+    color: rgb(153,153,153);
+}
+.login-label {
+    color: rgb(255, 202, 75);
+    outline: none;
+}
+.login-in-account{
+    color: rgb(153,153,153);
+}
+.login-in-account a{
+    color: rgb(255,202,75);
+}
+.imgSite {
+    position: relative;
+    top: -3px;
+    left: 40px;
+}
+
+.register-line {
+    width: 85%;
+    background: #000;
+    height: 1px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    background: #ccc;
+}
+
+.register-text {
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    color: #ccc;
+}
+.register_errorMsg,.email_errorMsg,.login_errMsg,.findPwd_errorMsg,.setPwd_errorMsg{
+	color: red;
+    display: none;
+    text-align: center;
+}
+.twitter {
+    margin-left: 20px
+}
+
+.faceBook {
+    margin-right: 20px
+}
+
+.other-register-icon{
+    margin-top: 20px;
+}
+.register-modal-content {
+    margin: 22% auto!important;
+}
+::-webkit-input-placeholder {
+    color: rgb(153,153,153);
+}
+.termAccept{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.termAnony{
+    margin: 0 0 20px 20px;
+    width: 100%;
+}
+.email-width {
+    width: 4.16rem;
+}
+
+.email-height {
+    height: 370px;
+}
+
+.email-body {
+    text-align: center;
+}
+
+.email-body {
+    text-align: center;
+}
+
+#verifyCode{
+    padding-left: 0px; 
+    text-align: center;
+}
+
+#verShadow{
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 99999;
+    width: 100%; 
+    height: 100%; 
+    background:rgba(0,0,0,.5);
+    display:none;
+}
+
+.marLeftZero{
+    margin-left: 0px;
+}
+#emailShadow{
+    position: fixed; 
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    width: 100%; 
+    height: 100%; 
+    background:rgba(0,0,0,.5);
+    display:none;
+}
+#email .accept{
+    margin-left: 10px;
+    color: rgb(153,153,153);
+    float: left;
+}
+#email .accept span{
+    color: rgb(255,202,75);
+}
+#email .allowUpload{
+    float: left;
+}
+#email .anonymousData{
+    margin-left: 10px;
+    color: rgb(153,153,153);
+    float:left;
+    max-width: 350px;
+}
+.checkBox {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 2px;
+    left: 0px;
+}
+
+.Verification-height {
+    height: 425px;
+}
+
+.Verification-center {
+    text-align: left;
+    width: 100%;
+    padding: 0 30px;
+}
+.Verification-center{
+    color: rgb(153,153,153);
+}
+.Verification-center span{
+    color: #40bdf2;
+}
+.buttonBox {
+    margin-top: 25px;
+    padding: 0 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Verification-back, .jump-btn {
+    width: 125px;
+    height: 48px;
+    border: none;
+    background: rgb(255, 202, 75);
+    border-radius: 30px;
+    font-size: 18px;
+    color: #775415;
+    font-weight: bolder;
+    outline: none;
+}
+
+.jump-btn {
+    background: #ccc;
+}
+
+#email .private{
+    float: left;
+}
+.private-modal-content{
+    margin:0!important;
+}
+.private-height{
+    height: 700px;
+    overflow: auto;
+}
+.private-height h3{
+    color: rgb(255,202,75);
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.private-height p{
+    color: #727272;
+    font-size: 20px;
+}
+.about-us-modal-content{
+    margin: 6% auto!important;
+}
+.about-us-height{
+    /* background:url('../img/sunfounder-steam-education-large.png') no-repeat center; */
+    background-size:95% auto;
+    color: #727272;
+    font-size:18px;
+    text-align: center
+}
+.about-us-height img{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+.about-us-height p{
+    text-align: left;
+}
+#aboutUs .modal-text{
+    position: relative;
+}
+
+#aboutUs .modal-text .close{
+    float: right;
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+#aboutUs .modal-text  span{
+    font-size: 20px;
+}
+.privateCheckedBox{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.privateCheckbox .checkBox{
+    float: left;
+    margin-left:20%;
+}
+.privateCheckbox div{
+    margin-left: 10px;
+    color: #727272;
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+.privateConfirm{
+    text-align: center;
+    margin-top: 20px;
+}
+.privateConfirm button{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background: rgb(255,202,75);
+    border: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    outline: none;
+}
+.private-height .private_error{
+    display:none;
+    color:red;
+    text-align: center;
+    color: red;
+    margin: 10px;
+    font-size: 18px;
+    margin-bottom: -20px;
+}
