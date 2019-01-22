@@ -28,6 +28,25 @@ Local['en'].PIMOBILE_ULTARSONIC_DISTANCE_TITLE2 = "Triq";
 Local['en'].PIMOBILE_ULTARSONIC_DISTANCE_TITLE3 = "Echo";
 Local['en'].PIMOBILE_ULTARSONIC_TOOLTIP = "Get ultarsonic value";
 
+
 Local['en'].PIMOBILE_MOTOR_TITLE1 = "Set motor";
-Local['en'].PIMOBILE_MOTOR_TITLE2 = "value to";
-Local['en'].PIMOBILE_MOTOR_TOOLTIP = "Set motor pulse width value (-4095 ~ 4095). Negative values represent backwards, positive values represent foewards. ";
+Local['en'].PIMOBILE_MOTOR_TITLE2 = "speed to";
+Local['en'].PIMOBILE_MOTOR_TITLE3 = "calibration value to";
+Local['en'].PIMOBILE_MOTOR_TOOLTIP = "Set motor speed (-100 ~ 100). Negative values represent backwards, \
+                                        positive values represent foewards. calibration value: \
+                                        Given by the speed calibration block.";
+
+
+
+Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1 = "Motor direction cailbration"
+Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TOOLTIP = "Set the speed of the car and adjust the speed difference \
+                                                        between the two wheels to make the car go straight.";
+
+
+
+Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE1 = "Motor speed"
+Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE2 = "calibration value"
+Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TOOLTIP = "Set the speed of the car and adjust the speed difference \
+                                                        between the two wheels to make the car go straight.\
+                                                        Speed range 0~100. Calibration value: positive value reduces left \
+                                                        wheel speed,negative value reduces right wheel speed.";
