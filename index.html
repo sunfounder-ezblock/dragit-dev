@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="apple-moblie-web-app-capable" content="yes" />
 	<meta name="google" value="notranslate">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<title>EzBlock</title>
-<!-- 
+	<!-- 
 	<script>
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('./ezblock_serviceworker.js', { scope: '.' }).then(
@@ -32,7 +33,7 @@
 			}
 		}
 	</script> -->
-	
+
 	<link rel="stylesheet" type="text/css" href="./css/ezblock.min.css" />
 	<script src="./js/ezblock.min.js"></script>
 
@@ -57,6 +58,7 @@
 	<link rel="stylesheet" type="text/css" href="./src/css/faq.css">
 	<link rel="stylesheet" type="text/css" href="./src/css/tutorials.css">
 
+	<script src="./node_modules/@babel/polyfill/dist/polyfill.min.js"></script>
 	<script src="./src/js/main/independentfunc.js"></script>
 	<script src="./src/js/main/global.js"></script>
 	<script src="./src/js/main/choice.js"></script>
@@ -534,8 +536,8 @@
 						<div class="choose-name">
 							<div class="choose-name-box choose-name-position">
 								<span class="choose-name-text">Kit: </span>
-								<input class="choose-name-input dropdown-toggle choose-name-btn add-kit-mode-ipt" data-toggle="dropdown" type="button"
-								 value="Name" style="width: 71%">
+								<input class="choose-name-input dropdown-toggle choose-name-btn add-kit-mode-ipt" data-toggle="dropdown" type="button" value="Name"
+								 style="width: 71%">
 								<span class="glyphicon glyphicon-play iotRotate"></span>
 								<ul class="dropdown-menu type-menu add-kit-ul" role="menu"></ul>
 							</div>
@@ -763,8 +765,7 @@
 						<div class="choose-name">
 							<div class="choose-name-box choose-name-position">
 								<span class="choose-name-text">Type: </span>
-								<input class="choose-name-input dropdown-toggle choose-name-btn" data-toggle="dropdown" type="button" value="Name"
-								 style="width: 71%">
+								<input class="choose-name-input dropdown-toggle choose-name-btn" data-toggle="dropdown" type="button" value="Name" style="width: 71%">
 								<span class="glyphicon glyphicon-play iotRotate"></span>
 								<ul class="dropdown-menu type-menu" role="menu">
 									<li class="actuators">
@@ -777,8 +778,7 @@
 							</div>
 							<div class="choose-type-select">
 								<span class="choose-type-text"></span>
-								<input class="choose-name-input choose-type-select-input dropdown-toggle" data-toggle="dropdown" type="button"
-								 placeholder="Name">
+								<input class="choose-name-input choose-type-select-input dropdown-toggle" data-toggle="dropdown" type="button" placeholder="Name">
 								<span class="glyphicon glyphicon-play iotRotate"></span>
 								<ul class="dropdown-menu input-menu" role="menu">
 
@@ -786,7 +786,7 @@
 							</div>
 							<div class="choose-name-box">
 								<span style="margin-left: 10px;" class="choose-name-text">Name: </span>
-								<input  class="choose-name-input iotName" type="text" placeholder="Name">
+								<input class="choose-name-input iotName" type="text" placeholder="Name">
 							</div>
 						</div>
 						<div class="show-image">
@@ -892,8 +892,7 @@
 						</div>
 					</li>
 					<li class="homeContent_sliderMenu_item" style="position:relative;">
-						<div class="homeContent_sliderMenu_item_icon dropdown-toggle" data-toggle="dropdown" id="set" aria-haspopup="true"
-						 aria-expanded="false">
+						<div class="homeContent_sliderMenu_item_icon dropdown-toggle" data-toggle="dropdown" id="set" aria-haspopup="true" aria-expanded="false">
 							<img src="./img/home_menu_white.png" alt="">
 							<img src="./img/home_menu_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_menu}</p>
@@ -923,14 +922,14 @@
 							<p class="homeContent_sliderMenu_item_text">%{home_new_project}</p>
 						</div>
 					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_tutorial" >
+					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_tutorial">
 						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('tutorialsProject')">
 							<img src="./img/home_tutorials_white.png" alt="">
 							<img src="./img/home_tutorials_orange.png" alt="" class="dis_none">
 							<p class="homeContent_sliderMenu_item_text">%{home_tutorial}</p>
 						</div>
 					</li>
-					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_example" >
+					<li class="homeContent_sliderMenu_item homeContent_sliderMenu_example">
 						<div class="homeContent_sliderMenu_item_icon" onclick="EzBlock.renderPage('examplesProject')">
 							<img src="./img/home_example_white.png" alt="">
 							<img src="./img/home_example_orange.png" alt="" class="dis_none">
@@ -1316,7 +1315,7 @@
 							<button onclick="Coding.platform.redo()">redo</button>
 							<button onclick="Coding.platform.findIptShow()">find</button>
 							<button onclick="Coding.platform.setKeyboard()" class="dis_none">keyborad</button>
-							<button onclick="Coding.platform.tab()" class="ace-tab-btn dis_none" >tab</button>
+							<button onclick="Coding.platform.tab()" class="ace-tab-btn dis_none">tab</button>
 							<select id="ace-selectheme" onchange="Coding.platform.setTheme()"></select>
 						</div>
 						<div class="hbox flex1">
@@ -1435,8 +1434,8 @@
 			<div class="clearfix debugTopic">
 				<button onclick="WebBLE.debugClear()">Clear</button>
 				<button onclick="WebBLE.expand()" class="toggleExpand">
-					<img src="./img/shrink.png" >
-					<img src="./img/expand.png" >
+					<img src="./img/shrink.png">
+					<img src="./img/expand.png">
 				</button>
 			</div>
 			<div class="getMessage remoteGetmessage">
@@ -1455,7 +1454,7 @@
 			</div>
 		</div>
 
-		<div class="dragfooter">
+		<div class="dragfooter hidden-xs">
 			<div class="clear margin">
 				<div class="flt">
 					<div>
@@ -1517,6 +1516,29 @@
 
 				</div>
 			</div>
+		</div>
+		<div class="dragfooter-xs visible-xs" style="background: rgb(255,202,75);">
+			<div class="text-align:center;">
+				<button>
+					<img src="./img/close-xs.png" alt="">
+				</button>
+				<button>
+					<img src="./img/IOT.png" alt="">
+				</button>
+				<button>
+					<img src="./img/电路.png" alt="">
+				</button>
+				<button>
+					<img src="./img/蓝牙遥控.png" alt="">
+				</button>
+				<button>
+					<img src="./img/蓝牙未连接.png" alt="">
+				</button>
+				<button>
+					<img src="./img/播放.png" alt="">
+				</button>
+			</div>
+
 		</div>
 		<div id="shadow">
 			<div class="loading"></div>

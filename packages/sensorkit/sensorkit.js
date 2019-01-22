@@ -118,9 +118,8 @@ var SensorKit = {
             'simulator': {
                 "type": "ValueInput",
                 "mode": 'toggle',
-                "initValue": 0,
+                "initValue": 1,
                 "pin": "SIG",
-
             },
             'pins': {
                 'SIG': {
