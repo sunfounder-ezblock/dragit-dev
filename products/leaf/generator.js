@@ -1,12 +1,3 @@
-/*
-  to do:
-  leaf:
-     --<>
-     --<>
-     --<>
-
-
- */
 'use strict';
 
 goog.provide('Blockly.Python.leaf');
