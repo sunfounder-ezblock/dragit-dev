@@ -16,6 +16,9 @@ Leaf.name = "Leaf";
 Leaf.kitName = "SensorKit For Leaf";
 Leaf.nameEn = "Leaf";
 Leaf.active = 'active';
+Leaf.libs = [
+    'sensorkit==v0.1',
+];
 Leaf.functions = [
 	"remote",
 	// "routing",

@@ -9,6 +9,9 @@ RaspberryPi.kits = {
     // 'sensorkit': SensorKit,
     // 'switchbot': SwitchBot,
 }
+RaspberryPi.libs = [
+    'sensorkit==v0.1',
+];
 RaspberryPi.name = 'Raspberry Pi';
 RaspberryPi.kitName = 'SensorKit For Pi';
 RaspberryPi.nameEn = 'Raspberry Pi';
