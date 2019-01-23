@@ -13,9 +13,9 @@ Lizard.functions = [
 ]
 
 Lizard.libs = [
-	'lizard.py',
-	'pw.py',
-	'robot.py',
+	'lizard==v0.1',
+	'pw==v0.1',
+	'robot==v0.1',
 ];
 
 Lizard.init = function () {

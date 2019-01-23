@@ -17,7 +17,7 @@ PiMobile.functions = [
 ]
 
 PiMobile.libs = [
-	// 'pimobile.py',
+	'pimobile==v0.1',
 ];
 
 PiMobile.init = function() {
