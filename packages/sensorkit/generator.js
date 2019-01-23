@@ -86,10 +86,11 @@ Blockly.Python['sensorkit_joystick_get_value'] = function(block) {
     var Xpin = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC);
     var Ypin = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC);
     var BTnpin = Blockly.Python.valueToCode(block, 'Btn', Blockly.Python.ORDER_ATOMIC);
+    var joystick = Blockly.Python.valueToCode(block, 'joystick', Blockly.Python.ORDER_ATOMIC);
     Blockly.Python.definitions_['import_sensorkit'] = 'from sensorkit import *';
 
     var code = '';
-    code += 'Joystick_get_value(' + Xpin + ', ' + Ypin + ', ' + BTnpin + ')';
+    code += 'Joystick_get_value(' + Xpin + ', ' + Ypin + ', ' + BTnpin + ', ' + joystick + ')';
     return [code, Blockly.Python.ORDER_ATOMIC];
 };
 

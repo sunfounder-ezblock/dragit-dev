@@ -45,6 +45,13 @@ Blockly.Constants.SensorKit.RGB = '#58ce6a';
 Blockly.Blocks.sensorkit.RGB = Blockly.Constants.SensorKit.RGB;
 
 
+Blockly.Constants.SensorKit.joystick = [
+    ['Y', '"0"'],
+    ['X', '"1"'],
+    ['Btn', '"2"'],
+];
+
+
 Blockly.Blocks.sensorkit_set_value = function(module) {
     return {
         init: function init() {
@@ -176,17 +183,19 @@ Blockly.Blocks['sensorkit_joystick_get_value'] = {
         this.appendValueInput("X")
             .setAlign(Blockly.ALIGN_RIGHT)
             .setCheck("Analog_Pin")
-            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_STATUS_TITLE1);
+            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_VALUE_TITLE1);
         this.appendValueInput("Y")
             .setAlign(Blockly.ALIGN_RIGHT)
             .setCheck("Analog_Pin")
-            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_STATUS_TITLE2);
+            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_VALUE_TITLE2);
         this.appendValueInput("Btn")
             .setAlign(Blockly.ALIGN_RIGHT)
             .setCheck("Digital_Pin")
-            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_STATUS_TITLE3);
+            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_VALUE_TITLE3);
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_VALUE_TITLE2);
+            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_VALUE_TITLE4)
+            .appendField(new Blockly.FieldDropdown(Blockly.Constants.SensorKit.joystick), 'joystick')
+            .appendField(Blockly.Msg.SENSORKIT_JOYSTICK_GET_VALUE_TITLE5);
         this.setInputsInline(true);
         this.setOutput(true, null);
         this.setColour(Blockly.Constants.SensorKit.RGB);
