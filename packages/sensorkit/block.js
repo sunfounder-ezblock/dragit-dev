@@ -49,7 +49,7 @@ Blockly.Blocks.sensorkit_set_value = function(module) {
     return {
         init: function init() {
             this.appendValueInput("SIG")
-                .setCheck('Digital_Pin', 'PWM_Pin')
+                .setCheck(['Digital_Pin', 'PWM_Pin'])
                 .appendField(Blockly.Msg['SENSORKIT_' + module + '_SET_VALUE_TITLE1']);
             this.appendValueInput("value").setCheck(null).appendField(Blockly.Msg['SENSORKIT_' + module + '_SET_VALUE_TITLE2']);
             this.setInputsInline(true);
@@ -101,7 +101,7 @@ Blockly.Blocks.sensorkit_analog_get_value = function(module) {
 Blockly.Blocks['sensorkit_led_module_set_value'] = {
     init: function init() {
         this.appendValueInput("SIG")
-            .setCheck("Digital_Pin", "PWM_Pin")
+            .setCheck(["PWM_Pin", "Digital_Pin"])
             .appendField(Blockly.Msg.SENSORKIT_LED_MODULE_SET_VALUE_TITLE1);
         this.appendValueInput("value")
             .setCheck("Number")
@@ -118,15 +118,15 @@ Blockly.Blocks['sensorkit_led_module_set_value'] = {
 Blockly.Blocks['sensorkit_rgb_set_value'] = {
     init: function() {
         this.appendValueInput("R")
-            .setCheck("PWM_Pin", "Digital_Pin")
+            .setCheck(["PWM_Pin", "Digital_Pin"])
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField(Blockly.Msg.SENSORKIT_RGB_SET_VALUE_TITLE1);
         this.appendValueInput("G")
-            .setCheck("PWM_Pin", "Digital_Pin")
+            .setCheck(["PWM_Pin", "Digital_Pin"])
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField(Blockly.Msg.SENSORKIT_RGB_SET_VALUE_TITLE2);
         this.appendValueInput("B")
-            .setCheck("PWM_Pin", "Digital_Pin")
+            .setCheck(["PWM_Pin", "Digital_Pin"])
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField(Blockly.Msg.SENSORKIT_RGB_SET_VALUE_TITLE3);
         this.appendValueInput("color")
