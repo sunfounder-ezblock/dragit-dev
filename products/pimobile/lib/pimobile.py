@@ -1,5 +1,6 @@
 # from pwm import PWM
 # from adc import ADC
+# from pin import Pin
 from raspberrypi import PWM， ADC, Pin
 import time
 
@@ -11,6 +12,9 @@ motor1 = PWM(4)
 motor2 = PWM(5)
 motor1_direction = Pin(23)
 motor2_direction = Pin(24)
+# next time use
+# forward_pins = [PWM(6), PWM(5)]
+# backward_pins = [PWM(7), PWM(4)]
 
 all_motors = [motor1, motor2]
 all_motors_direction = [motor1_direction, motor2_direction]
@@ -18,6 +22,7 @@ all_motors_direction = [motor1_direction, motor2_direction]
 for pin in all_motors:
     pin.period(PERIOD)
     pin.prescaler(PRESCALER)
+
 
 def get_distance(trig=17, echo=18):
     trig = Pin(trig)
@@ -51,21 +56,40 @@ def is_black(chn, references=300):
     else:
         return False
 
-def set_motor_speed(motor, speed):
+def set_motor_speed(motor, speed, value=0):
     motor -= 1
-    if speed > 0:
-        direction = 1
-    else:
-        direction = 0
+    if speed >= 0:
+        direction = 1 * motor_directions[motor]
+    elif speed < 0:
+        direction = -1 * motor_directions[motor]
     speed = abs(speed)
-    speed = speed / 4095 * 100
-    if direction > 0:
-        all_motors_direction[motor].high()
-        all_motors[motor].pulse_width(speed)
+    if value >= 0 and motor == 1:
+        speed = speed - value
+    elif value < 0 and motor ==0:
+        speed = speed - abs(value)
+    if speed != 0:
+        speed = int(speed / 100.0 *2048 ) + 2048
+    if direction < 0:
+        motor_direction_pins[motor].high()
+        motors_speed_pins[motor].pulse_width(speed)
     else:
-        
-        all_motors_direction[motor].low()
-        all_motors[motor].pulse_width(speed)
+        motor_direction_pins[motor].low()
+        motors_speed_pins[motor].pulse_width(speed)
+
+def Motor_speed_calibration(speed, value=0):
+    motor_direction_pins[0].high()
+    motors_speed_pins[0].pulse_width(speed)
+    
+    motor_direction_pins[1].low()
+    motors_speed_pins[1].pulse_width(speed)
+    return value
+
+def Motor_direction_calibration():
+    motor_direction_pins[0].high()
+    motors_speed_pins[0].pulse_width(3500)
+    
+    motor_direction_pins[1].low()
+    motors_speed_pins[1].pulse_width(3500)
 
     # forward_speed = speed if speed > 0 else 0
     # backward_speed = -speed if speed < 0 else 0
@@ -106,6 +130,10 @@ def set_motor_speed(motor, speed):
 #         print(r)
 
 
+# def test_motor():
+#     set_motor_speed(1, -4095)
+#     set_motor_speed(2, 4095)
+
 
 def test_all(value, dir):
     set_motor_speed(1, 0, 1)
@@ -115,20 +143,9 @@ def test_all(value, dir):
         try:
             value = int(value)
             set_motor_speed(2, value, dir)
-            set_motor_speed(1, value, dir)
+            set_motor_speed(1, value, -dir)
         except Exception as e:
             print(e)
         # set_motor_speed(2, value)
 
  
-
-# if __name__ == "__main__":
-#     while True:
-#         print(get_distance())
-#         print('')
-#         # value1 = get_line_value("A0")
-#         # value2 = get_line_value("A1")
-#         # print(value1)
-#         # print(value2)
-#         # print('')
-#         time.sleep(0.8)

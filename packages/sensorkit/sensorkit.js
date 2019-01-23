@@ -29,7 +29,7 @@ var SensorKit = {
                     'x': 0.3,
                     'y': 1,
                     'isSource': true,
-                    'property': ['din'],
+                    'property': ['din', 'pwm'],
                     'type': 'digital',
                 },
                 "VCC": {

@@ -101,7 +101,7 @@ Blockly.Blocks.sensorkit_analog_get_value = function(module) {
 Blockly.Blocks['sensorkit_led_module_set_value'] = {
     init: function init() {
         this.appendValueInput("SIG")
-            .setCheck("Digital_Pin")
+            .setCheck("Digital_Pin", "PWM_Pin")
             .appendField(Blockly.Msg.SENSORKIT_LED_MODULE_SET_VALUE_TITLE1);
         this.appendValueInput("value")
             .setCheck("Number")

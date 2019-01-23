@@ -95,10 +95,24 @@ Local['en'].RASPBERRYPI_SPI_TITLE2 = "device";
 Local['en'].RASPBERRYPI_SPI_TOOLTIP = "Read I2C";
 
 
-Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE1 = "PWM set pluse width value";
-Local['en'].RASPBERRYPI_SPI_TOOLTIP = "Set PWM pluse width value(0 ~ 4095).";
+Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE1 = "PWM set";
+Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE2 = "pluse width value";
+Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_TOOLTIP = "Set PWM pluse width value(0 ~ 4095).";
 
 
-Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM set pluse width precentage";
+Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM set";
+Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "pluse width precentage";
 Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2 = "%";
-Local['en'].RASPBERRYPI_SPI_TOOLTIP = "Set PWM pluse width precentage(0% ~ 100%).";
+Local['en'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP = "Set PWM pluse width precentage(0% ~ 100%).";
+
+Local['en'].RASPBERRYPI_PWM_FREQ_TITLE1 = "PWM set";
+Local['en'].RASPBERRYPI_PWM_FREQ_TITLE2 = "frequency to";
+Local['en'].RASPBERRYPI_PWM_FREQ_TOOLTIP = "Set PWM frequency value(HZ).";
+
+Local['en'].RASPBERRYPI_PWM_PRESCALER_TITLE1 = "PWM set";
+Local['en'].RASPBERRYPI_PWM_PRESCALER_TITLE2 = "prescaler to";
+Local['en'].RASPBERRYPI_PWM_PRESCALER_TOOLTIP = "Set PWM prescaler value.";
+
+Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE1 = "PWM set";
+Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE2 = "preiod to";
+Local['en'].RASPBERRYPI_PWM_PREIOD_TOOLTIP = "Set PWM preiod value.";
