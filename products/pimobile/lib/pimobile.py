@@ -73,8 +73,7 @@ def is_black(chn, references=300):
 #         all_motors_direction[motor].low()
 #         all_motors[motor].pulse_width(speed)
 
-def set_motor_speed(motor, speed):
-    value = Motor_speed_calibration()
+def set_motor_speed(motor, speed, value=0):
     motor -= 1
     if speed >= 0:
         direction = 1 * motor_directions[motor]
@@ -94,7 +93,7 @@ def set_motor_speed(motor, speed):
         motor_direction_pins[motor].low()
         motors_speed_pins[motor].pulse_width(speed)
 
-def Motor_speed_calibration(value=0):
+def Motor_speed_calibration(speed, value=0):
     motor_direction_pins[0].high()
     motors_speed_pins[0].pulse_width(speed)
     
