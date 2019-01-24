@@ -44,6 +44,12 @@ Blockly.Constants.PiMobile.motor_select = [
     ["Motor2", '2'],
 ];
 
+Blockly.Constants.PiMobile.motor_direction_calibration = [
+    ["normal", '0'],
+    ["motor1-reverse", '1'],
+    ["motor2-reverse", '2'],
+];
+
 
 
 // ---- pimobile constants blocks ---- //

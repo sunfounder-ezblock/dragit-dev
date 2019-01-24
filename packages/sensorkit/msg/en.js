@@ -27,20 +27,23 @@ Local['en'].SENSORKIT_BUZZER_SET_STATUS_TITLE2 = "play";
 Local['en'].SENSORKIT_BUZZER_SET_STATUS_TITLE3 = "for";
 Local['en'].SENSORKIT_BUZZER_SET_STATUS_TOOLTIP = "Buzzer play note for a beat";
 
-Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE1 = "Joystick get";
-Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE2 = "value";
+Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE1 = "Joystick get Y";
+Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE2 = "X";
+Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE3 = "Btn";
+Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE4 = "get";
+Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TITLE5 = "value";
 Local['en'].SENSORKIT_JOYSTICK_GET_VALUE_TOOLTIP = "Get joystick value";
 
 Local['en'].SENSORKIT_JOYSTICK_GET_STATUS_TITLE1 = "Joystick get status  X";
 Local['en'].SENSORKIT_JOYSTICK_GET_STATUS_TITLE2 = "Y";
-Local['en'].SENSORKIT_JOYSTICK_GET_STATUS_TITLE3 = "BT";
+Local['en'].SENSORKIT_JOYSTICK_GET_STATUS_TITLE3 = "Btn";
 Local['en'].SENSORKIT_JOYSTICK_GET_STATUS_TOOLTIP = "Get joystick status";
 
-Local['en'].SENSORKIT_POTENTIOMETER_GET_VALUE_TITLE1 = "Pot['en']tiometer get";
+Local['en'].SENSORKIT_POTENTIOMETER_GET_VALUE_TITLE1 = "Potentiometer get";
 Local['en'].SENSORKIT_POTENTIOMETER_GET_VALUE_TITLE2 = "value";
-Local['en'].SENSORKIT_POTENTIOMETER_GET_VALUE_TOOLTIP = "Get pot['en']tiometer analog value.";
+Local['en'].SENSORKIT_POTENTIOMETER_GET_VALUE_TOOLTIP = "Get potentiometer analog value.";
 
-Local['en'].SENSORKIT_SOUNDSENSOR_GET_VALUE_TITLE1 = "Sound s['en']sor get";
+Local['en'].SENSORKIT_SOUNDSENSOR_GET_VALUE_TITLE1 = "Sound sensor get";
 Local['en'].SENSORKIT_SOUNDSENSOR_GET_VALUE_TITLE2 = "value";
 Local['en'].SENSORKIT_SOUNDSENSOR_GET_VALUE_TOOLTIP = "Get sound analog value.";
 
@@ -64,9 +67,9 @@ Local['en'].SENSORKIT_SERVO_SET_ANGLE_TITLE1 = "Servo set ";
 Local['en'].SENSORKIT_SERVO_SET_ANGLE_TITLE2 = "angle";
 Local['en'].SENSORKIT_SERVO_SET_ANGLE_TOOLTIP = "Set servo angle";
 
-Local['en'].SENSORKIT_MOISTURE_SENSOR_GET_VALUE_TITLE1 = "Moisture s['en']sor get";
+Local['en'].SENSORKIT_MOISTURE_SENSOR_GET_VALUE_TITLE1 = "Moisture sensor get";
 Local['en'].SENSORKIT_MOISTURE_SENSOR_GET_VALUE_TITLE2 = "value";
-Local['en'].SENSORKIT_MOISTURE_SENSOR_GET_VALUE_TOOLTIP = "Get moisture s['en']sor value";
+Local['en'].SENSORKIT_MOISTURE_SENSOR_GET_VALUE_TOOLTIP = "Get moisture sensor value";
 
 Local['en'].SENSORKIT_ADXL345_GET_VALUE_TITLE1 = "ADXL345 get value";
 Local['en'].SENSORKIT_ADXL345_GET_VALUE_TOOLTIP = "Get ADXL345 value";
