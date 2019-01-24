@@ -81,7 +81,7 @@ SensorKit.simulator.RGBLED_set_value = function(Rpin, Gpin, Bpin, color, common)
     for (var i = 0; i < 3; i++) {
         val[i] = val[i] / 255.0 * 4095.0; // 0 - 255 map 0 - 4095
     }
-    if (common == 1) {; // common anode
+    if (common == 1) { // common anode
         R_val = 4095 - val[0];
         G_val = 4095 - val[1];
         B_val = 4095 - val[2];
@@ -247,9 +247,9 @@ Blockly.JavaScript['sensorkit_adxl345_get_value'] = function(block) {
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-
+/*
 //bottom function
-LEDModule_set_value = function(pin, value) {
+seLEDModule_set_value = function(pin, value) {
     if (pin.slice(0, 1) == "D") {
         var pin = Pin(pin)
         pin.value(value)
@@ -284,26 +284,57 @@ RGBLED_set_value = function(Rpin, Gpin, Bpin, color, common = 1) {
 
 };
 
-Button_get_value = function(pin) {
-    var pin = Pin(pin)
-    var value = pin.value()
-    if (value == 1) {
-        value = 0
-    } else {
-        value = 1
-    }
-    return value
-};
 
-Buzzer_play = function(pin, note, beat) {
-    var pwm = PWM(pin)
+
+
+SensorKit.simulator.Button_get_value = function(pin) {
+    pin = pin.toString();
+    pin = Pin(pin);
+    var value = pin.value();
+    if (value == 1) {
+        value = 0;
+    } else {
+        value = 1;
+    }
+    return value;
+}
+Simulator.interpreterFunctions['Button_get_value'] = {
+    name: "Button_get_value",
+    type: "createNativeFunction",
+    func: function(pin) {
+        SensorKit.simulator.Button_get_value(pin);
+    },
+}
+
+
+
+
+SensorKit.simulator.Buzzer_play = function(pin, note, beat) {
+    pin = pin.toString();
+    note = note.toString();
+    beat = pin.
+    var pwm = PWM(pin);
     pwm.freq(note)
-    pwm.pulse_width_percentage(50)
-    delay(beat) // 延时，eg：500毫秒
-    pwm.pulse_width_percentage(0)
-};
+    pwm.pulse_width_percentage(50);
+    delay(beat);
+    pwm.pulse_width_percentage(0);
+}
 
-TiltSwitch_get_value = function(pin) {
+Simulator.interpreterFunctions['Buzzer_play'] = {
+    name: "Buzzer_play",
+    type: "createNativeFunction",
+    func: function(pin, note, beat) {
+        SensorKit.simulator.Buzzer_play(pin, note, beat);
+    },
+}
+
+
+
+
+
+
+SensorKit.simulator.TiltSwitch_get_value = function(pin) {
+    pin = 
     var pin = Pin(pin)
     var value = pin.value()
     if (value == 1) {
@@ -313,6 +344,18 @@ TiltSwitch_get_value = function(pin) {
     }
     return value
 };
+
+Simulator.interpreterFunctions['Buzzer_play'] = {
+    name: "TiltSwitch_get_value",
+    type: "createNativeFunction",
+    func: function(pin) {
+        SensorKit.simulator.TiltSwitch_get_value(pin);
+    },
+}
+
+
+
+
 
 MoistureSensor_get_value = function(pin) {
     var adc = ADC(pin)
@@ -449,3 +492,5 @@ TouchSwitch_get_value = function(pin) {
     var value = pin.value()
     return value
 };
+
+*/
