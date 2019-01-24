@@ -177,7 +177,15 @@ Blockly.Blocks['pimobile_motor'] = {
             .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE1)
             .appendField(new Blockly.FieldDropdown(Blockly.Constants.PiMobile.motor_select), "motor")
             .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE2);
+<<<<<<< HEAD
         this.setInputsInline(true);
+=======
+        // this.appendValueInput("value")
+        //     .setCheck("Number")
+        //     .setAlign(Blockly.ALIGN_RIGHT)
+        //     .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE3);
+        this.setInputsInline(false);
+>>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.PiMobile.RGB);

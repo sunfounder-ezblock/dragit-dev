@@ -96,12 +96,12 @@ Blockly.Python['pimobile_motor'] = function(block) {
     // var motor = Blockly.Python.valueToCode(block, 'motor', Blockly.Python.ORDER_ATOMIC);
 
     var motor = block.getFieldValue('motor');
-    var value = Blockly.Python.valueToCode(block, 'value', Blockly.Python.ORDER_ATOMIC);
+    var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
 
     Blockly.Python.definitions_['import_pimobile'] = 'import pimobile';
 
     var code = ' ';
-    code = 'pimobile.set_motor_speed(' + motor + ', ' + value + ')\n';
+    code = 'pimobile.set_motor_speed(' + motor + ', ' + speed + ')\n';
     return code;
 };
 

@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 # from pwm import PWM
 # from adc import ADC
 # from pin import Pin
 from raspberrypi import PWM,  ADC, Pin
+=======
+from raspberrypi import PWM, ADC, Pin
+>>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
 import time
 
 PERIOD = 4095
@@ -18,7 +22,11 @@ motor_speed_pins = [motor1_pwm_pin, motor2_pwm_pin]
 cali_dir_value = [1, -1]
 cali_speed_value = [0, 0]
 
+<<<<<<< HEAD
 for pin in motor_speed_pins:
+=======
+for pin in motors_speed_pins:
+>>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
     pin.period(PERIOD)
     pin.prescaler(PRESCALER)
 
@@ -62,8 +70,12 @@ def set_motor_speed(motor, speed):
         direction = -1 * cali_dir_value[motor]
     speed = abs(speed)
     if speed != 0:
+<<<<<<< HEAD
         speed = int(speed / 100.0 *2048 ) + 2048
     speed = speed - cali_speed_value[motor]
+=======
+        speed = int(speed / 100.0 * 2048 ) + 2048
+>>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
     if direction < 0:
         motor_direction_pins[motor].high()
         motor_speed_pins[motor].pulse_width(speed)
