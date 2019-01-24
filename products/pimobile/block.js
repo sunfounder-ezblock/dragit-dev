@@ -180,10 +180,10 @@ Blockly.Blocks['pimobile_motor'] = {
             .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE1)
             .appendField(new Blockly.FieldDropdown(Blockly.Constants.PiMobile.motor_select), "motor")
             .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE2);
-        this.appendValueInput("value")
-            .setCheck("Number")
-            .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE3);
+        // this.appendValueInput("value")
+        //     .setCheck("Number")
+        //     .setAlign(Blockly.ALIGN_RIGHT)
+        //     .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE3);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);

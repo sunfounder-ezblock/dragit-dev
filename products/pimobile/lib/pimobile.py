@@ -1,7 +1,4 @@
-# from pwm import PWM
-# from adc import ADC
-# from pin import Pin
-from raspberrypi import PWM， ADC, Pin
+from raspberrypi import PWM, ADC, Pin
 import time
 
 PERIOD = 4095
@@ -17,7 +14,7 @@ motor_directions = [1, -1]
 motor_direction_pins = [motor1_direction, motor2_direction]
 motors_speed_pins = [motor1_speed, motor2_speed]
 
-for pin in all_motors:
+for pin in motors_speed_pins:
     pin.period(PERIOD)
     pin.prescaler(PRESCALER)
 
@@ -54,19 +51,15 @@ def is_black(chn, references=300):
     else:
         return False
 
-def set_motor_speed(motor, speed, value=0):
+def set_motor_speed(motor, speed):
     motor -= 1
     if speed >= 0:
         direction = 1 * motor_directions[motor]
     elif speed < 0:
         direction = -1 * motor_directions[motor]
     speed = abs(speed)
-    if value >= 0 and motor == 1:
-        speed = speed - value
-    elif value < 0 and motor ==0:
-        speed = speed - abs(value)
     if speed != 0:
-        speed = int(speed / 100.0 *2048 ) + 2048
+        speed = int(speed / 100.0 * 2048 ) + 2048
     if direction < 0:
         motor_direction_pins[motor].high()
         motors_speed_pins[motor].pulse_width(speed)
