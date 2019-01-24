@@ -70,12 +70,8 @@ def set_motor_speed(motor, speed):
         direction = -1 * cali_dir_value[motor]
     speed = abs(speed)
     if speed != 0:
-<<<<<<< HEAD
         speed = int(speed / 100.0 *2048 ) + 2048
     speed = speed - cali_speed_value[motor]
-=======
-        speed = int(speed / 100.0 * 2048 ) + 2048
->>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
     if direction < 0:
         motor_direction_pins[motor].high()
         motor_speed_pins[motor].pulse_width(speed)
