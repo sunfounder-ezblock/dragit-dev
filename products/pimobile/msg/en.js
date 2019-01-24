@@ -29,7 +29,7 @@ Local['en'].PIMOBILE_ULTARSONIC_DISTANCE_TITLE3 = "Echo";
 Local['en'].PIMOBILE_ULTARSONIC_TOOLTIP = "Get ultarsonic value";
 
 
-Local['en'].PIMOBILE_MOTOR_TITLE1 = "Set motor";
+Local['en'].PIMOBILE_MOTOR_TITLE1 = "Motor set";
 Local['en'].PIMOBILE_MOTOR_TITLE2 = "speed to";
 Local['en'].PIMOBILE_MOTOR_TITLE3 = "calibration value to";
 Local['en'].PIMOBILE_MOTOR_TOOLTIP = "Set motor speed (-100 ~ 100). Negative values represent backwards, \
@@ -38,15 +38,13 @@ Local['en'].PIMOBILE_MOTOR_TOOLTIP = "Set motor speed (-100 ~ 100). Negative val
 
 
 
-Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1 = "Motor direction cailbration"
-Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TOOLTIP = "Set the speed of the car and adjust the speed difference \
-                                                        between the two wheels to make the car go straight.";
+Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1 = "Motor set"
+Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE2 = "direction to"
+Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TOOLTIP = "The correct direction is 0; The direction error is 1.";
 
 
 
-Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE1 = "Motor speed"
-Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE2 = "calibration value"
-Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TOOLTIP = "Set the speed of the car and adjust the speed difference \
-                                                        between the two wheels to make the car go straight.\
-                                                        Speed range 0~100. Calibration value: positive value reduces left \
-                                                        wheel speed,negative value reduces right wheel speed.";
+Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE1 = "Motor set speed calibration value"
+Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE2 = ""
+Local['en'].PIMOBILE_MOTOR_SPEED_CALIBRATION_TOOLTIP = " Calibration value: positive value reduces left wheel speed,\
+                                                            negative value reduces right wheel speed.range(-100~100)";

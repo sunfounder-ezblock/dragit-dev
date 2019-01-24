@@ -44,12 +44,6 @@ Blockly.Constants.PiMobile.motor_select = [
     ["Motor2", '2'],
 ];
 
-Blockly.Constants.PiMobile.motor_direction_calibration = [
-    ["normal", '0'],
-    ["motor1-reverse", '1'],
-    ["motor2-reverse", '2'],
-];
-
 
 
 // ---- pimobile constants blocks ---- //
@@ -112,17 +106,20 @@ Blockly.Blocks['pimobile_pwm_pin'] = {
     }
 };
 
-Blockly.Blocks['pimobile_line'] = {
-    init: function() {
-        this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown(Blockly.Constants.PiMobile.Line_follower_channel), "line_follower");
-        this.setInputsInline(true);
-        this.setOutput(true, "LINE");
-        this.setColour(Blockly.Constants.PiMobile.RGB);
-        this.setTooltip(Blockly.Msg.PIMOBILE_LINE_TOOLTIP);
-        this.setHelpUrl('');
-    }
-};
+// Blockly.Blocks['pimobile_line'] = {
+//     init: function() {
+//         this.appendDummyInput()
+//             .appendField(new Blockly.FieldDropdown(Blockly.Constants.PiMobile.Line_follower_channel), "line_follower");
+//         this.setInputsInline(true);
+//         this.setOutput(true, "LINE");
+//         this.setColour(Blockly.Constants.PiMobile.RGB);
+//         this.setTooltip(Blockly.Msg.PIMOBILE_LINE_TOOLTIP);
+//         this.setHelpUrl('');
+//     }
+// };
+
+
+
 
 Blockly.Blocks['pimobile_motor_select'] = {
     init: function() {
@@ -136,20 +133,20 @@ Blockly.Blocks['pimobile_motor_select'] = {
     }
 };
 // ---- pimobile constants blocks ---- //
-Blockly.Blocks['pimobile_line_follower'] = {
-    init: function() {
-        this.appendValueInput("line")
-            .setCheck("LINE")
-            .appendField(Blockly.Msg.PIMOBILE_LINE_FOLLOWER_TITLE1);
-        this.appendDummyInput()
-            .appendField(Blockly.Msg.PIMOBILE_LINE_FOLLOWER_TITLE2);
-        this.setInputsInline(true);
-        this.setOutput(true, "Number");
-        this.setColour(Blockly.Constants.PiMobile.RGB);
-        this.setTooltip(Blockly.Msg.PIMOBILE_LINE_FOLLOWER_TOOLTIP);
-        this.setHelpUrl('');
-    }
-};
+// Blockly.Blocks['pimobile_line_follower'] = {
+//     init: function() {
+//         this.appendValueInput("line")
+//             .setCheck(null)
+//             .appendField(Blockly.Msg.PIMOBILE_LINE_FOLLOWER_TITLE1);
+//         this.appendDummyInput()
+//             .appendField(Blockly.Msg.PIMOBILE_LINE_FOLLOWER_TITLE2);
+//         this.setInputsInline(true);
+//         this.setOutput(true, "Number");
+//         this.setColour(Blockly.Constants.PiMobile.RGB);
+//         this.setTooltip(Blockly.Msg.PIMOBILE_LINE_FOLLOWER_TOOLTIP);
+//         this.setHelpUrl('');
+//     }
+// };
 
 Blockly.Blocks['pimobile_ultarsonic_distance'] = {
     init: function() {
@@ -180,11 +177,7 @@ Blockly.Blocks['pimobile_motor'] = {
             .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE1)
             .appendField(new Blockly.FieldDropdown(Blockly.Constants.PiMobile.motor_select), "motor")
             .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE2);
-        this.appendValueInput("value")
-            .setCheck("Number")
-            .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(Blockly.Msg.PIMOBILE_MOTOR_TITLE3);
-        this.setInputsInline(false);
+        this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.PiMobile.RGB);
@@ -197,26 +190,27 @@ Blockly.Blocks['pimobile_motor_direction_calibration'] = {
     init: function() {
         this.appendDummyInput()
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(Blockly.Msg.PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1);
+            .appendField(Blockly.Msg.PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1)
+            .appendField(new Blockly.FieldDropdown(Blockly.Constants.PiMobile.motor_select), "motor");
+        this.appendValueInput("value")
+            .setCheck("Number")
+            .appendField(Blockly.Msg.PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE2);
+        this.setInputsInline(true);
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.PiMobile.RGB);
         this.setTooltip(Blockly.Msg.PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TOOLTIP);
         this.setHelpUrl('');
-
     }
 };
 
 
 Blockly.Blocks['pimobile_motor_speed_calibration'] = {
     init: function() {
-        this.appendValueInput("speed")
-            .setCheck(null)
-            .appendField(Blockly.Msg.PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE1);
         this.appendValueInput("value")
             .setCheck(null)
-            .appendField(Blockly.Msg.PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE2);
+            .appendField(Blockly.Msg.PIMOBILE_MOTOR_SPEED_CALIBRATION_TITLE1);
         this.setInputsInline(true);
         this.setOutput(true, "Number");
         this.setColour(Blockly.Constants.PiMobile.RGB);

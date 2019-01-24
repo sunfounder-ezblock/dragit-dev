@@ -43,12 +43,12 @@ PiMobile.toolboxText =
     '      </value>' +
     '    </block>' +
 
-    '    <block type="pimobile_line_follower"> ' +
-    '    <value name="line"> ' +
-    '        <shadow type="pimobile_line"> ' +
-    '        </shadow> ' +
-    '    </value> ' +
-    '    </block> ' +
+    // '    <block type="pimobile_line_follower"> ' +
+    // '    <value name="line"> ' +
+    // '        <shadow type="pimobile_line"> ' +
+    // '        </shadow> ' +
+    // '    </value> ' +
+    // '    </block> ' +
     '    <block type="pimobile_ultarsonic_distance"> ' +
     '        <value name="Triq"> ' +
     '        <shadow type="raspberrypi_digital_pin"> ' +
@@ -63,17 +63,17 @@ PiMobile.toolboxText =
     '    <block type="pimobile_motor"> ' +
     '        <value name="speed"> ' +
     '            <shadow type="math_number"> ' +
-    '                <field name="NUM">4095</field> ' +
-    '            </shadow> ' +
-    '        </value> ' +
-    '        <value name="value"> ' +
-    '            <shadow type="math_number"> ' +
-    '                <field name="NUM">0</field> ' +
+    '                <field name="NUM">75</field> ' +
     '            </shadow> ' +
     '        </value> ' +
     '    </block> ' +
 
-    '   <block type="pimobile_motor_direction_calibration"></block>' +
+    '   <block type="pimobile_motor_direction_calibration"> ' +
+    '        <value name="value"> ' +
+    '        <shadow type="math_number"> ' +
+    '        </shadow> ' +
+    '        </value> ' +
+    '    </block>' +
 
     '   <block type="pimobile_motor_speed_calibration"> ' +
     '       <value name="speed"> ' +
