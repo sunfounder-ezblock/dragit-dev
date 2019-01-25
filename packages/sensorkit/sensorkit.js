@@ -552,6 +552,13 @@ var SensorKit = {
                 '</block> '
             ],
             'img': 'servo-sensor.png',
+            'simulator': {
+                "type": "ValueOutput",
+                "mode": 'rotation',
+                "inputRange": '102=511',
+                "outputRange": '-90=90',
+                "pin": "SIG",
+            },
             'pins': [{
                 'id': 0,
                 'name': 'SIG',
