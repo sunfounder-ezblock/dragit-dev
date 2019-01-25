@@ -19,5 +19,10 @@ RaspberryPi.examples.block['Blink LED'] = {
 }
 
 RaspberryPi.examples.block['Breath LED'] = {
-    "name": 'Breath LED'
+    "name": 'Breath LED',
+    "project": {
+        "name": "",
+        "dateTime": "",
+        "device": "raspberrypi", "platform": "blockcode", "code": { "code": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>", "libs": {} }, "readOnly": false, "datetime": 1548381077631, "route": { "device": { "x": "50%", "y": "50%", "id": "_0" }, "currentModules": {} }, "remote": {}, "iot": [], "kits": ""
+    }
 }
