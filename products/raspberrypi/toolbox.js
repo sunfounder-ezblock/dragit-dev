@@ -231,6 +231,24 @@ RaspberryPi.toolboxText =
     '        </value>' +
     '    </block>' +
 
+    '    <block type="raspberrypi_send_mail">' +
+    '      <value name="email">' +
+    '        <shadow type="text">' +
+    '          <field name="TEXT">xxx@xxx.com</field>' +
+    '        </shadow>' +
+    '      </value>' +
+    '      <value name="object">' +
+    '        <shadow type="text">' +
+    '          <field name="TEXT">flower</field>' +
+    '        </shadow>' +
+    '      </value>' +
+    '      <value name="thing">' +
+    '        <shadow type="text">' +
+    '          <field name="TEXT">watering</field>' +
+    '        </shadow>' +
+    '      </value>' +
+    '    </block>' +
+
 
     '  </category>' +
 

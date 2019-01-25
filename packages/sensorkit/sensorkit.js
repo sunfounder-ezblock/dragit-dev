@@ -589,7 +589,7 @@ var SensorKit = {
                 'x': 0.3,
                 'y': 1,
                 'isSource': true,
-                'property': ['din'],
+                'property': ['ain'],
                 'type': 'analog'
             }, {
                 'id': 1,

@@ -313,17 +313,22 @@ Blockly.Blocks['sensorkit_adxl345_get_value'] = {
     }
 };
 
-// Blockly.Blocks['sensorkit_adxl345_get_value'] = {
+// Blockly.Blocks['sensorkit_send_mail'] = {
 //     init: function init() {
-//         this.appendValueInput("pin")
-//             .setCheck("Digital_Pin")
-//             .appendField(Blockly.Msg.SENSORKIT_ADXL345_GET_VALUE_TITLE1);
-//         this.appendDummyInput()
-//             .appendField(Blockly.Msg.SENSORKIT_ADXL345_GET_VALUE_TITLE2);
-//         this.setInputsInline(true);
-//         this.setOutput(true, null);
+//         this.appendValueInput("email")
+//             .setCheck(null)
+//             .appendField(Blockly.Msg.SENSORKIT_SEND_EMAIL_TITLE1);
+//         this.appendValueInput("object")
+//             .setCheck(null)
+//             .appendField(Blockly.Msg.SENSORKIT_SEND_EMAIL_TITLE2);
+//         this.appendValueInput("todo")
+//             .setCheck(null)
+//             .appendField(Blockly.Msg.SENSORKIT_SEND_EMAIL_TITLE3);
+//         this.setInputsInline(false);
+//         this.setPreviousStatement(true, null);
+//         this.setNextStatement(true, null);
 //         this.setColour(Blockly.Constants.SensorKit.RGB);
-//         this.setTooltip(Blockly.Msg.SENSORKIT_ADXL345_GET_VALUE_TOOLTIP);
+//         this.setTooltip(Blockly.Msg.SENSORKIT_SEND_EMAIL_TOOLTIP);
 //         this.setHelpUrl('');
 //     }
 // };

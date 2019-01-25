@@ -49,7 +49,6 @@ Simulator.interpreterFunctions['LEDModule_set_value'] = {
     },
 }
 
-
 Blockly.JavaScript['sensorkit_rgb_set_value'] = function(block) {
     var pin_r = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_g = Blockly.JavaScript.valueToCode(block, 'G', Blockly.JavaScript.ORDER_ATOMIC);

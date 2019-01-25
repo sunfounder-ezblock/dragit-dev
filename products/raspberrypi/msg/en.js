@@ -116,3 +116,9 @@ Local['en'].RASPBERRYPI_PWM_PRESCALER_TOOLTIP = "Set PWM prescaler value.";
 Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE1 = "PWM set";
 Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE2 = "preiod to";
 Local['en'].RASPBERRYPI_PWM_PREIOD_TOOLTIP = "Set PWM preiod value.";
+
+
+Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Send mail to";
+Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "about object";
+Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE3 = "and thing";
+Local['en'].RASPBERRYPI_SEND_EMAIL_TOOLTIP = "Ezblock reminds you: Your 'object' needs “to do”";

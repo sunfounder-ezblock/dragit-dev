@@ -436,100 +436,28 @@ Blockly.Blocks['raspberrypi_freq'] = Blockly.Blocks.raspberrypi_pwm('FREQ');
 Blockly.Blocks['raspberrypi_prescaler'] = Blockly.Blocks.raspberrypi_pwm('PRESCALER');
 Blockly.Blocks['raspberrypi_preiod'] = Blockly.Blocks.raspberrypi_pwm('PREIOD');
 
-// Blockly.Blocks['raspberrypi_pwm_pulse_width'] = {
-//     init: function() {
-//         this.appendValueInput('SIG')
-//             .setCheck('PWM_Pin')
-//             .setAlign(Blockly.ALIGN_RIGHT)
-//             .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_TITLE1);
-//         this.appendValueInput('value')
-//             .setCheck('Number')
-//             .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_TITLE2);
-//         this.setInputsInline(true);
-//         this.setPreviousStatement(true, null);
-//         this.setNextStatement(true, null);
-//         this.setColour(Blockly.Constants.RaspberryPi.RGB);
-//         this.setTooltip(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_TOOLTIP);
-//         this.setHelpUrl('');
-//     }
-// };
 
-// Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = {
-//     init: function() {
-//         this.appendValueInput('SIG')
-//             .setCheck('PWM_Pin')
-//             .setAlign(Blockly.ALIGN_RIGHT)
-//             .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1);
-//         this.appendValueInput('value')
-//             .setCheck('Number')
-//             .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2);
-//         this.appendDummyInput()
-//             .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE3);
-//         this.setInputsInline(true);
-//         this.setPreviousStatement(true, null);
-//         this.setNextStatement(true, null);
-//         this.setColour(Blockly.Constants.RaspberryPi.RGB);
-//         this.setTooltip(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP);
-//         this.setHelpUrl('');
-//     }
-// };
+//send mail
 
-// Blockly.Blocks['raspberrypi_freq'] = {
-//     init: function() {
-//         this.appendValueInput('SIG')
-//             .setCheck('PWM_Pin')
-//             .setAlign(Blockly.ALIGN_RIGHT)
-//             .appendField(Blockly.Msg.RASPBERRYPI_FREQ_TITLE1);
-//         this.appendValueInput('value')
-//             .setCheck('Number')
-//             .appendField(Blockly.Msg.RASPBERRYPI_FREQ_TITLE2);
-//         this.appendDummyInput()
-//             .appendField(Blockly.Msg.RASPBERRYPI_FREQ_TITLE3);
-//         this.setInputsInline(true);
-//         this.setPreviousStatement(true, null);
-//         this.setNextStatement(true, null);
-//         this.setColour(Blockly.Constants.RaspberryPi.RGB);
-//         this.setTooltip(Blockly.Msg.RASPBERRYPI_FREQ_TOOLTIP);
-//         this.setHelpUrl('');
-//     }
-// };
-
-// Blockly.Blocks['raspberrypi_prescaler'] = {
-//     init: function() {
-//         this.appendValueInput('SIG')
-//             .setCheck('PWM_Pin')
-//             .setAlign(Blockly.ALIGN_RIGHT)
-//             .appendField(Blockly.Msg.RASPBERRYPI_PRESCALER_TITLE1);
-//         this.appendValueInput('value')
-//             .setCheck('Number')
-//             .appendField(Blockly.Msg.RASPBERRYPI_PRESCALER_TITLE2);
-//         this.appendDummyInput()
-//             .appendField(Blockly.Msg.RASPBERRYPI_PRESCALER_TITLE3);
-//         this.setInputsInline(true);
-//         this.setPreviousStatement(true, null);
-//         this.setNextStatement(true, null);
-//         this.setColour(Blockly.Constants.RaspberryPi.RGB);
-//         this.setTooltip(Blockly.Msg.RASPBERRYPI_PRESCALER_TOOLTIP);
-//         this.setHelpUrl('');
-//     }
-// };
-
-// Blockly.Blocks['raspberrypi_period'] = {
-//     init: function() {
-//         this.appendValueInput('SIG')
-//             .setCheck('PWM_Pin')
-//             .setAlign(Blockly.ALIGN_RIGHT)
-//             .appendField(Blockly.Msg.RASPBERRYPI_PREIOD_TITLE1);
-//         this.appendValueInput('value')
-//             .setCheck('Number')
-//             .appendField(Blockly.Msg.RASPBERRYPI_PREIOD_TITLE2);
-//         this.appendDummyInput()
-//             .appendField(Blockly.Msg.RASPBERRYPI_PREIOD_TITLE3);
-//         this.setInputsInline(true);
-//         this.setPreviousStatement(true, null);
-//         this.setNextStatement(true, null);
-//         this.setColour(Blockly.Constants.RaspberryPi.RGB);
-//         this.setTooltip(Blockly.Msg.RASPBERRYPI_PREIOD_TOOLTIP);
-//         this.setHelpUrl('');
-//     }
-// };
+Blockly.Blocks['raspberrypi_send_mail'] = {
+    init: function init() {
+        this.appendValueInput("email")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE1);
+        this.appendValueInput("object")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE2);
+        this.appendValueInput("thing")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE3);
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
