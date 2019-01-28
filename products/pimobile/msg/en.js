@@ -38,7 +38,7 @@ Local['en'].PIMOBILE_MOTOR_TOOLTIP = "Set motor speed (-100 ~ 100). Negative val
 
 
 
-Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1 = "Motor set"
+Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE1 = "Motor calibration"
 Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TITLE2 = "direction to"
 Local['en'].PIMOBILE_MOTOR_DIRECTION_CALIBRATION_TOOLTIP = "The correct direction is 0; The direction error is 1.";
 
