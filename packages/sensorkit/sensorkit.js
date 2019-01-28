@@ -20,7 +20,9 @@ var SensorKit = {
             'simulator': {
                 "type": "ValueOutput",
                 "onHigh": "module-led_on.png",
-                "onLow": "module-led_off.png"
+                "onLow": "module-led_off.png",
+                "pin": "SIG",
+                "mode": "opacity",
             },
             'pins': {
                 "SIG": {
