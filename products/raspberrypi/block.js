@@ -461,3 +461,51 @@ Blockly.Blocks['raspberrypi_send_mail'] = {
         this.setHelpUrl('');
     }
 };
+
+Blockly.Blocks['raspberrypi_send_mail'] = {
+    init: function init() {
+        this.appendValueInput("email")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE1);
+        this.appendValueInput("object")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE2);
+        this.appendValueInput("thing")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE3);
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
+
+
+Blockly.Constants.RaspberryPi.value = [
+    ['ON', '1'],
+    ['OFF', '2'],
+];
+
+Blockly.Blocks['switchbot_s1_get_value'] = {
+    init: function init() {
+        this.appendValueInput("mac")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SWITCHBOT_S1_TITLE1);
+        this.appendDummyInput()
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SWITCHBOT_S1_TITLE2)
+            .appendField(new Blockly.FieldDropdown(Blockly.Constants.RaspberryPi.value), "value");
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_SWITCHBOT_S1_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};

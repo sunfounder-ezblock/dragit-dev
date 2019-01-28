@@ -312,23 +312,3 @@ Blockly.Blocks['sensorkit_adxl345_get_value'] = {
         this.setHelpUrl('');
     }
 };
-
-// Blockly.Blocks['sensorkit_send_mail'] = {
-//     init: function init() {
-//         this.appendValueInput("email")
-//             .setCheck(null)
-//             .appendField(Blockly.Msg.SENSORKIT_SEND_EMAIL_TITLE1);
-//         this.appendValueInput("object")
-//             .setCheck(null)
-//             .appendField(Blockly.Msg.SENSORKIT_SEND_EMAIL_TITLE2);
-//         this.appendValueInput("todo")
-//             .setCheck(null)
-//             .appendField(Blockly.Msg.SENSORKIT_SEND_EMAIL_TITLE3);
-//         this.setInputsInline(false);
-//         this.setPreviousStatement(true, null);
-//         this.setNextStatement(true, null);
-//         this.setColour(Blockly.Constants.SensorKit.RGB);
-//         this.setTooltip(Blockly.Msg.SENSORKIT_SEND_EMAIL_TOOLTIP);
-//         this.setHelpUrl('');
-//     }
-// };
