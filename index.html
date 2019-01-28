@@ -294,7 +294,7 @@
             <input type="text" class="project_title" value="project_name">
             <button class="project_title_save">save</button>
         </div>
-        <!-- Login -->
+        <!-- Sign in -->
         <div class="col-xs-6 col-md-6  parent_login">
 
             <a href="#" class="login dis_none">
@@ -381,7 +381,7 @@
                         <button onclick="Coding.platform.replace()">Replace</button>
                         <button onclick="Coding.platform.replaceAll()">All</button>
                     </div>
-                </div>
+                </div>-
             </div>
         </div>
     </div>
@@ -958,11 +958,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="homeContent_device_choice_block dis_none">
+                        <button class="homeContent_device_header_btn" onclick="EzBlock.renderPage('selectBoard')">%{home_products}
+							<img src="./img/切换箭头.png" alt="">
+						</button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="selectBoardContent dis_none">
             <div class="selectBoard clearfix">
+                <div style="text-align: center" class="clearfix visible-xs selectBoardTitle">
+                    <p style="width: 50%;float: left;color:rgb(255,202,75);margin-top: 10px;font-size: 18px;" onclick="$('.selectBoardLeft').show();$('.selectBoardRight').hide();$(this).css('color','rgb(255,202,75)');$(this).siblings('p').css('color','#727272');">Products</p>
+                    <p style="width: 50%;float: left;margin-top: 10px;font-size: 18px;" onclick="$('.selectBoardRight').show();$('.selectBoardLeft').hide();$(this).css('color','rgb(255,202,75)');$(this).siblings('p').css('color','#727272');">Recently Used</p>
+                </div>
                 <div class="selectBoardLeft  clearfix">
                     <div>
                         <button class="select_return" onclick="SelectBoard.return();">Return</button>
@@ -973,7 +982,11 @@
                     <p class="recentUsed">Recently Used</p>
                     <ul class="recentUsedUl clearfix">
                     </ul>
+                    <div class="visible-xs">
+                        <button onclick="SelectBoard.return();" class="select_right_return">Return</button>
+                    </div>
                 </div>
+
             </div>
         </div>
         <!--个人信息页面  -->
@@ -1366,14 +1379,14 @@
 
         <!-- 售后服务页面 -->
         <div class="afterSaleProblemContent dis_none">
-            <div class="sender clearfix">
-                <div>%{sender}:</div>
+            <div class="from clearfix">
+                <div>%{from}:</div>
                 <span></span>
                 <input type="email" placeholder="%{enterEmail}" class="commonArea" onchange="this.style.color='rgb(102,102,102)'">
                 <br />
             </div>
-            <div class="receiver clearfix">
-                <div>%{receiver}：</div>
+            <div class="to clearfix">
+                <div>%{to}：</div>
                 <span></span>
                 <input type="email" placeholder="%{enterEmail}" class="commonArea" onchange="this.style.color='rgb(102,102,102)'">
                 <br />

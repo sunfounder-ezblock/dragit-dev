@@ -1,34 +1,23 @@
-<<<<<<< HEAD
-# from pwm import PWM
-# from adc import ADC
-# from pin import Pin
-from raspberrypi import PWM,  ADC, Pin
-=======
 from raspberrypi import PWM, ADC, Pin
->>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
 import time
 
 PERIOD = 4095
 PRESCALER = 10
 TIMEOUT = 0.02
 
-motor1_pwm_pin = PWM(4)
-motor2_pwm_pin = PWM(5)
-motor1_dir_pin = Pin(23)
-motor2_dir_pin = Pin(24)
+motor1_speed = PWM(4)
+motor2_speed = PWM(5)
+motor1_direction = Pin(23)
+motor2_direction = Pin(24)
 
-motor_direction_pins = [motor1_dir_pin, motor2_dir_pin]
-motor_speed_pins = [motor1_pwm_pin, motor2_pwm_pin]
-cali_dir_value = [1, -1]
-cali_speed_value = [0, 0]
+motor_directions = [1, -1]
+motor_direction_pins = [motor1_direction, motor2_direction]
+motors_speed_pins = [motor1_speed, motor2_speed]
 
-<<<<<<< HEAD
-for pin in motor_speed_pins:
-=======
 for pin in motors_speed_pins:
->>>>>>> 451f48e1716f7324250310d0edeef362e876efd0
     pin.period(PERIOD)
     pin.prescaler(PRESCALER)
+
 
 def get_distance(trig=17, echo=18):
     trig = Pin(trig)
@@ -52,9 +41,9 @@ def get_distance(trig=17, echo=18):
     during = pulse_end - pluse_start
     return during * 340 /2 *100
 
-# def get_line_value(chn):
-#     chn = ADC(chn)
-#     return chn.read()
+def get_line_value(chn):
+    chn = ADC(chn)
+    return chn.read()
 
 def is_black(chn, references=300):
     if get_line_value(chn) < references:
@@ -65,35 +54,33 @@ def is_black(chn, references=300):
 def set_motor_speed(motor, speed):
     motor -= 1
     if speed >= 0:
-        direction = 1 * cali_dir_value[motor]
+        direction = 1 * motor_directions[motor]
     elif speed < 0:
-        direction = -1 * cali_dir_value[motor]
+        direction = -1 * motor_directions[motor]
     speed = abs(speed)
     if speed != 0:
         speed = int(speed / 100.0 *2048 ) + 2048
     speed = speed - cali_speed_value[motor]
     if direction < 0:
         motor_direction_pins[motor].high()
-        motor_speed_pins[motor].pulse_width(speed)
+        motors_speed_pins[motor].pulse_width(speed)
     else:
         motor_direction_pins[motor].low()
-        motor_speed_pins[motor].pulse_width(speed)
+        motors_speed_pins[motor].pulse_width(speed)
 
-def motor_speed_calibration(value):
-    global cali_speed_value
-    if value < 0:
-        cali_speed_value[0] = 0
-        cali_speed_value[1] = abs(value)
-    else:
-        cali_speed_value[0] = abs(value)
-        cali_speed_value[1] = 0
+def Motor_speed_calibration(speed, value=0):
+    motor_direction_pins[0].high()
+    motors_speed_pins[0].pulse_width(speed)
+    
+    motor_direction_pins[1].low()
+    motors_speed_pins[1].pulse_width(speed)
+    return value
 
-def motor_direction_calibration(motor, value):
-    # 0: positive direction
-    # 1: negative direction
-    motor -= 1
-    if value == 1:
-    cali_dir_value[motor] = -cali_dir_value[motor]
+def Motor_direction_calibration():
+    motor_direction_pins[0].high()
+    motors_speed_pins[0].pulse_width(3500)
+    
+    motor_direction_pins[1].low()
+    motors_speed_pins[1].pulse_width(3500)
 
-#  def test():
-     
+ 
