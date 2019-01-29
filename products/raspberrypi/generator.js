@@ -93,7 +93,7 @@ Blockly.Python['raspberrypi_pin_get_value'] = function(block) {
     }
 
     var code = '';
-    code += obj + '.' + getValue + '()\n';
+    code += obj + '.' + getValue + '()';
     return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -149,7 +149,7 @@ Blockly.Python['raspberrypi_taskmgr'] = function(block) {
     var taskmgr = block.getFieldValue('taskmgr');
 
     var code = '';
-    code += 'Taskmgr().' + taskmgr + '()\n';
+    code += 'Taskmgr().' + taskmgr + '()';
     return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -210,14 +210,14 @@ Blockly.Python['raspberrypi_i2c_is_ready'] = function(block) {
     var address = Blockly.Python.valueToCode(block, 'address', Blockly.Python.ORDER_ATOMIC);
 
     var code = '';
-    code += 'I2C().is_ready(' + address + ')\n';
+    code += 'I2C().is_ready(' + address + ')';
     return [code, Blockly.Python.ORDER_NONE];
 };
 
 
 Blockly.Python['raspberrypi_i2c_scan'] = function(block) {
     var code = '';
-    code += 'I2C().scan()\n';
+    code += 'I2C().scan()';
     return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -236,7 +236,7 @@ Blockly.Python['raspberrypi_i2c_recv'] = function(block) {
     var addr = Blockly.Python.valueToCode(block, 'addr', Blockly.Python.ORDER_ATOMIC);
 
     var code = '';
-    code += 'I2C().recv(' + recv + ', ' + addr + ')\n';
+    code += 'I2C().recv(' + recv + ', ' + addr + ')';
     return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -258,7 +258,7 @@ Blockly.Python['raspberrypi_i2c_mem_read'] = function(block) {
     var memaddr = Blockly.Python.valueToCode(block, 'memaddr', Blockly.Python.ORDER_ATOMIC);
 
     var code = '';
-    code += 'I2C().mem_read(' + data + ', ' + addr + ', ' + memaddr + ')\n';
+    code += 'I2C().mem_read(' + data + ', ' + addr + ', ' + memaddr + ')';
     return [code, Blockly.Python.ORDER_NONE];
 };
 
