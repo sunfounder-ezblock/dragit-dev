@@ -280,3 +280,228 @@ RaspberryPi.examplesHasKit.block["Touch Switch"] = {
         "kits": ""
     }
 }
+
+
+RaspberryPi.examplesHasKit.block["Moisture Sensor"] = {
+    "name": "Moisture Sensor",
+    "project": {
+        "name": "Moisture Sensor",
+        "dateTime": "",
+        "device": "raspberrypi",
+        "platform": "blockcode",
+        "code": {
+            "code": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><variables><variable type=\"\" id=\"LIusRtA#TwdYb[$P#UAm\">Value</variable></variables><block type=\"basic_start\" id=\"qrswBI$2J**dCagSbF$0\" x=\"-230\" y=\"-290\"></block><block type=\"basic_forever\" id=\"(.X9-M;L7,PGS[je0yNt\" x=\"-210\" y=\"-210\"><statement name=\"statement\"><block type=\"variables_set\" id=\"8/4]O}C$XMmxP/B@8M2)\"><field name=\"VAR\" id=\"LIusRtA#TwdYb[$P#UAm\" variabletype=\"\">Value</field><value name=\"VALUE\"><block type=\"sensorkit_moisture_sensor_get_value\" id=\";:G)wt9#H7-y6{UaORWl\"><value name=\"SIG\"><block type=\"raspberrypi_analog_pin\" id=\"i8|4^CB7%Ww8Vm5xZQcw\"><field name=\"pin\">\"A0\"</field></block></value></block></value><next><block type=\"controls_if\" id=\"~26u{]`vnh.0qxN;dNv$\"><value name=\"IF0\"><block type=\"logic_compare\" id=\"$i879}bctBUyKuq]QJbU\"><field name=\"OP\">LT</field><value name=\"A\"><block type=\"variables_get\" id=\"H-0BC5h)1buNJBIe+xj2\"><field name=\"VAR\" id=\"LIusRtA#TwdYb[$P#UAm\" variabletype=\"\">Value</field></block></value><value name=\"B\"><block type=\"math_number\" id=\"6A#~OFn.dR;o`Ejx,~4D\"><field name=\"NUM\">1000</field></block></value></block></value><statement name=\"DO0\"><block type=\"sensorkit_buzzer_set_value\" id=\"|BA*TSPAGnc9FWVHVUMH\"><value name=\"SIG\"><block type=\"raspberrypi_pwm_pin\" id=\"R6,jLFI_G)ycya#DAzO`\"><field name=\"pin\">\"P0\"</field></block></value><value name=\"note\"><shadow type=\"music_notes\" id=\"U1`^z)VlLz-|1e?Mb]f$\"><field name=\"note\">587.33</field></shadow></value><value name=\"beat\"><shadow type=\"music_beat\" id=\"ezR/Lz}6QDM6qlug;%BE\"><field name=\"beat\">1</field></shadow></value></block></statement></block></next></block></statement></block></xml>",
+            "libs": {}
+        },
+        "readOnly": false,
+        "datetime": 1549848455970,
+        "route": {
+            "device": {
+                "x": 335,
+                "y": 350,
+                "id": 335
+            },
+            "currentModules": {
+                "sensorkit": {
+                    "moisture-sensor#jsPlumb_1_121": {
+                        "x": 359,
+                        "y": 93,
+                        "src": "http://127.0.0.1:5500/packages/sensorkit/img/moisture-sensor.png",
+                        "pins": {
+                            "SIG": {
+                                "targetPoint": "A0",
+                                "sourceUuid": "source-jsPlumb_1_121-0",
+                                "targetUuid": "target8"
+                            },
+                            "VCC": {
+                                "targetPoint": "3V3",
+                                "sourceUuid": "source-jsPlumb_1_121-1",
+                                "targetUuid": "target39"
+                            },
+                            "GND": {
+                                "targetPoint": "GND",
+                                "sourceUuid": "source-jsPlumb_1_121-2",
+                                "targetUuid": "target37"
+                            }
+                        }
+                    },
+                    "buzzer#jsPlumb_1_131": {
+                        "x": 550,
+                        "y": 102,
+                        "src": "http://127.0.0.1:5500/packages/sensorkit/img/buzzer.png",
+                        "pins": {
+                            "SIG": {
+                                "targetPoint": "P0",
+                                "sourceUuid": "source-jsPlumb_1_131-0",
+                                "targetUuid": "target0"
+                            },
+                            "VCC": {
+                                "targetPoint": "3V3",
+                                "sourceUuid": "source-jsPlumb_1_131-1",
+                                "targetUuid": "target38"
+                            },
+                            "GND": {
+                                "targetPoint": "GND",
+                                "sourceUuid": "source-jsPlumb_1_131-2",
+                                "targetUuid": "target36"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "remote": {},
+        "iot": [],
+        "kits": ""
+    }
+}
+
+
+RaspberryPi.examplesHasKit.block["Vibration Switch"] = {
+    "name": "Vibration Switch",
+    "project": {
+        "name": "Vibration Switch",
+        "dateTime": "",
+        "device": "raspberrypi",
+        "platform": "blockcode",
+        "code": {
+            "code": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><variables><variable type=\"\" id=\"H#zIjE0wPb[|Xk%^tB0-\">Value</variable></variables><block type=\"basic_start\" id=\"qrswBI$2J**dCagSbF$0\" x=\"-230\" y=\"-290\"></block><block type=\"basic_forever\" id=\"(.X9-M;L7,PGS[je0yNt\" x=\"-170\" y=\"-210\"><statement name=\"statement\"><block type=\"variables_set\" id=\"|sP|Kwu`ivq7Bt%/~E*6\"><field name=\"VAR\" id=\"H#zIjE0wPb[|Xk%^tB0-\" variabletype=\"\">Value</field><value name=\"VALUE\"><block type=\"sensorkit_vibrationswitch_get_value\" id=\"PARgQU^OWVF*^$#{@(k]\"><value name=\"SIG\"><block type=\"raspberrypi_digital_pin\" id=\"2GW%7Wbyt8]GKSe4.BxK\"><field name=\"pin\">\"D0\"</field></block></value></block></value><next><block type=\"controls_if\" id=\"zPfIwsxO7X$UCVBfst^8\"><mutation else=\"1\"></mutation><value name=\"IF0\"><block type=\"logic_compare\" id=\"4a1X/L~Ide{!5x?`lF3.\"><field name=\"OP\">EQ</field><value name=\"A\"><block type=\"variables_get\" id=\"DhBfExUgFT!@|,czej+]\"><field name=\"VAR\" id=\"H#zIjE0wPb[|Xk%^tB0-\" variabletype=\"\">Value</field></block></value><value name=\"B\"><block type=\"math_number\" id=\"]RI}`HE^mPh,H2abJUZy\"><field name=\"NUM\">0</field></block></value></block></value><statement name=\"DO0\"><block type=\"sensorkit_led_module_set_value\" id=\"NPH^1qJl1XnF_-HqGTog\"><value name=\"SIG\"><block type=\"raspberrypi_digital_pin\" id=\"DtlI[ID/WvS;Kzg._Ko+\"><field name=\"pin\">\"D1\"</field></block></value><value name=\"value\"><shadow type=\"math_number\" id=\")c{IcpUHa`:[G=Y,~ii=\"><field name=\"NUM\">1</field></shadow></value></block></statement><statement name=\"ELSE\"><block type=\"sensorkit_led_module_set_value\" id=\"+A8b02lOqH2bEQ/.Y?8R\"><value name=\"SIG\"><block type=\"raspberrypi_digital_pin\" id=\"-*$NxvKU47!3BlcLhalP\"><field name=\"pin\">\"D1\"</field></block></value><value name=\"value\"><shadow type=\"math_number\" id=\"MGj$kK)=n4Z.9wch[voY\"><field name=\"NUM\">0</field></shadow></value></block></statement><next><block type=\"basic_delay\" id=\"nFTAfUpm^KzzW5!dEI=N\"><value name=\"ms\"><shadow type=\"math_number\" id=\"i3FP2xxNnzNqFn!w;get\"><field name=\"NUM\">1000</field></shadow></value></block></next></block></next></block></statement></block></xml>",
+            "libs": {}
+        },
+        "readOnly": false,
+        "datetime": 1549848979922,
+        "route": {
+            "device": {
+                "x": 242,
+                "y": 331,
+                "id": 242
+            },
+            "currentModules": {
+                "sensorkit": {
+                    "vibration-switch#jsPlumb_1_121": {
+                        "x": 263,
+                        "y": 107,
+                        "src": "http://127.0.0.1:5500/packages/sensorkit/img/vibration-switch.png",
+                        "pins": {
+                            "SIG": {
+                                "targetPoint": "D0",
+                                "sourceUuid": "source-jsPlumb_1_121-0",
+                                "targetUuid": "target20"
+                            },
+                            "VCC": {
+                                "targetPoint": "3V3",
+                                "sourceUuid": "source-jsPlumb_1_121-1",
+                                "targetUuid": "target39"
+                            },
+                            "GND": {
+                                "targetPoint": "GND",
+                                "sourceUuid": "source-jsPlumb_1_121-2",
+                                "targetUuid": "target37"
+                            }
+                        }
+                    },
+                    "led-module#jsPlumb_1_131": {
+                        "x": 443,
+                        "y": 107,
+                        "src": "http://127.0.0.1:5500/packages/sensorkit/img/led-module.png",
+                        "pins": {
+                            "SIG": {
+                                "targetPoint": "D1",
+                                "sourceUuid": "source-jsPlumb_1_131-SIG",
+                                "targetUuid": "target21"
+                            },
+                            "VCC": {
+                                "targetPoint": "3V3",
+                                "sourceUuid": "source-jsPlumb_1_131-VCC",
+                                "targetUuid": "target38"
+                            },
+                            "GND": {
+                                "targetPoint": "GND",
+                                "sourceUuid": "source-jsPlumb_1_131-GND",
+                                "targetUuid": "target36"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "remote": {},
+        "iot": [],
+        "kits": ""
+    }
+}
+
+
+RaspberryPi.examplesHasKit.block["Temperature Sensor-DS18B20"] = {
+    "name": "Temperature Sensor-DS18B20",
+    "project": {
+        "name": "Temperature Sensor-DS18B20",
+        "dateTime": "",
+        "device": "raspberrypi",
+        "platform": "blockcode",
+        "code": {
+            "code": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><variables><variable type=\"\" id=\"/g:`X5h9!;Mj02/XH%F~\">Value</variable></variables><block type=\"basic_start\" id=\"qrswBI$2J**dCagSbF$0\" x=\"-230\" y=\"-290\"></block><block type=\"basic_forever\" id=\"(.X9-M;L7,PGS[je0yNt\" x=\"-190\" y=\"-210\"><statement name=\"statement\"><block type=\"variables_set\" id=\"G+Gp*71/DwOx+u8yPW}w\"><field name=\"VAR\" id=\"/g:`X5h9!;Mj02/XH%F~\" variabletype=\"\">Value</field><value name=\"VALUE\"><block type=\"sensorkit_ds18b20_get_value\" id=\"dGlLAu@@mx2*+*1AgJU{\"><value name=\"SIG\"><block type=\"raspberrypi_digital_pin\" id=\":F32sOS5q}V/Jde$eyM{\"><field name=\"pin\">\"D7\"</field></block></value></block></value><next><block type=\"controls_if\" id=\"dwF++l,?QL+}j/6.B}-*\"><value name=\"IF0\"><block type=\"logic_compare\" id=\"Nq?u1v+m}vYkz.D*8rFk\"><field name=\"OP\">GT</field><value name=\"A\"><block type=\"variables_get\" id=\"0BvA_V59#E^m;}`-]*W=\"><field name=\"VAR\" id=\"/g:`X5h9!;Mj02/XH%F~\" variabletype=\"\">Value</field></block></value><value name=\"B\"><block type=\"math_number\" id=\"2X3(%V*aR_J5qkhZ4u*(\"><field name=\"NUM\">31</field></block></value></block></value><statement name=\"DO0\"><block type=\"sensorkit_buzzer_set_value\" id=\"i[gRY?^+D=UeBnXF}gwZ\"><value name=\"SIG\"><block type=\"raspberrypi_pwm_pin\" id=\"Z6c}4$Nyd/:5{.(xiQb{\"><field name=\"pin\">\"P0\"</field></block></value><value name=\"note\"><shadow type=\"music_notes\" id=\"2|(gHr?Kxe%LgW~%PVjp\"><field name=\"note\">587.33</field></shadow></value><value name=\"beat\"><shadow type=\"music_beat\" id=\"_nUP1x)/5T]Mzrc%/N[3\"><field name=\"beat\">1</field></shadow></value><next><block type=\"basic_delay\" id=\"E*/gu@(]|TpJ5/XFKTRs\"><value name=\"ms\"><shadow type=\"math_number\" id=\"$T5k$[6~HbwJH#JMoX%G\"><field name=\"NUM\">1000</field></shadow></value></block></next></block></statement></block></next></block></statement></block></xml>",
+            "libs": {}
+        },
+        "readOnly": false,
+        "datetime": 1549850024131,
+        "route": {
+            "device": {
+                "x": 296,
+                "y": 307,
+                "id": 296
+            },
+            "currentModules": {
+                "sensorkit": {
+                    "buzzer#jsPlumb_1_121": {
+                        "x": 494,
+                        "y": 110,
+                        "src": "http://127.0.0.1:5500/packages/sensorkit/img/buzzer.png",
+                        "pins": {
+                            "SIG": {
+                                "targetPoint": "P0",
+                                "sourceUuid": "source-jsPlumb_1_121-0",
+                                "targetUuid": "target0"
+                            },
+                            "VCC": {
+                                "targetPoint": "3V3",
+                                "sourceUuid": "source-jsPlumb_1_121-1",
+                                "targetUuid": "target39"
+                            },
+                            "GND": {
+                                "targetPoint": "GND",
+                                "sourceUuid": "source-jsPlumb_1_121-2",
+                                "targetUuid": "target36"
+                            }
+                        }
+                    },
+                    "ds18b20#jsPlumb_1_131": {
+                        "x": 334,
+                        "y": 109,
+                        "src": "http://127.0.0.1:5500/packages/sensorkit/img/ds18b20.png",
+                        "pins": {
+                            "SIG": {
+                                "targetPoint": "D7",
+                                "sourceUuid": "source-jsPlumb_1_131-0",
+                                "targetUuid": "target27"
+                            },
+                            "VCC": {
+                                "targetPoint": "5V",
+                                "sourceUuid": "source-jsPlumb_1_131-1",
+                                "targetUuid": "target18"
+                            },
+                            "GND": {
+                                "targetPoint": "GND",
+                                "sourceUuid": "source-jsPlumb_1_131-2",
+                                "targetUuid": "target37"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "remote": {},
+        "iot": [],
+        "kits": ""
+    }
+}

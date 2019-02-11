@@ -63,7 +63,7 @@ def set_motor_speed(motor, speed):
     speed = abs(speed)
     if speed != 0:
         speed = int(speed / 100.0 *2048 ) + 2048
-    speed = speed - calibrate_value[motor]
+    speed = speed - cali_speed_value[motor]
     if direction < 0:
         motor_direction_pins[motor].high()
         motor_speed_pins[motor].pulse_width(speed)
@@ -72,25 +72,25 @@ def set_motor_speed(motor, speed):
         motor_speed_pins[motor].pulse_width(speed)
 
 def motor_speed_calibration(value):
-    global calibrate_value
+    global cali_speed_value
     if value < 0:
-        calibrate_value[0] = 0
-        calibrate_value[1] = abs(value)
+        cali_speed_value[0] = 0
+        cali_speed_value[1] = abs(value)
     else:
-        calibrate_value[0] = abs(value)
-        calibrate_value[1] = 0
+        cali_speed_value[0] = abs(value)
+        cali_speed_value[1] = 0
 
 def motor_direction_calibration(motor, value):
     # 0: positive direction
     # 1:negative direction
     motor -= 1
     if value == 1:
-    cali_dir_value[motor] = -cali_dir_value[motor]
+        cali_dir_value[motor] = -cali_dir_value[motor]
 
 #  def test():
      
- def test():
-    set_motor_speed(1, 100)
+#  def test():
+#     set_motor_speed(1, 100)
 
-if __name__ == "__main__":
-	test()
+# if __name__ == "__main__":
+# 	test
