@@ -63,7 +63,7 @@ Blockly.Python['raspberrypi_pin_set_value'] = function(block) {
     var pin = Blockly.Python.valueToCode(block, 'pin', Blockly.Python.ORDER_ATOMIC);
     var value = Blockly.Python.valueToCode(block, 'value', Blockly.Python.ORDER_ATOMIC);
 
-    if (pin.startsWith('"D') || (pin in ['LED', 'SW'])) {
+    if (pin.startsWith('"D') || (pin in ['"LED"', '"SW"'])) {
         Blockly.Python.definitions_['import_raspberrypi_pin'] = 'from raspberrypi import Pin';
         var obj = 'Pin(' + pin + ')';
         var setValue = 'value';
