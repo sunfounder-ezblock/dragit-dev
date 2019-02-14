@@ -1,17 +1,17 @@
 <xml>
-  <category name="%{BKY_CATPIMOBILE}" colour='#CF5889'>
+  <category name="%{BKY_CATROBOTHAT}" colour='#CF5889'>
 
     <block type="raspberrypi_pin_set_value">
       <value name="pin">
 
-    <!-- <block type="pimobile_line_follower">
+    <!-- <block type="robothat_line_follower">
       <value name="line">
-        <shadow type="pimobile_line">
+        <shadow type="robothat_line">
         </shadow>
       </value>
     </block> -->
 
-    <block type="pimobile_ultarsonic_distance">
+    <block type="robothat_ultarsonic_distance">
       <value name="Triq">
         <shadow type="raspberrypi_digital_pin">
         </shadow>
@@ -23,21 +23,21 @@
       </value>
     </block>
 
-    <block type="pimobile_motor">
+    <block type="robothat_motor">
       <value name="motor">
-        <shadow type="pimobile_motor_select">
+        <shadow type="robothat_motor_select">
         </shadow>
       </value>
     </block>
 
-    <block type="pimobile_motor_direction_calibration">
+    <block type="robothat_motor_direction_calibration">
       <value name="value">
         <shadow type="math_number">
         </shadow>
       </value>
     </block>
 
-    <block type="pimobile_motor_speed_calibration">
+    <block type="robothat_motor_speed_calibration">
       <value name="speed">
         <shadow type="math_number">
         </shadow>

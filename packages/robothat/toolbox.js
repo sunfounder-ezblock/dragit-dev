@@ -1,14 +1,14 @@
-PiMobile.toolboxText =
-    '  <category name="%{BKY_CATPIMOBILE}" colour="#3F34D1">' +
+RobotHat.toolboxText =
+    '  <category name="%{BKY_CATROBOTHAT}" colour="#3F34D1">' +
 
-    '    <block type="pimobile_digital_pin"></block>' +
-    '    <block type="pimobile_analog_pin"></block>' +
-    '    <block type="pimobile_pwm_pin"></block>' +
-    '    <block type="pimobile_device_pin"></block>' +
+    '    <block type="robothat_digital_pin"></block>' +
+    '    <block type="robothat_analog_pin"></block>' +
+    '    <block type="robothat_pwm_pin"></block>' +
+    '    <block type="robothat_device_pin"></block>' +
 
     '    <block type="raspberrypi_pin_set_value">' +
     '      <value name="pin">' +
-    '        <shadow type="pimobile_digital_pin">' +
+    '        <shadow type="robothat_digital_pin">' +
     '        </shadow>' +
     '      </value>' +
     '      <value name="value">' +
@@ -20,7 +20,7 @@ PiMobile.toolboxText =
 
     '    <block type="raspberrypi_pin_set_value">' +
     '      <value name="pin">' +
-    '        <shadow type="pimobile_pwm_pin">' +
+    '        <shadow type="robothat_pwm_pin">' +
     '        </shadow>' +
     '      </value>' +
     '      <value name="value">' +
@@ -32,24 +32,24 @@ PiMobile.toolboxText =
 
     '    <block type="raspberrypi_pin_get_value">' +
     '      <value name="pin">' +
-    '        <shadow type="pimobile_digital_pin">' +
+    '        <shadow type="robothat_digital_pin">' +
     '        </shadow>' +
     '      </value>' +
     '    </block>' +
     '    <block type="raspberrypi_pin_get_value">' +
     '      <value name="pin">' +
-    '        <shadow type="pimobile_analog_pin">' +
+    '        <shadow type="robothat_analog_pin">' +
     '        </shadow>' +
     '      </value>' +
     '    </block>' +
 
-    // '    <block type="pimobile_line_follower"> ' +
+    // '    <block type="robothat_line_follower"> ' +
     // '    <value name="line"> ' +
-    // '        <shadow type="pimobile_line"> ' +
+    // '        <shadow type="robothat_line"> ' +
     // '        </shadow> ' +
     // '    </value> ' +
     // '    </block> ' +
-    '    <block type="pimobile_ultarsonic_distance"> ' +
+    '    <block type="robothat_ultarsonic_distance"> ' +
     '        <value name="Triq"> ' +
     '        <shadow type="raspberrypi_digital_pin"> ' +
     '        </shadow> ' +
@@ -60,7 +60,7 @@ PiMobile.toolboxText =
     '        </shadow> ' +
     '        </value> ' +
     '    </block> ' +
-    '    <block type="pimobile_motor"> ' +
+    '    <block type="robothat_motor"> ' +
     '        <value name="speed"> ' +
     '            <shadow type="math_number"> ' +
     '                <field name="NUM">75</field> ' +
@@ -68,14 +68,14 @@ PiMobile.toolboxText =
     '        </value> ' +
     '    </block> ' +
 
-    '   <block type="pimobile_motor_direction_calibration"> ' +
+    '   <block type="robothat_motor_direction_calibration"> ' +
     '        <value name="value"> ' +
     '        <shadow type="math_number"> ' +
     '        </shadow> ' +
     '        </value> ' +
     '    </block>' +
 
-    '   <block type="pimobile_motor_speed_calibration"> ' +
+    '   <block type="robothat_motor_speed_calibration"> ' +
     '       <value name="speed"> ' +
     '           <shadow type="math_number"> ' +
     '           </shadow> ' +

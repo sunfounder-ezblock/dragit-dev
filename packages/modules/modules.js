@@ -1,6 +1,6 @@
 'use strict';
 
-var  Module = function (obj) {
+var Module = function(obj) {
     // 小写名称
     this.sname = obj.sname;
     this.name = "";
@@ -11,18 +11,18 @@ var  Module = function (obj) {
     Object.defineProperty(this, 'name', {
         get: () => {
             var upperName = this.sname.toUpperCase().replace(/-+/g, "")
-            return MSG[`MODULES_${upperName}_NAME`];
+            return Blockly.Msg[`MODULES_${upperName}_NAME`];
         },
     });
 }
 
 var Modules = {
     simulator: {},
-    init: ()=>{},
+    init: () => {},
 };
 
 Modules["led-module"] = new Module({
-    'sname':'led-module',
+    'sname': 'led-module',
     'blocks': [
         '<block type="modules_ledmodule_set_value"> ' +
         '  <value name="value"> ' +
@@ -68,14 +68,14 @@ Modules["led-module"] = new Module({
 })
 
 Modules["rgb-led"] = new Module({
-    'sname':'rgb-led',
+    'sname': 'rgb-led',
     'blocks': [
         '<block type="modules_rgbled_set_value"> ' +
-            '<value name="color"> ' +
-                '<shadow type="colour_led_picker"> ' +
-                    '<field name="COLOUR">#ff0000</field> ' +
-                '</shadow> ' +
-            '</value> ' +
+        '<value name="color"> ' +
+        '<shadow type="colour_led_picker"> ' +
+        '<field name="COLOUR">#ff0000</field> ' +
+        '</shadow> ' +
+        '</value> ' +
         '</block>'
     ],
     "simulator": {
@@ -126,7 +126,7 @@ Modules["rgb-led"] = new Module({
 })
 
 Modules["button"] = new Module({
-    'sname':'button',
+    'sname': 'button',
     'blocks': ['<block type="modules_button_get_value"></block> '],
     'simulator': {
         "type": "ValueInput",
@@ -166,7 +166,7 @@ Modules["button"] = new Module({
 })
 
 Modules["tilt-switch"] = new Module({
-    'sname':'tilt-switch',
+    'sname': 'tilt-switch',
     'blocks': ['<block type="modules_tiltswitch_get_value"> </block> '],
     'simulator': {
         "type": "ValueInput",
@@ -207,7 +207,7 @@ Modules["tilt-switch"] = new Module({
 })
 
 Modules["vibration-switch"] = new Module({
-    'sname':'vibration-switch',
+    'sname': 'vibration-switch',
     'blocks': ['<block type="modules_vibrationswitch_get_value"> </block> '],
     'pins': {
         "SIG": {
@@ -241,7 +241,7 @@ Modules["vibration-switch"] = new Module({
 })
 
 Modules["buzzer"] = new Module({
-    'sname':'buzzer',
+    'sname': 'buzzer',
     'blocks': [
         '<block type="modules_buzzer_set_value">' +
         '<value name="note"> ' +
@@ -286,7 +286,7 @@ Modules["buzzer"] = new Module({
 })
 
 Modules["joystick"] = new Module({
-    'sname':'joystick',
+    'sname': 'joystick',
     'blocks': ['<block type="modules_joystick_get_status"> </block>', '<block type="modules_joystick_get_value"> </block>'],
     'pins': {
         "Y": {
@@ -339,7 +339,7 @@ Modules["joystick"] = new Module({
 })
 
 Modules["potentiometer"] = new Module({
-    'sname':'potentiometer',
+    'sname': 'potentiometer',
     'blocks': ['<block type="modules_potentiometer_get_value"> </block> '],
     'simulator': {
         "type": "ValueInput",
@@ -379,7 +379,7 @@ Modules["potentiometer"] = new Module({
 })
 
 Modules["sound-sensor"] = new Module({
-    'sname':'sound-sensor',
+    'sname': 'sound-sensor',
     'blocks': ['<block type="modules_soundsensor_get_value"> </block> '],
     'simulator': {
         "type": "ValueInput",
@@ -419,7 +419,7 @@ Modules["sound-sensor"] = new Module({
 })
 
 Modules["photoresistor"] = new Module({
-    'sname':'photoresistor',
+    'sname': 'photoresistor',
     'blocks': ['<block type="modules_photoresistor_get_value"></block> '],
     'simulator': {
         "type": "ValueInput",
@@ -460,7 +460,7 @@ Modules["photoresistor"] = new Module({
 })
 
 Modules["touch-switch"] = new Module({
-    'sname':"touch-switch",
+    'sname': "touch-switch",
     'blocks': ['<block type="modules_touchswitch_get_value"></block> '],
     'simulator': {
         "type": "ValueInput",
@@ -500,7 +500,7 @@ Modules["touch-switch"] = new Module({
 })
 
 Modules["ultrasonic-ranging-module"] = new Module({
-    'sname':'ultrasonic-ranging-module',
+    'sname': 'ultrasonic-ranging-module',
     'blocks': ['<block type="modules_ultrasonic_get_value"></block> '],
     'pins': {
         "Trig": {
@@ -543,7 +543,7 @@ Modules["ultrasonic-ranging-module"] = new Module({
 })
 
 Modules["ds18b20"] = new Module({
-    'sname':"ds18b20",
+    'sname': "ds18b20",
     'blocks': ['<block type="modules_ds18b20_get_value"></block> '],
     'pins': {
         "SIG": {
@@ -577,7 +577,7 @@ Modules["ds18b20"] = new Module({
 })
 
 Modules["servo"] = new Module({
-    'sname':'servo',
+    'sname': 'servo',
     'blocks': [
         '<block type="modules_servo_set_angle"> ' +
         '<value name="angle"> ' +
@@ -625,7 +625,7 @@ Modules["servo"] = new Module({
 })
 
 Modules["moisture-sensor"] = new Module({
-    'sname':'moisture-sensor',
+    'sname': 'moisture-sensor',
     'blocks': ['<block type="modules_moisture_sensor_get_value"> </block>'],
     'pins': {
         "SIG": {
@@ -659,7 +659,7 @@ Modules["moisture-sensor"] = new Module({
 })
 
 Modules["adxl345"] = new Module({
-    'sname':'adxl345',
+    'sname': 'adxl345',
     'blocks': ['<block type="modules_adxl345_get_value"> </block> '],
     'pins': {
         "GND": {

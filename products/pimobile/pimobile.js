@@ -1,26 +1,16 @@
-/**
- * create a object of PiMobile and contain it's id and name
- */
-var PiMobile = {};
+var PiMobile = {}
 PiMobile.id = 'pimobile';
-PiMobile.kits = {}
-PiMobile.series = "raspberrypi";
-PiMobile.nameEn = "PiMobile";
-PiMobile.type = "raspberrypi";
+PiMobile.list = {
+    "device": "RobotHat",
+    "Modules": [
+        "ultrasonic-ranging-module",
+        "2ch-line-follower",
+    ],
+}
 
-PiMobile.functions = [
-    "iot",
-    "remote",
-    "routing",
-    "bluetooth",
-    "play",
-]
-
-PiMobile.libs = [
-    // 'pimobile==v0.2'
-];
+PiMobile.name = '';
 
 PiMobile.init = function() {
-    PiMobile.name = MSG.catPiMobile;
+    PiMobile.name = MSG.catPiMobileForPi;
     PiMobile.description = MSG.pimobile_description;
 }

@@ -1,11 +1,11 @@
 'use strict';
 
-goog.provide('Blockly.JavaScript.pimobile');
+goog.provide('Blockly.JavaScript.robothat');
 
 goog.require('Blockly.JavaScript');
 
 
-// Blockly.JavaScript['pimobile_line_follower'] = function(block) {
+// Blockly.JavaScript['robothat_line_follower'] = function(block) {
 //     var chn = block.getFieldValue('line');
 
 //     var code = ' ';
@@ -14,7 +14,7 @@ goog.require('Blockly.JavaScript');
 //     return code;
 // };
 
-// Blockly.JavaScript['pimobile_ultarsonic_distance'] = function(block) {
+// Blockly.JavaScript['robothat_ultarsonic_distance'] = function(block) {
 
 //     var code = ' ';
 //     code = 'get_distance()\n';
@@ -22,7 +22,7 @@ goog.require('Blockly.JavaScript');
 //     return code;
 // };
 
-Blockly.JavaScript['pimobile_motor'] = function(block) {
+Blockly.JavaScript['robothat_motor'] = function(block) {
     var motor = Blockly.Python.valueToCode(block, 'motor', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.Python.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
