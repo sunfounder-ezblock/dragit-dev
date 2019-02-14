@@ -119,6 +119,8 @@ var SensorKit = {
             'img': 'button.png',
             'simulator': {
                 "type": "ValueInput",
+                // "onHigh": "module-button-on.png",
+                // "onLow": "module-button-off.png",
                 "mode": 'toggle',
                 "initValue": 1,
                 "pin": "SIG",

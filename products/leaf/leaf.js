@@ -36,7 +36,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -47,7 +47,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -58,7 +58,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -69,7 +69,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -91,7 +91,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -102,7 +102,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -113,7 +113,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -124,7 +124,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -135,7 +135,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["ain"],
+        'property': ["ain", "pwm"],
         'type': 'analog',
     },
     {
@@ -333,7 +333,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["din", "dout"],
+        'property': ["din", "dout", "SCL"],
         'type': 'digital',
     },
     {
@@ -344,7 +344,7 @@ Leaf.pins = [{
         'width': Leaf.pinWidth,
         'height': Leaf.pinHeight,
         'isSource': false,
-        'property': ["din", "dout"],
+        'property': ["din", "dout", "SDA"],
         'type': 'digital',
     },
     {
