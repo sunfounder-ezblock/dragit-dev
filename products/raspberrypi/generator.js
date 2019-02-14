@@ -271,7 +271,7 @@ Blockly.Python['raspberrypi_pwm_pulse_width'] = function(block) {
     var pl = '';
     pl += 'PWM(' + SIG + ')';
     var code = '';
-    code += pl + '.pulse_width_percentage(' + value + ')\n';
+    code += pl + '.pulse_width(' + value + ')\n';
     return code
 };
 

@@ -48,7 +48,7 @@ def Buzzer_play(pin, note, beat):
 	pwm = PWM(pin)
 	pwm.freq(note)
 	pwm.pulse_width_percentage(50)
-	delay(beat)
+	time.sleep(beat)
 	pwm.pulse_width_percentage(0)
 
 def TiltSwitch_get_value(pin):
