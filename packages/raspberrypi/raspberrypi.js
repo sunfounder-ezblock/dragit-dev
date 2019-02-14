@@ -4,17 +4,17 @@
 var RaspberryPi = {};
 RaspberryPi.id = 'raspberrypi';
 RaspberryPi.series = 'raspberrypi';
-RaspberryPi.seriesClass = 'rpiSeries';
-RaspberryPi.kits = {
-    // 'sensorkit': SensorKit,
-    // 'switchbot': SwitchBot,
-}
-RaspberryPi.libs = [
-    'sensorkit==v0.1',
-];
+// RaspberryPi.seriesClass = 'rpiSeries';
+// RaspberryPi.kits = {
+//     // 'sensorkit': SensorKit,
+//     // 'switchbot': SwitchBot,
+// }
+// RaspberryPi.libs = [
+//     'sensorkit==v0.1',
+// ];
 RaspberryPi.name = 'Raspberry Pi';
-RaspberryPi.kitName = 'SensorKit For Pi';
-RaspberryPi.nameEn = 'Raspberry Pi';
+// RaspberryPi.kitName = 'SensorKit For Pi';
+// RaspberryPi.nameEn = 'Raspberry Pi';
 RaspberryPi.width = 87;
 RaspberryPi.height = 58;
 RaspberryPi.pinWidth = 8;
@@ -29,8 +29,8 @@ RaspberryPi.pwmReference = 4095;
 RaspberryPi.adcReference = 4095;
 
 RaspberryPi.avalibleKits = {
-    'sensorkit': SensorKit,
-    'switchbot': SwitchBot,
+    'sensorkit': "SensorKit",
+    'switchbot': "SwitchBot",
 }
 
 RaspberryPi.functions = [
@@ -490,6 +490,5 @@ RaspberryPi.pins = [{
 
 RaspberryPi.init = function() {
     RaspberryPi.name = MSG.catRaspberryPi;
-    RaspberryPi.kitName = MSG.catSensorKitForPi;
     RaspberryPi.description = MSG.raspberrypi_description;
 }
