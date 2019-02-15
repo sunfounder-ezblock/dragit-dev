@@ -34,6 +34,13 @@ Local['zh-hans'].MODULES_BUZZER_SET_STATUS_TITLE3 = "保持";
 Local['zh-hans'].MODULES_BUZZER_SET_STATUS_TOOLTIP = "蜂鸣器打一个节拍";
 
 Local['zh-hans'].MODULES_JOYSTICK_NAME = "摇杆";
+Local['zh-hans'].MODULES_JOYSTICK_GET_VALUE_TITLE1 = "摇杆 X";
+Local['zh-hans'].MODULES_JOYSTICK_GET_VALUE_TITLE2 = "Y";
+Local['zh-hans'].MODULES_JOYSTICK_GET_VALUE_TITLE3 = "Btn 获取";
+Local['zh-hans'].MODULES_JOYSTICK_GET_VALUE_TITLE4 = "值";
+Local['zh-hans'].MODULES_JOYSTICK_GET_VALUE_TOOLTIP = "Get 摇杆 X/Y/Btn 的值";
+
+Local['zh-hans'].MODULES_JOYSTICK_NAME = "摇杆";
 Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TITLE1 = "摇杆 获取状态 X";
 Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TITLE2 = "Y";
 Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TITLE3 = "Btn";
