@@ -113,9 +113,9 @@ Local['en'].RASPBERRYPI_PWM_PRESCALER_TITLE1 = "PWM set";
 Local['en'].RASPBERRYPI_PWM_PRESCALER_TITLE2 = "prescaler to";
 Local['en'].RASPBERRYPI_PWM_PRESCALER_TOOLTIP = "Set PWM prescaler value.";
 
-Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE1 = "PWM set";
-Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE2 = "preiod to";
-Local['en'].RASPBERRYPI_PWM_PREIOD_TOOLTIP = "Set PWM preiod value.";
+Local['en'].RASPBERRYPI_PWM_PERIOD_TITLE1 = "PWM set";
+Local['en'].RASPBERRYPI_PWM_PERIOD_TITLE2 = "period to";
+Local['en'].RASPBERRYPI_PWM_PERIOD_TOOLTIP = "Set PWM period value.";
 
 
 // Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Send mail to";

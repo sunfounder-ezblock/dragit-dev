@@ -310,14 +310,14 @@ Blockly.Python['raspberrypi_prescaler'] = function(block) {
     return code
 };
 
-Blockly.Python['raspberrypi_preiod'] = function(block) {
+Blockly.Python['raspberrypi_period'] = function(block) {
     var SIG = Blockly.Python.valueToCode(block, 'SIG', Blockly.Python.ORDER_ATOMIC);
     var value = Blockly.Python.valueToCode(block, 'value', Blockly.Python.ORDER_ATOMIC);
 
-    var preiod = '';
-    preiod += 'PWM(' + SIG + ')';
+    var period = '';
+    period += 'PWM(' + SIG + ')';
     var code = '';
-    code += preiod + '.preiod(' + value + ')\n';
+    code += period + '.period(' + value + ')\n';
     return code
 };
 

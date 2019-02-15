@@ -19,6 +19,20 @@ Local['zh-hans'].RASPBERRYPI_PIN_STATUS_TOOLTIP = "GPIO 引脚状态";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TRIGGER = "中断触发";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TRIGGER_TOOLTIP = "中断触发";
 
+Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE1 = "连接WiFi"
+Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE2 = "国家"
+Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE3 = "网络名称"
+Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE4 = "密码"
+Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TOOLTIP = "连接WIFI，请输入国家的缩写（两个大写的英文字母），参考链接: https://zh-hans.wikipedia.org/wiki/ISO_3166-1_alpha-2";
+
+Local['zh-hans'].RASPBERRYPI_TASKMGR_TITLE1 = "获取"
+Local['zh-hans'].RASPBERRYPI_TASKMGR_TITLE2 = "值"
+Local['zh-hans'].RASPBERRYPI_TASKMGR_TOOLTIP = "获取CPU温度、GPU温度、CPU使用率、磁盘使用率、内存使用率.";
+
+
+
+
+
 Local['zh-hans'].RASPBERRYPI_PIN_SET_VALUE_TITLE1 = "设置引脚";
 Local['zh-hans'].RASPBERRYPI_PIN_SET_VALUE_TITLE2 = "的值为";
 Local['zh-hans'].RASPBERRYPI_PIN_SET_VALUE_TOOLTIP = "设置引脚的值为高/低";
@@ -41,18 +55,6 @@ Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TITLE3 = "中断触发";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TITLE4 = "执行";
 Local['zh-hans'].RASPBERRYPI_PIN_IRQ_TOOLTIP = "The evzh-hanst_detected() function is designed to be used in a loop with other things, \n\
         but unlike polling it is not going to miss the change in state of an input while the CPU is busy working on other things. ";
-
-
-Local['zh-hans'].RASPBERRYPI_TASKMGR_TITLE1 = "获取"
-Local['zh-hans'].RASPBERRYPI_TASKMGR_TITLE2 = "值"
-Local['zh-hans'].RASPBERRYPI_TASKMGR_TOOLTIP = "获取CPU温度、GPU温度、CPU使用率、磁盘使用率、内存使用率.";
-
-
-Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE1 = "连接WiFi"
-Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE2 = "国家"
-Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE3 = "账号"
-Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TITLE4 = "密码"
-Local['zh-hans'].RASPBERRYPI_CONNECT_WIFI_TOOLTIP = "连接WIFI，请输入国家的缩写（两个大写的英文字母），参考链接: https://zh-hans.wikipedia.org/wiki/ISO_3166-1_alpha-2";
 
 
 Local['zh-hans'].RASPBERRYPI_SERVO_SET_ANGLE_TITLE1 = "设置舵机"
@@ -104,12 +106,29 @@ Local['zh-hans'].RASPBERRYPI_I2C_MEM_READ_TITLE3 = "从机地址";
 Local['zh-hans'].RASPBERRYPI_I2C_MEM_READ_TOOLTIP = "在I2C设备的内存中读取，并返回读取值。 ";
 
 
+Local['zh-hans'].RASPBERRYPI_SPI_TITLE1 = "SPI 通道";
+Local['zh-hans'].RASPBERRYPI_SPI_TITLE2 = "设备";
+Local['zh-hans'].RASPBERRYPI_SPI_TOOLTIP = "读取";
+
 
 Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE1 = "PWM设置";
 Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_TITLE2 = "脉冲宽度的值为";
-Local['zh-hans'].RASPBERRYPI_SPI_TOOLTIP = "设置PWM脉冲宽度的值为（0 ~ 4095）.";
+Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_TOOLTIP = "设置PWM脉冲宽度的值为（0 ~ 4095）.";
 
 Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM设置";
 Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "脉冲宽度的百分比为";
 Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2 = "%";
-Local['zh-hans'].RASPBERRYPI_SPI_TOOLTIP = "设置PWM脉冲宽度的百分比为(0% ~ 100%).";
+Local['zh-hans'].RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP = "设置PWM脉冲宽度的百分比为(0% ~ 100%).";
+
+
+Local['zh-hans'].RASPBERRYPI_PWM_FREQ_TITLE1 = "PWM 设置";
+Local['zh-hans'].RASPBERRYPI_PWM_FREQ_TITLE2 = "频率为";
+Local['zh-hans'].RASPBERRYPI_PWM_FREQ_TOOLTIP = "设置PWM的频率(HZ).";
+
+Local['zh-hans'].RASPBERRYPI_PWM_PRESCALER_TITLE1 = "PWM 设置";
+Local['zh-hans'].RASPBERRYPI_PWM_PRESCALER_TITLE2 = "预分频为";
+Local['zh-hans'].RASPBERRYPI_PWM_PRESCALER_TOOLTIP = "设置PWM预分频的值.";
+
+Local['zh-hans'].RASPBERRYPI_PWM_PERIOD_TITLE1 = "PWM 设置";
+Local['zh-hans'].RASPBERRYPI_PWM_PERIOD_TITLE2 = "周期为";
+Local['zh-hans'].RASPBERRYPI_PWM_PERIOD_TOOLTIP = "设置PWM周期的值.";

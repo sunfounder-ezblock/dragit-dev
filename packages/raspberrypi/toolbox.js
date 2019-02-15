@@ -127,7 +127,7 @@ RaspberryPi.toolboxText =
     '       </value>' +
     '    </block>' +
 
-    '    <block type="raspberrypi_preiod">' +
+    '    <block type="raspberrypi_period">' +
     '       <value name="SIG">' +
     '        <shadow type="raspberrypi_pwm_pin">' +
     '        </shadow>' +

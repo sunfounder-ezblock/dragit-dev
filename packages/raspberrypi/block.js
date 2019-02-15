@@ -434,7 +434,7 @@ Blockly.Blocks['raspberrypi_pwm_pulse_width'] = Blockly.Blocks.raspberrypi_pwm('
 Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = Blockly.Blocks.raspberrypi_pwm('PULSE_WIDTH_PRECENTAGE');
 Blockly.Blocks['raspberrypi_freq'] = Blockly.Blocks.raspberrypi_pwm('FREQ');
 Blockly.Blocks['raspberrypi_prescaler'] = Blockly.Blocks.raspberrypi_pwm('PRESCALER');
-Blockly.Blocks['raspberrypi_preiod'] = Blockly.Blocks.raspberrypi_pwm('PREIOD');
+Blockly.Blocks['raspberrypi_period'] = Blockly.Blocks.raspberrypi_pwm('PERIOD');
 
 
 //send mail
