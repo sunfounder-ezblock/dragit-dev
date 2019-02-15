@@ -492,7 +492,7 @@ Simulator.interpreterFunctions['Servo_set_value'] = {
     },
 }
 
-Blockly.JavaScript['sensorkit_moisturesensor_get_value'] = function(block) {
+Blockly.JavaScript['modules_moisturesensor_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
