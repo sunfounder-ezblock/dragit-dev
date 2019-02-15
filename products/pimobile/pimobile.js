@@ -11,6 +11,6 @@ PiMobile.list = {
 PiMobile.name = '';
 
 PiMobile.init = function() {
-    PiMobile.name = MSG.catPiMobileForPi;
+    PiMobile.name = MSG.catPiMobile;
     PiMobile.description = MSG.pimobile_description;
 }

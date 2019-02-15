@@ -25,9 +25,9 @@ Leaf.functions = [
     "bluetooth",
     // "play",
 ]
-Leaf.avalibleKits = {
-    'sensorkit': SensorKit,
-}
+Leaf.avalibleKits = [
+    "SensorKit",
+]
 Leaf.pins = [{
         'id': 1,
         'name': 'A0',
