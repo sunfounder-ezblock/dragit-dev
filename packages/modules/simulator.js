@@ -20,7 +20,7 @@ goog.provide('Blockly.JavaScript.modules');
 goog.require('Blockly.JavaScript');
 
 
-Blockly.JavaScript['sensorkit_led_module_set_value'] = function(block) {
+Blockly.JavaScript['modules_led_module_set_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -49,7 +49,7 @@ Simulator.interpreterFunctions['LEDModule_set_value'] = {
     },
 }
 
-Blockly.JavaScript['sensorkit_rgb_set_value'] = function(block) {
+Blockly.JavaScript['modules_rgb_set_value'] = function(block) {
     var pin_r = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_g = Blockly.JavaScript.valueToCode(block, 'G', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_b = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_ATOMIC);
@@ -103,7 +103,7 @@ Simulator.interpreterFunctions['RGBLED_set_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_button_get_value'] = function(block) {
+Blockly.JavaScript['modules_button_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -128,7 +128,7 @@ Simulator.interpreterFunctions['Button_get_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_tiltswitch_get_value'] = function(block) {
+Blockly.JavaScript['modules_tiltswitch_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -151,7 +151,7 @@ Simulator.interpreterFunctions['TiltSwitch_get_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_vibrationswitch_get_value'] = function(block) {
+Blockly.JavaScript['modules_vibrationswitch_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -175,7 +175,7 @@ Simulator.interpreterFunctions['VibrationSwitch_get_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_buzzer_set_value'] = function(block) {
+Blockly.JavaScript['modules_buzzer_set_value'] = function(block) {
     //digital pin number
     var SIG = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var note = Blockly.JavaScript.valueToCode(block, 'note', Blockly.JavaScript.ORDER_ATOMIC);
@@ -207,7 +207,7 @@ Simulator.interpreterFunctions['Buzzer_play'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_joystick_get_value'] = function(block) {
+Blockly.JavaScript['modules_joystick_get_value'] = function(block) {
     var Xpin = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
     var Ypin = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
     var BTnpin = Blockly.JavaScript.valueToCode(block, 'Btn', Blockly.JavaScript.ORDER_ATOMIC);
@@ -241,7 +241,7 @@ Simulator.interpreterFunctions['Joystick_get_value'] = {
 
 
 
-Blockly.JavaScript['sensorkit_joystick_get_status'] = function(block) {
+Blockly.JavaScript['modules_joystick_get_status'] = function(block) {
     var Xpin = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
     var Ypin = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
     var BTnpin = Blockly.JavaScript.valueToCode(block, 'Btn', Blockly.JavaScript.ORDER_ATOMIC);
@@ -288,7 +288,7 @@ Simulator.interpreterFunctions['Joystick_get_status'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_potentiometer_get_value'] = function(block) {
+Blockly.JavaScript['modules_potentiometer_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -313,7 +313,7 @@ Simulator.interpreterFunctions['Potentiometer_get_value'] = {
 
 
 
-Blockly.JavaScript['sensorkit_soundsensor_get_value'] = function(block) {
+Blockly.JavaScript['modules_soundsensor_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -342,7 +342,7 @@ Simulator.interpreterFunctions['SoundSensor_get_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_photoresistor_get_value'] = function(block) {
+Blockly.JavaScript['modules_photoresistor_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -366,7 +366,7 @@ Simulator.interpreterFunctions['Photoresistor_get_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_touchswitch_get_value'] = function(block) {
+Blockly.JavaScript['modules_touchswitch_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -389,7 +389,7 @@ Simulator.interpreterFunctions['TouchSwitch_get_value'] = {
 }
 
 
-Blockly.JavaScript['sensorkit_ultrasonic_get_value'] = function(block) {
+Blockly.JavaScript['modules_ultrasonic_get_value'] = function(block) {
     var pin_trig = Blockly.JavaScript.valueToCode(block, 'Trig', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_echo = Blockly.JavaScript.valueToCode(block, 'Echo', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -439,7 +439,7 @@ Simulator.interpreterFunctions['UltrasonicSensor_get_value'] = {
     },
 }
 
-Blockly.JavaScript['sensorkit_ds18b20_get_value'] = function(block) {
+Blockly.JavaScript['modules_ds18b20_get_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = '';
@@ -457,7 +457,7 @@ Simulator.interpreterFunctions['DS18B20_get_value'] = {
     },
 }
 
-Blockly.JavaScript['sensorkit_servo_set_angle'] = function(block) {
+Blockly.JavaScript['modules_servo_set_angle'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -517,7 +517,7 @@ Simulator.interpreterFunctions['MoistureSensor_get_value'] = {
 
 
 
-Blockly.JavaScript['sensorkit_adxl345_get_value'] = function(block) {
+Blockly.JavaScript['modules_adxl345_get_value'] = function(block) {
 
     var code = '';
     code += 'ADXL345_get_value()';
