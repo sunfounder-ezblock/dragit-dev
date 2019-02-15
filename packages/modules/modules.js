@@ -254,6 +254,12 @@ Modules["buzzer"] = new Module({
         '</value> ' +
         '</block>'
     ],
+    'simulator': {
+        "type": "ValueOutput",
+        "pin": 'SIG',
+        "mode": 'musicFrequency',
+        "initValue": 0
+    },
     'pins': {
         "SIG": {
             'id': 0,
