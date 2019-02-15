@@ -188,21 +188,24 @@ Blockly.JavaScript['modules_buzzer_set_value'] = function(block) {
 };
 
 Modules.simulator.Buzzer_play = function(pin, note, beat) {
-    pin = pin.toString();
-    note = note.toString();
-    beat = parseInt(beat)
-    var pwm = PWM(pin);
-    pwm.freq(note)
-    pwm.pulse_width_percentage(50);
-    delay(beat);
-    pwm.pulse_width_percentage(0);
+    async function play(){
+        pin = pin.toString();
+        note = note.toString();
+        beat = parseInt(beat)
+        var pwm = PWM(pin);
+        pwm.freq(note)
+        pwm.pulse_width_percentage(50);
+        await Simulator.delay(beat);
+        pwm.pulse_width_percentage(0);
+    }
+    return play()
 }
 
 Simulator.interpreterFunctions['Buzzer_play'] = {
     name: "Buzzer_play",
-    type: "createNativeFunction",
-    func: function(pin, note, beat) {
-        Modules.simulator.Buzzer_play(pin, note, beat);
+    type: "createAsyncFunction",
+    func: function(pin, note, beat, callback) {
+        Modules.simulator.Buzzer_play(pin, note, beat).then(callback);
     },
 }
 
