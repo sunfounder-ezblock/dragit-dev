@@ -197,6 +197,7 @@ Modules.simulator.Buzzer_play = function(pin, note, beat) {
         pwm.pulse_width_percentage(50);
         await Simulator.delay(beat);
         pwm.pulse_width_percentage(0);
+        await Simulator.delay(beat);
     }
     return play()
 }
