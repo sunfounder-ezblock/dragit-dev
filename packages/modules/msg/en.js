@@ -23,7 +23,7 @@ Local['en'].MODULES_TILTSWITCH_GET_VALUE_TITLE2 = "value";
 Local['en'].MODULES_TILTSWITCH_GET_VALUE_TOOLTIP = "Get tilt switch value.";
 
 Local['en'].MODULES_VIBRATIONSWITCH_NAME = "Vibration Switch";
-Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE1 = "Vibration switch";
+Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE1 = "Vibration switch get";
 Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE2 = "value";
 Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TOOLTIP = "Get vibration switch value.";
 
@@ -33,7 +33,7 @@ Local['en'].MODULES_BUZZER_SET_STATUS_TITLE2 = "play";
 Local['en'].MODULES_BUZZER_SET_STATUS_TITLE3 = "for";
 Local['en'].MODULES_BUZZER_SET_STATUS_TOOLTIP = "Buzzer play note for a beat";
 
-Local['en'].MODULES_JOYSTICK_NAME = "JOYSTICK";
+Local['en'].MODULES_JOYSTICK_NAME = "Joystick";
 Local['en'].MODULES_JOYSTICK_GET_STATUS_TITLE1 = "Joystick get status  X";
 Local['en'].MODULES_JOYSTICK_GET_STATUS_TITLE2 = "Y";
 Local['en'].MODULES_JOYSTICK_GET_STATUS_TITLE3 = "Btn";
@@ -70,14 +70,14 @@ Local['en'].MODULES_DS18B20_GET_VALUE_TITLE1 = "DS18B20 Get temperature(to GPIO 
 Local['en'].MODULES_DS18B20_GET_VALUE_TOOLTIP = "Get DS18B20 value (Connect GPIO 4)";
 
 Local['en'].MODULES_SERVO_NAME = "Servo";
-Local['en'].MODULES_SERVO_SET_ANGLE_TITLE1 = "Servo set ";
+Local['en'].MODULES_SERVO_SET_ANGLE_TITLE1 = "Servo set";
 Local['en'].MODULES_SERVO_SET_ANGLE_TITLE2 = "angle";
 Local['en'].MODULES_SERVO_SET_ANGLE_TOOLTIP = "Set servo angle";
 
-Local['en'].MODULES_MOISTURE_NAME = "Moisture";
-Local['en'].MODULES_MOISTURE_SENSOR_GET_VALUE_TITLE1 = "Moisture sensor get";
-Local['en'].MODULES_MOISTURE_SENSOR_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_MOISTURE_SENSOR_GET_VALUE_TOOLTIP = "Get moisture sensor value";
+Local['en'].MODULES_MOISTURESENSOR_NAME = "Moisture Sensor";
+Local['en'].MODULES_MOISTURESENSOR_GET_VALUE_TITLE1 = "Moisture sensor get";
+Local['en'].MODULES_MOISTURESENSOR_GET_VALUE_TITLE2 = "value";
+Local['en'].MODULES_MOISTURESENSOR_GET_VALUE_TOOLTIP = "Get moisture sensor value";
 
 Local['en'].MODULES_ADXL345_NAME = "ADXL345";
 Local['en'].MODULES_ADXL345_GET_VALUE_TITLE1 = "ADXL345 get value";

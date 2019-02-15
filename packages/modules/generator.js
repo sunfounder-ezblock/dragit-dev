@@ -170,7 +170,7 @@ Blockly.Python['modules_servo_set_angle'] = function(block) {
     return code;
 };
 
-Blockly.Python['modules_moisture_sensor_get_value'] = function(block) {
+Blockly.Python['modules_moisturesensor_get_value'] = function(block) {
     var pin = Blockly.Python.valueToCode(block, 'SIG', Blockly.Python.ORDER_ATOMIC);
     Blockly.Python.definitions_['import_modules'] = 'from modules import *';
 

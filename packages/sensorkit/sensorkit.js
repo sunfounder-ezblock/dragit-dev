@@ -16,7 +16,7 @@ var SensorKit = {
         "sound-sensor": Modules["sound-sensor"],
         "photoresistor": Modules["photoresistor"],
         "touch-switch": Modules["touch-switch"],
-        "ultrasonic": Modules["ultrasonic-ranging-module"],
+        "ultrasonic": Modules["ultrasonic"],
         "ds18b20": Modules["ds18b20"],
         "servo": Modules["servo"],
         "moisture-sensor": Modules["moisture-sensor"],
