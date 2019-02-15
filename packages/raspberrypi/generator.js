@@ -320,17 +320,3 @@ Blockly.Python['raspberrypi_period'] = function(block) {
     code += period + '.period(' + value + ')\n';
     return code
 };
-
-
-// send mail
-Blockly.Python['raspberrypi_send_email'] = function(block) {
-    var email = Blockly.Python.valueToCode(block, 'email', Blockly.Python.ORDER_ATOMIC);
-    var object = Blockly.Python.valueToCode(block, 'object', Blockly.Python.ORDER_ATOMIC);
-    var thing = Blockly.Python.valueToCode(block, 'thing', Blockly.Python.ORDER_ATOMIC);
-
-    Blockly.Python.definitions_['import_raspberrypi'] = 'from raspberrypi import *';
-
-    var code = '';
-    code += 'send_mail(' + email + ', ' + object + ', ' + thing + ')\n';
-    return code;
-};
