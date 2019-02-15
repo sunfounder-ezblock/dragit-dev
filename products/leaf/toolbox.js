@@ -2,10 +2,7 @@ Leaf.toolboxText =
     '<category name="%{BKY_CATLEAF}" colour="80">' +
     '  <label text="Pin"></label>' +
     '  <block type="leaf_digital_pin"></block>' +
-    '  <block type="leaf_analog_pin"></block>' +
     '  <block type="leaf_device_pin"></block>' +
-    '  <block type="leaf_servo_pin"></block>' +
-    '  <sep></sep>' +
     '  <block type="leaf_pin_get_value">' +
     '    <value name="pin">' +
     '      <shadow type="leaf_digital_pin">' +
@@ -51,6 +48,7 @@ Leaf.toolboxText =
     '  </block>' +
 
     '  <label text="ADC"></label>' +
+    '  <block type="leaf_analog_pin"></block>' +
     '  <block type="leaf_adc_read">' +
     '    <value name="analog_pin">' +
     '      <shadow type="leaf_analog_pin">' +
@@ -72,6 +70,7 @@ Leaf.toolboxText =
     '  </block>' +
 
     '  <label text="Servo"></label>' +
+    '  <block type="leaf_servo_pin"></block>' +
     '  <block type="leaf_servo_set_angle">' +
     '    <value name="servo_pin">' +
     '      <shadow type="leaf_servo_pin">' +
@@ -153,13 +152,72 @@ Leaf.toolboxText =
     '      </shadow>' +
     '    </value>' +
     '  </block>' +
+
+    '  <label text="PWM"></label>' +
+    '  <block type="leaf_pwm_pin"></block>' +
+    '  <block type="leaf_pwm_pulse_width">' +
+    '    <value name="pwm_pin">' +
+    '      <shadow type="leaf_pwm_pin">' +
+    '      </shadow>' +
+    '    </value>' +
+    '    <value name="analog_value">' +
+    '      <shadow type="math_number">' +
+    '        <field name="NUM">0</field>' +
+    '      </shadow>' +
+    '    </value>' +
+    '  </block>' +
+    '  <block type="leaf_pwm_pulse_width_precentage">' +
+    '    <value name="pwm_pin">' +
+    '      <shadow type="leaf_pwm_pin">' +
+    '      </shadow>' +
+    '    </value>' +
+    '    <value name="analog_value">' +
+    '      <shadow type="math_number">' +
+    '        <field name="NUM">0</field>' +
+    '      </shadow>' +
+    '    </value>' +
+    '  </block>' +
+    '  <block type="leaf_freq">' +
+    '    <value name="pwm_pin">' +
+    '      <shadow type="leaf_pwm_pin">' +
+    '      </shadow>' +
+    '    </value>' +
+    '    <value name="analog_value">' +
+    '      <shadow type="math_number">' +
+    '        <field name="NUM">50</field>' +
+    '      </shadow>' +
+    '    </value>' +
+    '  </block>' +
+    '  <block type="leaf_prescaler">' +
+    '    <value name="pwm_pin">' +
+    '      <shadow type="leaf_pwm_pin">' +
+    '      </shadow>' +
+    '    </value>' +
+    '    <value name="analog_value">' +
+    '      <shadow type="math_number">' +
+    '        <field name="NUM">0</field>' +
+    '      </shadow>' +
+    '    </value>' +
+    '  </block>' +
+    '  <block type="leaf_period">' +
+    '    <value name="pwm_pin">' +
+    '      <shadow type="leaf_pwm_pin">' +
+    '      </shadow>' +
+    '    </value>' +
+    '    <value name="analog_value">' +
+    '      <shadow type="math_number">' +
+    '        <field name="NUM">0</field>' +
+    '      </shadow>' +
+    '    </value>' +
+    '  </block>' +
+    '  <sep></sep>' +
     '</category>' +
 
     '<category name="%{BKY_CATTIME}" colour="292">' +
     '  <block type="time_localtime">' +
     '  </block>' +
     '  <block type="time_mktime">' +
-    '  </block>' +
+    '  </block>' +  
     '  <block type="time_sleep">' +
     '    <value name="delay_secs">' +
     '      <shadow type="math_number">' +

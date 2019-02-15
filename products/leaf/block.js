@@ -5,8 +5,8 @@ goog.provide('Blockly.Constants.Leaf');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Msg');
 
-Blockly.Constants.Leaf.HUE = 80;
-Blockly.Blocks.leaf.HUE = Blockly.Constants.Leaf.HUE;
+Blockly.Constants.Leaf.RGB = 80;
+Blockly.Blocks.leaf.RGB = Blockly.Constants.Leaf.RGB;
 
 
 //#################################################
@@ -29,8 +29,6 @@ Blockly.Constants.Leaf.DIGITAL_PINS = [
   ["D11", '"D11"'],
   ["D12", '"D12"'],
   ["D13", '"D13"'],
-  ["D14", '"D14"'],
-  ["D15", '"D15"'],
 ];
 
 Blockly.Constants.Leaf.ANALOG_PINS = [
@@ -49,8 +47,6 @@ Blockly.Constants.Leaf.ANALOG_PINS = [
   ["A11", '"A11"'],
   ["A12", '"A12"'],
   ["A13", '"A13"'],
-  ["A14", '"A14"'],
-  ["A15", '"A15"'],
 ];
 
 Blockly.Constants.Leaf.DEVICE_PINS = [
@@ -70,6 +66,28 @@ Blockly.Constants.Leaf.PIN_STATUS = [
   [Blockly.Msg.LEAF_PIN_INPUT, "Pin.IN"],
   [Blockly.Msg.LEAF_PIN_OPEN_DRAIN, "Pin.OPEN_DRAIN"],
 ];
+
+Blockly.Constants.Leaf.PWM_PINS = [
+  ['A0', '"A0"'],
+  ['A1', '"A1"'],
+  ['A2', '"A2"'],
+  ['A3', '"A3"'],
+  ['D4', '"D4"'],
+  ['D5', '"D5"'],
+  ['D6', '"D6"'],
+  ['D7', '"D7"'],
+];
+
+Blockly.Constants.Leaf.PWM_PIN_DICT = {
+  "A0":[2,1],
+  "A1":[2,2],
+  "A2":[2,3],
+  "A3":[2,4],
+  "D4":[4,1],
+  "D5":[4,2],
+  "D6":[4,3],
+  "D7":[4,4]
+}
 
 Blockly.Constants.Leaf.PIN_PULL = [
   ["pull_up", "Pin.PULL_UP"],
@@ -95,7 +113,7 @@ Blockly.Blocks['leaf_digital_pin'] = {
       .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.DIGITAL_PINS), "pin");
     this.setInputsInline(true);
     this.setOutput(true, "Digital_Pin");
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_DIGITAL_PIN_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -107,7 +125,7 @@ Blockly.Blocks['leaf_analog_pin'] = {
       .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.ANALOG_PINS), "pin");
     this.setInputsInline(true);
     this.setOutput(true, "Analog_Pin");
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_ANALOG_PIN_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -119,7 +137,7 @@ Blockly.Blocks['leaf_device_pin'] = {
       .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.DEVICE_PINS), "pin");
     this.setInputsInline(true);
     this.setOutput(true, "Device_Pin");
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_DEVICE_PIN_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -131,7 +149,7 @@ Blockly.Blocks['leaf_servo_pin'] = {
       .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.SERVO_PINS), "pin");
     this.setInputsInline(true);
     this.setOutput(true, "Servo_Pin");
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_SERVO_PIN_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -143,7 +161,7 @@ Blockly.Blocks['leaf_pin_pull'] = {
       .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.PIN_PULL), "pin_pull");
     this.setInputsInline(true);
     this.setOutput(true, "Pin_pull");
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_PULL_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -157,8 +175,20 @@ Blockly.Blocks['leaf_pin_irq_trigger'] = {
       .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.IRQ_TRIGGER), "irq_trigger");
     this.setInputsInline(true);
     this.setOutput(true, "Irq_trigger");
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_IRQ_TRIGGER_TOOLTIP);
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['leaf_pwm_pin'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldDropdown(Blockly.Constants.Leaf.PWM_PINS), "pin");
+    this.setInputsInline(true);
+    this.setOutput(true, "Pwm_Pin");
+    this.setColour(Blockly.Constants.Leaf.RGB);
+    this.setTooltip(Blockly.Msg.LEAF_PWM_PIN_TOOLTIP);
     this.setHelpUrl('');
   }
 };
@@ -176,7 +206,7 @@ Blockly.Blocks['leaf_pin_set_value'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_SET_VALUE_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -191,7 +221,7 @@ Blockly.Blocks['leaf_pin_get_value'] = {
       .appendField(Blockly.Msg.LEAF_PIN_GET_VALUE_TITLE2);
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_GET_VALUE_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -207,7 +237,7 @@ Blockly.Blocks['leaf_pin_on'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_ON_TOOLTIP);
   }
 };
@@ -222,7 +252,7 @@ Blockly.Blocks['leaf_pin_off'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_PIN_OFF_TOOLTIP);
   }
 };
@@ -246,7 +276,7 @@ Blockly.Blocks['leaf_pin_irq'] = {
     this.appendStatementInput("irq_handler")
       .setCheck(null)
       .appendField(Blockly.Msg.LEAF_PIN_IRQ_TITLE5);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     //this.setOutput(true, null);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -269,7 +299,7 @@ Blockly.Blocks['leaf_adc_read'] = {
       .appendField(Blockly.Msg.LEAF_ADC_READ_TITLE2);
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_ADC_READ_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -291,7 +321,7 @@ Blockly.Blocks['leaf_dac_write'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_DAC_WRITE_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -313,7 +343,7 @@ Blockly.Blocks['leaf_servo_get_angle'] = {
       .appendField(Blockly.Msg.LEAF_SERVO_GET_ANGLE_TITLE2);
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_SERVO_GET_ANGLE_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -333,7 +363,7 @@ Blockly.Blocks['leaf_servo_set_angle'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_SERVO_SET_ANGLE_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -348,7 +378,7 @@ Blockly.Blocks['leaf_servo_get_speed'] = {
       .appendField(Blockly.Msg.LEAF_SERVO_GET_SPEED_TITLE2);
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_SERVO_GET_SPEED_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -368,7 +398,7 @@ Blockly.Blocks['leaf_servo_set_speed'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_SERVO_SET_SPEED_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -383,7 +413,7 @@ Blockly.Blocks['leaf_servo_get_calibration'] = {
       .appendField(Blockly.Msg.LEAF_SERVO_GET_CALIBRATION_TITLE2);
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_SERVO_GET_CALIBRATION_TOOLTIP);
     this.setHelpUrl('');
   }
@@ -414,8 +444,95 @@ Blockly.Blocks['leaf_servo_set_calibration'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Constants.Leaf.HUE);
+    this.setColour(Blockly.Constants.Leaf.RGB);
     this.setTooltip(Blockly.Msg.LEAF_SERVO_SET_CALIBRATION_TOOLTIP);
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['leaf_pwm_pulse_width'] = {
+  init: function () {
+    this.appendValueInput("pwm_pin")
+      .setCheck("Pwm_Pin")
+      .appendField(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_TITLE1);
+    this.appendValueInput("analog_value")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_TITLE2);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Constants.Leaf.RGB);
+    this.setTooltip(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_TOOLTIP);
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['leaf_pwm_pulse_width_precentage'] = {
+  init: function () {
+    this.appendValueInput("pwm_pin")
+      .setCheck("Pwm_Pin")
+      .appendField(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1);
+    this.appendValueInput("analog_value")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE3);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Constants.Leaf.RGB);
+    this.setTooltip(Blockly.Msg.LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP);
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['leaf_freq'] = {
+  init: function () {
+    this.appendValueInput("pwm_pin")
+      .setCheck("Pwm_Pin")
+      .appendField(Blockly.Msg.LEAF_PWM_FREQ_TITLE1);
+    this.appendValueInput("analog_value")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LEAF_PWM_FREQ_TITLE2);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Constants.Leaf.RGB);
+    this.setTooltip(Blockly.Msg.LEAF_PWM_FREQ_TOOLTIP);
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['leaf_prescaler'] = {
+  init: function () {
+    this.appendValueInput("pwm_pin")
+      .setCheck("Pwm_Pin")
+      .appendField(Blockly.Msg.LEAF_PWM_PRESCALER_TITLE1);
+    this.appendValueInput("analog_value")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LEAF_PWM_PRESCALER_TITLE2);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Constants.Leaf.RGB);
+    this.setTooltip(Blockly.Msg.LEAF_PWM_PRESCALER_TOOLTIP);
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['leaf_period'] = {
+  init: function () {
+    this.appendValueInput("pwm_pin")
+      .setCheck("Pwm_Pin")
+      .appendField(Blockly.Msg.LEAF_PWM_PERIOD_TITLE1);
+    this.appendValueInput("analog_value")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LEAF_PWM_PERIOD_TITLE2);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Constants.Leaf.RGB);
+    this.setTooltip(Blockly.Msg.LEAF_PWM_PERIOD_TOOLTIP);
     this.setHelpUrl('');
   }
 };
