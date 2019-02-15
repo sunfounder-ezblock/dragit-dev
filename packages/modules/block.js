@@ -286,17 +286,17 @@ Blockly.Blocks['modules_servo_set_angle'] = {
     }
 };
 
-Blockly.Blocks['modules_moisture_sensor_get_value'] = {
+Blockly.Blocks['modules_moisturesensor_get_value'] = {
     init: function init() {
         this.appendValueInput("SIG")
             .setCheck("Analog_Pin")
-            .appendField(Blockly.Msg.MODULES_MOISTURE_SENSOR_GET_VALUE_TITLE1);
+            .appendField(Blockly.Msg.MODULES_MOISTURESENSOR_GET_VALUE_TITLE1);
         this.appendDummyInput()
-            .appendField(Blockly.Msg.MODULES_MOISTURE_SENSOR_GET_VALUE_TITLE2);
+            .appendField(Blockly.Msg.MODULES_MOISTURESENSOR_GET_VALUE_TITLE2);
         this.setInputsInline(true);
         this.setOutput(true, null);
         this.setColour(Blockly.Constants.Modules.RGB);
-        this.setTooltip(Blockly.Msg.MODULES_MOISTURE_SENSOR_GET_VALUE_TOOLTIP);
+        this.setTooltip(Blockly.Msg.MODULES_MOISTURESENSOR_GET_VALUE_TOOLTIP);
         this.setHelpUrl('');
     }
 };

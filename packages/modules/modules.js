@@ -499,8 +499,8 @@ Modules["touch-switch"] = new Module({
     }
 })
 
-Modules["ultrasonic-ranging-module"] = new Module({
-    'sname': 'ultrasonic-ranging-module',
+Modules["ultrasonic"] = new Module({
+    'sname': 'ultrasonic',
     'blocks': ['<block type="modules_ultrasonic_get_value"></block> '],
     'pins': {
         "Trig": {
@@ -626,7 +626,7 @@ Modules["servo"] = new Module({
 
 Modules["moisture-sensor"] = new Module({
     'sname': 'moisture-sensor',
-    'blocks': ['<block type="modules_moisture_sensor_get_value"> </block>'],
+    'blocks': ['<block type="modules_moisturesensor_get_value"> </block>'],
     'pins': {
         "SIG": {
             'id': 0,

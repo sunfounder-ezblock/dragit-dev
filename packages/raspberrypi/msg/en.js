@@ -118,13 +118,13 @@ Local['en'].RASPBERRYPI_PWM_PREIOD_TITLE2 = "preiod to";
 Local['en'].RASPBERRYPI_PWM_PREIOD_TOOLTIP = "Set PWM preiod value.";
 
 
-Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Send mail to";
-Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "about object";
-Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE3 = "and thing";
-Local['en'].RASPBERRYPI_SEND_EMAIL_TOOLTIP = "Ezblock reminds you: Your 'object' needs “to do”";
+// Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Send mail to";
+// Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "about object";
+// Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE3 = "and thing";
+// Local['en'].RASPBERRYPI_SEND_EMAIL_TOOLTIP = "Ezblock reminds you: Your 'object' needs “to do”";
 
 
-Local['en'].RASPBERRYPI_SWITCHBOT_S1_TITLE1 = "SwitchBot S1 MAC address";
-Local['en'].RASPBERRYPI_SWITCHBOT_S1_TITLE2 = "set status";
-Local['en'].RASPBERRYPI_SWITCHBOT_S1_TOOLTIP = "Fill in the Switchbot MAC address and set the status. \
-                                For the Switchbot MAC address, please see the link:";
+// Local['en'].RASPBERRYPI_SWITCHBOT_S1_TITLE1 = "SwitchBot S1 MAC address";
+// Local['en'].RASPBERRYPI_SWITCHBOT_S1_TITLE2 = "set status";
+// Local['en'].RASPBERRYPI_SWITCHBOT_S1_TOOLTIP = "Fill in the Switchbot MAC address and set the status. \
+//                                 For the Switchbot MAC address, please see the link:";

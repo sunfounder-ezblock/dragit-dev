@@ -1,84 +1,84 @@
-Local['en'].MSG.catSensorkit = "Sensor Kit";
+Local['zh-hans'].MSG.catModules = "模块";
 
-Local['en'].MODULES_LEDMODULE_NAME = "LED Module";
-Local['en'].MODULES_LEDMODULE_SET_VALUE_TITLE1 = "LED module set ";
-Local['en'].MODULES_LEDMODULE_SET_VALUE_TITLE2 = "status";
-Local['en'].MODULES_LEDMODULE_SET_VALUE_TOOLTIP = "Set LED to ON or OFF.(0 is OFF, 1 is ON)";
+Local['zh-hans'].MODULES_LEDMODULE_NAME = "LED 模块";
+Local['zh-hans'].MODULES_LEDMODULE_SET_VALUE_TITLE1 = "LED 模块设置 ";
+Local['zh-hans'].MODULES_LEDMODULE_SET_VALUE_TITLE2 = "状态";
+Local['zh-hans'].MODULES_LEDMODULE_SET_VALUE_TOOLTIP = "设置LED为开或关.(0 代表关, 1 代表开)";
 
-Local['en'].MODULES_RGBLED_NAME = "RGB LED";
-Local['en'].MODULES_RGBLED_SET_VALUE_TITLE1 = "RGB module R";
-Local['en'].MODULES_RGBLED_SET_VALUE_TITLE2 = "G";
-Local['en'].MODULES_RGBLED_SET_VALUE_TITLE3 = "B";
-Local['en'].MODULES_RGBLED_SET_VALUE_TITLE4 = "set colour to";
-Local['en'].MODULES_RGBLED_SET_VALUE_TOOLTIP = "Set RGB color";
+Local['zh-hans'].MODULES_RGBLED_NAME = "RGB LED";
+Local['zh-hans'].MODULES_RGBLED_SET_VALUE_TITLE1 = "RGB 模块 R";
+Local['zh-hans'].MODULES_RGBLED_SET_VALUE_TITLE2 = "G";
+Local['zh-hans'].MODULES_RGBLED_SET_VALUE_TITLE3 = "B";
+Local['zh-hans'].MODULES_RGBLED_SET_VALUE_TITLE4 = "设置颜色为";
+Local['zh-hans'].MODULES_RGBLED_SET_VALUE_TOOLTIP = "设置RGB的颜色";
 
-Local['en'].MODULES_BUTTON_NAME = "Button";
-Local['en'].MODULES_BUTTON_GET_VALUE_TITLE1 = "Button get";
-Local['en'].MODULES_BUTTON_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_BUTTON_GET_VALUE_TOOLTIP = "Get button value.0(button pressed) or 1(button released)";
+Local['zh-hans'].MODULES_BUTTON_NAME = "按键";
+Local['zh-hans'].MODULES_BUTTON_GET_VALUE_TITLE1 = "按键 获取";
+Local['zh-hans'].MODULES_BUTTON_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_BUTTON_GET_VALUE_TOOLTIP = "获取按键的值， 0代表按键按下、1代表按键弹出";
 
-Local['en'].MODULES_TILTSWITCH_NAME = "Tilt Switch";
-Local['en'].MODULES_TILTSWITCH_GET_VALUE_TITLE1 = "Tilt switch get";
-Local['en'].MODULES_TILTSWITCH_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_TILTSWITCH_GET_VALUE_TOOLTIP = "Get tilt switch value.";
+Local['zh-hans'].MODULES_TILTSWITCH_NAME = "倾斜快关";
+Local['zh-hans'].MODULES_TILTSWITCH_GET_VALUE_TITLE1 = "倾斜开关 获取";
+Local['zh-hans'].MODULES_TILTSWITCH_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_TILTSWITCH_GET_VALUE_TOOLTIP = "获取倾斜开关的值.";
 
-Local['en'].MODULES_VIBRATIONSWITCH_NAME = "Vibration Switch";
-Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE1 = "Vibration switch";
-Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_VIBRATIONSWITCH_GET_VALUE_TOOLTIP = "Get vibration switch value.";
+Local['zh-hans'].MODULES_VIBRATIONSWITCH_NAME = "振动开关";
+Local['zh-hans'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE1 = "振动开关 获取";
+Local['zh-hans'].MODULES_VIBRATIONSWITCH_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_VIBRATIONSWITCH_GET_VALUE_TOOLTIP = "获取振动开关的值.";
 
-Local['en'].MODULES_BUZZER_NAME = "Buzzer";
-Local['en'].MODULES_BUZZER_SET_STATUS_TITLE1 = "Buzzer";
-Local['en'].MODULES_BUZZER_SET_STATUS_TITLE2 = "play";
-Local['en'].MODULES_BUZZER_SET_STATUS_TITLE3 = "for";
-Local['en'].MODULES_BUZZER_SET_STATUS_TOOLTIP = "Buzzer play note for a beat";
+Local['zh-hans'].MODULES_BUZZER_NAME = "蜂鸣器";
+Local['zh-hans'].MODULES_BUZZER_SET_STATUS_TITLE1 = "蜂鸣器";
+Local['zh-hans'].MODULES_BUZZER_SET_STATUS_TITLE2 = "音调";
+Local['zh-hans'].MODULES_BUZZER_SET_STATUS_TITLE3 = "保持";
+Local['zh-hans'].MODULES_BUZZER_SET_STATUS_TOOLTIP = "蜂鸣器打一个节拍";
 
-Local['en'].MODULES_JOYSTICK_NAME = "JOYSTICK";
-Local['en'].MODULES_JOYSTICK_GET_STATUS_TITLE1 = "Joystick get status  X";
-Local['en'].MODULES_JOYSTICK_GET_STATUS_TITLE2 = "Y";
-Local['en'].MODULES_JOYSTICK_GET_STATUS_TITLE3 = "Btn";
-Local['en'].MODULES_JOYSTICK_GET_STATUS_TOOLTIP = "Get joystick status";
+Local['zh-hans'].MODULES_JOYSTICK_NAME = "摇杆";
+Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TITLE1 = "摇杆 获取状态 X";
+Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TITLE2 = "Y";
+Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TITLE3 = "Btn";
+Local['zh-hans'].MODULES_JOYSTICK_GET_STATUS_TOOLTIP = "获取摇杆的状态值";
 
-Local['en'].MODULES_POTENTIOMETER_NAME = "Potentiometer";
-Local['en'].MODULES_POTENTIOMETER_GET_VALUE_TITLE1 = "Potentiometer get";
-Local['en'].MODULES_POTENTIOMETER_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_POTENTIOMETER_GET_VALUE_TOOLTIP = "Get potentiometer analog value.";
+Local['zh-hans'].MODULES_POTENTIOMETER_NAME = "电位计";
+Local['zh-hans'].MODULES_POTENTIOMETER_GET_VALUE_TITLE1 = "电位计 获取";
+Local['zh-hans'].MODULES_POTENTIOMETER_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_POTENTIOMETER_GET_VALUE_TOOLTIP = "获取电位计的模拟值.";
 
-Local['en'].MODULES_SOUNDSENSOR_NAME = "Sound Sensor";
-Local['en'].MODULES_SOUNDSENSOR_GET_VALUE_TITLE1 = "Sound sensor get";
-Local['en'].MODULES_SOUNDSENSOR_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_SOUNDSENSOR_GET_VALUE_TOOLTIP = "Get sound analog value.";
+Local['zh-hans'].MODULES_SOUNDSENSOR_NAME = "声音传感器";
+Local['zh-hans'].MODULES_SOUNDSENSOR_GET_VALUE_TITLE1 = "声音传感器 获取";
+Local['zh-hans'].MODULES_SOUNDSENSOR_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_SOUNDSENSOR_GET_VALUE_TOOLTIP = "获取声音传感器的模拟值.";
 
-Local['en'].MODULES_PHOTORESISTOR_NAME = "Photoresistor";
-Local['en'].MODULES_PHOTORESISTOR_GET_VALUE_TITLE1 = "Photoresistor get";
-Local['en'].MODULES_PHOTORESISTOR_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_PHOTORESISTOR_GET_VALUE_TOOLTIP = "Get photoresisotr analog value.";
+Local['zh-hans'].MODULES_PHOTORESISTOR_NAME = "光敏电阻";
+Local['zh-hans'].MODULES_PHOTORESISTOR_GET_VALUE_TITLE1 = "光敏电阻 获取";
+Local['zh-hans'].MODULES_PHOTORESISTOR_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_PHOTORESISTOR_GET_VALUE_TOOLTIP = "获取光敏电阻的模拟值.";
 
-Local['en'].MODULES_TOUCHSWITCH_NAME = "Touch Switch";
-Local['en'].MODULES_TOUCHSWITCH_GET_VALUE_TITLE1 = "Touch switch get";
-Local['en'].MODULES_TOUCHSWITCH_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_TOUCHSWITCH_GET_VALUE_TOOLTIP = "Get touch switch value.";
+Local['zh-hans'].MODULES_TOUCHSWITCH_NAME = "触摸开关";
+Local['zh-hans'].MODULES_TOUCHSWITCH_GET_VALUE_TITLE1 = "触摸开关 获取";
+Local['zh-hans'].MODULES_TOUCHSWITCH_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_TOUCHSWITCH_GET_VALUE_TOOLTIP = "获取触摸开关的值.";
 
-Local['en'].MODULES_ULTRASONIC_NAME = "Ultrasonic";
-Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE1 = "Ultrasonic ranging get distance";
-Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE2 = "trig";
-Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE3 = "echo";
-Local['en'].MODULES_ULTRASONIC_VALUE_TOOLTIP = " Get ultrasonic ranging value.";
+Local['zh-hans'].MODULES_ULTRASONIC_NAME = "超声波";
+Local['zh-hans'].MODULES_ULTRASONIC_GET_VALUE_TITLE1 = "超声波获取距离";
+Local['zh-hans'].MODULES_ULTRASONIC_GET_VALUE_TITLE2 = "trig";
+Local['zh-hans'].MODULES_ULTRASONIC_GET_VALUE_TITLE3 = "echo";
+Local['zh-hans'].MODULES_ULTRASONIC_VALUE_TOOLTIP = "获取超声波测量距离的值.";
 
-Local['en'].MODULES_DS18B20_NAME = "DS18B20";
-Local['en'].MODULES_DS18B20_GET_VALUE_TITLE1 = "DS18B20 Get temperature(to GPIO 4)";
-Local['en'].MODULES_DS18B20_GET_VALUE_TOOLTIP = "Get DS18B20 value (Connect GPIO 4)";
+Local['zh-hans'].MODULES_DS18B20_NAME = "DS18B20";
+Local['zh-hans'].MODULES_DS18B20_GET_VALUE_TITLE1 = "DS18B20 获取温度(to GPIO 4)";
+Local['zh-hans'].MODULES_DS18B20_GET_VALUE_TOOLTIP = "获取DS18B20检测的值(连接GPIO 4)";
 
-Local['en'].MODULES_SERVO_NAME = "Servo";
-Local['en'].MODULES_SERVO_SET_ANGLE_TITLE1 = "Servo set ";
-Local['en'].MODULES_SERVO_SET_ANGLE_TITLE2 = "angle";
-Local['en'].MODULES_SERVO_SET_ANGLE_TOOLTIP = "Set servo angle";
+Local['zh-hans'].MODULES_SERVO_NAME = "舵机";
+Local['zh-hans'].MODULES_SERVO_SET_ANGLE_TITLE1 = "舵机 设置";
+Local['zh-hans'].MODULES_SERVO_SET_ANGLE_TITLE2 = "角度";
+Local['zh-hans'].MODULES_SERVO_SET_ANGLE_TOOLTIP = "设置电机的角度";
 
-Local['en'].MODULES_MOISTURE_NAME = "Moisture";
-Local['en'].MODULES_MOISTURE_SENSOR_GET_VALUE_TITLE1 = "Moisture sensor get";
-Local['en'].MODULES_MOISTURE_SENSOR_GET_VALUE_TITLE2 = "value";
-Local['en'].MODULES_MOISTURE_SENSOR_GET_VALUE_TOOLTIP = "Get moisture sensor value";
+Local['zh-hans'].MODULES_MOISTURESENSOR_NAME = "湿度传感器";
+Local['zh-hans'].MODULES_MOISTURESENSOR_GET_VALUE_TITLE1 = "湿度传感器 获取";
+Local['zh-hans'].MODULES_MOISTURESENSOR_GET_VALUE_TITLE2 = "值";
+Local['zh-hans'].MODULES_MOISTURESENSOR_GET_VALUE_TOOLTIP = "获取湿度传感器的值";
 
-Local['en'].MODULES_ADXL345_NAME = "ADXL345";
-Local['en'].MODULES_ADXL345_GET_VALUE_TITLE1 = "ADXL345 get value";
-Local['en'].MODULES_ADXL345_GET_VALUE_TOOLTIP = "Get ADXL345 value";
+Local['zh-hans'].MODULES_ADXL345_NAME = "加速度传感器";
+Local['zh-hans'].MODULES_ADXL345_GET_VALUE_TITLE1 = "加速度传感器 获取值";
+Local['zh-hans'].MODULES_ADXL345_GET_VALUE_TOOLTIP = "Get 加速度传感器的值(ADXL345).";
