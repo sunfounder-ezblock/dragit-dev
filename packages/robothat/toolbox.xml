@@ -1,0 +1,57 @@
+<xml>
+  <category name="%{BKY_CATROBOTHAT}" colour='#CF5889'>
+
+    <block type="raspberrypi_pin_set_value">
+      <value name="pin">
+
+    <!-- <block type="robothat_line_follower">
+      <value name="line">
+        <shadow type="robothat_line">
+        </shadow>
+      </value>
+    </block> -->
+
+    <block type="robothat_ultarsonic_distance">
+      <value name="Triq">
+        <shadow type="raspberrypi_digital_pin">
+        </shadow>
+      </value>
+      <value name="Echo">
+        <shadow type="raspberrypi_digital_pin">
+          <field name="NUM">D1</field>
+        </shadow>
+      </value>
+    </block>
+
+    <block type="robothat_motor">
+      <value name="motor">
+        <shadow type="robothat_motor_select">
+        </shadow>
+      </value>
+    </block>
+
+    <block type="robothat_motor_direction_calibration">
+      <value name="value">
+        <shadow type="math_number">
+        </shadow>
+      </value>
+    </block>
+
+    <block type="robothat_motor_speed_calibration">
+      <value name="speed">
+        <shadow type="math_number">
+        </shadow>
+      </value>
+      <value name="value">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+
+
+  </category>
+
+  
+  <sep></sep>
+</xml>

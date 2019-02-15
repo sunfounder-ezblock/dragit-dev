@@ -48,7 +48,7 @@ def Buzzer_play(pin, note, beat):
 	pwm = PWM(pin)
 	pwm.freq(note)
 	pwm.pulse_width_percentage(50)
-	time.sleep(beat)
+	delay(beat)
 	pwm.pulse_width_percentage(0)
 
 def TiltSwitch_get_value(pin):
@@ -112,9 +112,15 @@ def VibrationSwitch_get_value(pin):
 	return value
 
 
-def Joystick_get_value(pin):
-	adc = ADC(pin)
-	value = adc.read()
+def Joystick_get_value(Xpin, Ypin, Btpin, pin_select):
+	array = [Xpin, Ypin, Btpin]
+	pin = array[pin_select]
+	if pinpin_select == 2:
+		pin = Pin(pin)
+		pin.value(value)
+	else:
+		adc = ADC(pin)
+		value = adc.read()
 	return value
 
 
