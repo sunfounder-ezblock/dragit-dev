@@ -26,12 +26,11 @@ var SensorKit = {
 
 SensorKit.libs = Modules.libs;
 
-Object.defineProperty(SensorKit, 'path', {
+Object.defineProperty(SensorKit, 'libPath', {
     get: function get() {
-        return Modules.libPath$
+        return Modules.libPath
     },
-    set: function set(newValue) {
-    }
+    set: function set(newValue) {}
 });
 
 SensorKit.functions = [
