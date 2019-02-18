@@ -20,7 +20,7 @@ goog.provide('Blockly.JavaScript.modules');
 goog.require('Blockly.JavaScript');
 
 
-Blockly.JavaScript['modules_led_module_set_value'] = function(block) {
+Blockly.JavaScript['modules_ledmodule_set_value'] = function(block) {
     var pin = Blockly.JavaScript.valueToCode(block, 'SIG', Blockly.JavaScript.ORDER_ATOMIC);
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -49,7 +49,7 @@ Simulator.interpreterFunctions['LEDModule_set_value'] = {
     },
 }
 
-Blockly.JavaScript['modules_rgb_set_value'] = function(block) {
+Blockly.JavaScript['modules_rgbled_set_value'] = function(block) {
     var pin_r = Blockly.JavaScript.valueToCode(block, 'R', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_g = Blockly.JavaScript.valueToCode(block, 'G', Blockly.JavaScript.ORDER_ATOMIC);
     var pin_b = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_ATOMIC);

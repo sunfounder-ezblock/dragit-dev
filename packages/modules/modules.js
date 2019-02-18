@@ -18,6 +18,7 @@ var Module = function(obj) {
 
 var Modules = {
     simulator: {},
+    id: "modules",
     libPath: "",
     libs: [
         "modules==v0.2",
