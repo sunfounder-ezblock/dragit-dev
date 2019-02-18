@@ -10,8 +10,13 @@ MAX_PW = 2500
 DS18B20 = ''
 
 def LEDModule_set_value(pin, value):
-	pin = Pin(pin)
-	pin.value(value)
+	if pin[0:1] == "D":
+		pin = Pin(pin)
+		pin.value(value)
+	elif pin[0:1] == "P":
+		value = 4095 - value
+		pin = PWM(pin)
+		pin.pulse_width(value)
 
 def RGBLED_set_value(Rpin, Gpin, Bpin, color, common=1):
 	Rpin = PWM(Rpin)
@@ -48,7 +53,7 @@ def Buzzer_play(pin, note, beat):
 	pwm = PWM(pin)
 	pwm.freq(note)
 	pwm.pulse_width_percentage(50)
-	delay(beat)
+	time.sleep(beat/1000)
 	pwm.pulse_width_percentage(0)
 
 def TiltSwitch_get_value(pin):
