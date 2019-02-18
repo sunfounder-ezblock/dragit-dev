@@ -10,8 +10,13 @@ MAX_PW = 2500
 DS18B20 = ''
 
 def LEDModule_set_value(pin, value):
-	pin = Pin(pin)
-	pin.value(value)
+	if pin[0:1] == "D":
+		pin = Pin(pin)
+		pin.value(value)
+	elif pin[0:1] == "P":
+		value = 4095 - value
+		pin = PWM(pin)
+		pin.pulse_width(value)
 
 def RGBLED_set_value(Rpin, Gpin, Bpin, color, common=1):
 	Rpin = PWM(Rpin)
@@ -112,9 +117,15 @@ def VibrationSwitch_get_value(pin):
 	return value
 
 
-def Joystick_get_value(pin):
-	adc = ADC(pin)
-	value = adc.read()
+def Joystick_get_value(Xpin, Ypin, Btpin, pin_select):
+	array = [Xpin, Ypin, Btpin]
+	pin = array[pin_select]
+	if pinpin_select == 2:
+		pin = Pin(pin)
+		pin.value(value)
+	else:
+		adc = ADC(pin)
+		value = adc.read()
 	return value
 
 
