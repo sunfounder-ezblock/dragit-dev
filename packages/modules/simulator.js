@@ -193,9 +193,10 @@ Modules.simulator.Buzzer_play = function(pin, note, beat) {
         note = note.toString();
         beat = parseInt(beat)
         var pwm = PWM(pin);
-        pwm.freq(note)
+        pwm.freq(note);
         pwm.pulse_width_percentage(50);
         await Simulator.delay(beat);
+        pwm.freq(0);
         pwm.pulse_width_percentage(0);
         await Simulator.delay(beat);
     }

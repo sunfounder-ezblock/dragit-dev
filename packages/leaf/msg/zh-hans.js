@@ -114,3 +114,11 @@ Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TOOLTIP = "Sets the angle of the ser
       pulse_angle_90 is the pulse width corresponding to 90 degrees.\n\
       pulse_speed_100 is the pulse width corresponding to a speed of 100."
 
+Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_TITLE1 = "PWM设置";
+Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_TITLE2 = "脉冲宽度的值为";
+Local['zh-hans'].LEAF_SPI_TOOLTIP = "设置PWM脉冲宽度的值为（0 ~ 4095）.";
+      
+Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM设置";
+Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "脉冲宽度的百分比为";
+Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2 = "%";
+

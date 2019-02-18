@@ -56,29 +56,31 @@ Local['en'].LEAF_PIN_IRQ_TOOLTIP   = "There are a total of 22 interrupt lines. 1
 //#################################################
 // class PWM - control pins PWM
 //#################################################
-Local['en'].LEAF_PWM_INIT_TITLE1    = "init pin";
-Local['en'].LEAF_PWM_INIT_TITLE2    = "as pwm";
-Local['en'].LEAF_PWM_INIT_TOOLTIP   = "create PWM object from a pin, PWM can be enabled on all pins except Pin(16)";
+Local['en'].LEAF_PWM_PIN_TITLE = "PWM"
+Local['en'].LEAF_PWM_PIN_TOOLTIP = "PWM pin number";
+// Local['en'].LEAF_PWM_INIT_TITLE1    = "init pin";
+// Local['en'].LEAF_PWM_INIT_TITLE2    = "as pwm";
+// Local['en'].LEAF_PWM_INIT_TOOLTIP   = "create PWM object from a pin, PWM can be enabled on all pins except Pin(16)";
 
-Local['en'].LEAF_PWM_DEINIT_TITLE1    = "pwm";
-Local['en'].LEAF_PWM_DEINIT_TITLE2    = "deinit";
-Local['en'].LEAF_PWM_DEINIT_TOOLTIP   = "turn off PWM on the pin"
+// Local['en'].LEAF_PWM_DEINIT_TITLE1    = "pwm";
+// Local['en'].LEAF_PWM_DEINIT_TITLE2    = "deinit";
+// Local['en'].LEAF_PWM_DEINIT_TOOLTIP   = "turn off PWM on the pin"
 
-Local['en'].LEAF_PWM_GET_FREQ_TITLE1    = "get pwm";
-Local['en'].LEAF_PWM_GET_FREQ_TITLE2    = "freqency";
-Local['en'].LEAF_PWM_GET_FREQ_TOOLTIP   = "get current frequency"
+// Local['en'].LEAF_PWM_GET_FREQ_TITLE1    = "get pwm";
+// Local['en'].LEAF_PWM_GET_FREQ_TITLE2    = "freqency";
+// Local['en'].LEAF_PWM_GET_FREQ_TOOLTIP   = "get current frequency"
 
-Local['en'].LEAF_PWM_SET_FREQ_TITLE1    = "set pwm";
-Local['en'].LEAF_PWM_SET_FREQ_TITLE2    = "freqency";
-Local['en'].LEAF_PWM_SET_FREQ_TOOLTIP   = "set frequency range between 1 and 1000 (measured in Hz)"
+// Local['en'].LEAF_PWM_SET_FREQ_TITLE1    = "set pwm";
+// Local['en'].LEAF_PWM_SET_FREQ_TITLE2    = "freqency";
+// Local['en'].LEAF_PWM_SET_FREQ_TOOLTIP   = "set frequency range between 1 and 1000 (measured in Hz)"
 
-Local['en'].LEAF_PWM_GET_DUTY_TITLE1    = "get pwm";
-Local['en'].LEAF_PWM_GET_DUTY_TITLE2    = "duty cycle";
-Local['en'].LEAF_PWM_GET_DUTY_TOOLTIP   = "get current duty cycle"
+// Local['en'].LEAF_PWM_GET_DUTY_TITLE1    = "get pwm";
+// Local['en'].LEAF_PWM_GET_DUTY_TITLE2    = "duty cycle";
+// Local['en'].LEAF_PWM_GET_DUTY_TOOLTIP   = "get current duty cycle"
 
-Local['en'].LEAF_PWM_SET_DUTY_TITLE1    = "set pwm";
-Local['en'].LEAF_PWM_SET_DUTY_TITLE2    = "duty cycle";
-Local['en'].LEAF_PWM_SET_DUTY_TOOLTIP   = "set duty cycle, the duty cycle is between 0 and 1023 inclusive."
+// Local['en'].LEAF_PWM_SET_DUTY_TITLE1    = "set pwm";
+// Local['en'].LEAF_PWM_SET_DUTY_TITLE2    = "duty cycle";
+// Local['en'].LEAF_PWM_SET_DUTY_TOOLTIP   = "set duty cycle, the duty cycle is between 0 and 1023 inclusive."
 
 
 //#################################################
@@ -204,3 +206,25 @@ Local['en'].LEAF_I2C_READ_FROM_TOOLTIP = "read n bytes from slave device with ad
 Local['en'].LEAF_I2C_WRITE_TO_TITLE1  = "i2c write words";
 Local['en'].LEAF_I2C_WRITE_TO_TITLE2  = "to addr";
 Local['en'].LEAF_I2C_WRITE_TO_TOOLTIP = "write 'N' to slave device with address 0xAA";
+
+Local['en'].LEAF_PWM_PULSE_WIDTH_TITLE1 = "PWM set";
+Local['en'].LEAF_PWM_PULSE_WIDTH_TITLE2 = "pulse width to";
+Local['en'].LEAF_PWM_PULSE_WIDTH_TOOLTIP = "Set PWM pulse width value(0 ~ 4095).";
+
+
+Local['en'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM set";
+Local['en'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2 = "pulse width to";
+Local['en'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE3 = "%";
+Local['en'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP = "Set PWM pulse width precentage(0% ~ 100%).";
+
+Local['en'].LEAF_PWM_FREQ_TITLE1 = "PWM set";
+Local['en'].LEAF_PWM_FREQ_TITLE2 = "frequency to";
+Local['en'].LEAF_PWM_FREQ_TOOLTIP = "Set PWM frequency value(HZ,0 < HZ).";
+
+Local['en'].LEAF_PWM_PRESCALER_TITLE1 = "PWM set";
+Local['en'].LEAF_PWM_PRESCALER_TITLE2 = "prescaler to";
+Local['en'].LEAF_PWM_PRESCALER_TOOLTIP = "Set PWM prescaler value.";
+
+Local['en'].LEAF_PWM_PERIOD_TITLE1 = "PWM set";
+Local['en'].LEAF_PWM_PERIOD_TITLE2 = "period to";
+Local['en'].LEAF_PWM_PERIOD_TOOLTIP = "Set PWM period value(0 ~ 4095).";

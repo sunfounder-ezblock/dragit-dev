@@ -68,6 +68,14 @@ Blockly.Python['leaf_pin_irq_trigger'] = function(block) {
   return [code, Blockly.Python.ORDER_NONE];
 };
 
+Blockly.Python['leaf_pwm_pin'] = function(block) {
+  var pin = block.getFieldValue('pin');
+  Blockly.Python.definitions_['define_pwm_pin_dict'] = 'Pwm_Pin_Dict = {"A0":[2,1],"A1":[2,2],"A2":[2,3],"A3":[2,4],"D4":[4,1],"D5":[4,2],"D6":[4,3],"D7":[4,4]}';
+
+  var code = '';
+  code += pin;
+  return [code, Blockly.Python.ORDER_ATOMIC];
+};
 // ---- Pin functions generator ---- //
 Blockly.Python['leaf_pin_set_value'] = function(block) {
   var value_pin = Blockly.Python.valueToCode(block, 'pin', Blockly.Python.ORDER_ATOMIC);
@@ -224,3 +232,85 @@ Blockly.Python['leaf_servo_set_calibration'] = function(block) {
 
   return code;
 };
+
+Blockly.Python['leaf_pwm_pulse_width'] = function(block) {
+  var value_pin   = Blockly.Python.valueToCode(block, 'pwm_pin', Blockly.Python.ORDER_ATOMIC);
+  var value_write = Blockly.Python.valueToCode(block, 'analog_value', Blockly.Python.ORDER_ATOMIC);
+  var timer = Blockly.Constants.Leaf.PWM_PIN_DICT[value_pin.replace(/"+/g, "")][0];
+  var channel = `ch_${value_pin.replace(/"+/g, "")}`
+
+  Blockly.Python.definitions_['import_pwm'] = 'from leaf import Pin, Timer';
+  Blockly.Python.definitions_[`define_pwm_tim_${timer}`] = 
+    `tim${timer} = Timer(${timer}, freq=50)`;
+  Blockly.Python.definitions_[`define_${channel}`] = 
+    `${channel} = tim${timer}.channel(Pwm_Pin_Dict[${value_pin}][1], Timer.PWM, pin=Pin(${value_pin}))`;
+
+  var code = '';
+  code += `${channel}.pulse_width(${value_write})\n`;
+
+  return code;
+};
+
+Blockly.Python['leaf_pwm_pulse_width_precentage'] = function(block) {
+  var value_pin   = Blockly.Python.valueToCode(block, 'pwm_pin', Blockly.Python.ORDER_ATOMIC);
+  var value_write = Blockly.Python.valueToCode(block, 'analog_value', Blockly.Python.ORDER_ATOMIC);
+  var timer = Blockly.Constants.Leaf.PWM_PIN_DICT[value_pin.replace(/"+/g, "")][0];
+  var channel = `ch_${value_pin.replace(/"+/g, "")}`
+
+  Blockly.Python.definitions_['import_pwm'] = 'from leaf import Pin, Timer';
+  Blockly.Python.definitions_[`define_pwm_tim_${timer}`] = 
+    `tim${timer} = Timer(${timer}, freq=50)`;
+  Blockly.Python.definitions_[`define_${channel}`] = 
+    `${channel} = tim${timer}.channel(Pwm_Pin_Dict[${value_pin}][1], Timer.PWM, pin=Pin(${value_pin}))`;  
+
+  var code = ''
+  code += `${channel}.pulse_width_percent(${value_write})\n` 
+
+  return code;
+};
+
+Blockly.Python['leaf_freq'] = function(block) {
+  var value_pin   = Blockly.Python.valueToCode(block, 'pwm_pin', Blockly.Python.ORDER_ATOMIC);
+  var value_write = Blockly.Python.valueToCode(block, 'analog_value', Blockly.Python.ORDER_ATOMIC);
+  var timer = Blockly.Constants.Leaf.PWM_PIN_DICT[value_pin.replace(/"+/g, "")][0];
+
+  Blockly.Python.definitions_['import_pwm'] = 'from leaf import Pin, Timer';
+  Blockly.Python.definitions_[`define_pwm_tim_${timer}`] = 
+    `tim${timer} = Timer(${timer}, freq=50)`;
+
+  var code = ''
+  code += `tim${timer}.freq(${value_write})\n`
+
+  return code;
+};
+
+Blockly.Python['leaf_prescaler'] = function(block) {
+  var value_pin   = Blockly.Python.valueToCode(block, 'pwm_pin', Blockly.Python.ORDER_ATOMIC);
+  var value_write = Blockly.Python.valueToCode(block, 'analog_value', Blockly.Python.ORDER_ATOMIC);
+  var timer = Blockly.Constants.Leaf.PWM_PIN_DICT[value_pin.replace(/"+/g, "")][0];
+
+  Blockly.Python.definitions_['import_pwm'] = 'from leaf import Pin, Timer';
+  Blockly.Python.definitions_[`define_pwm_tim_${timer}`] = 
+    `tim${timer} = Timer(${timer}, freq=50)`;
+
+  var code = ''
+  code += `tim${timer}.prescaler(${value_write})\n`;
+
+  return code;
+};
+
+Blockly.Python['leaf_period'] = function(block) {
+  var value_pin   = Blockly.Python.valueToCode(block, 'pwm_pin', Blockly.Python.ORDER_ATOMIC);
+  var value_write = Blockly.Python.valueToCode(block, 'analog_value', Blockly.Python.ORDER_ATOMIC);
+  var timer = Blockly.Constants.Leaf.PWM_PIN_DICT[value_pin.replace(/"+/g, "")][0];
+
+  Blockly.Python.definitions_['import_pwm'] = 'from leaf import Pin, Timer';
+  Blockly.Python.definitions_[`define_pwm_tim_${timer}`] = 
+    `tim${timer} = Timer(${timer}, freq=50)`;
+
+  var code = ''
+  code += `tim${timer}.period(${value_write})\n`;
+
+  return code;
+};
+
