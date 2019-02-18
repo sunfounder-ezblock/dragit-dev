@@ -18,8 +18,22 @@ var Module = function(obj) {
 
 var Modules = {
     simulator: {},
+    libPath: "",
+    libs: [
+        "modules==v0.2",
+    ],
     init: () => {},
 };
+
+Object.defineProperty(Modules, 'libPath', {
+    get: function get() {
+        var dev = window[Choice.current.device].series;
+        return `./packages/modules/lib/${dev}`
+    },
+    set: function set(newValue) {
+    }
+});
+
 
 Modules["led-module"] = new Module({
     'sname': 'led-module',

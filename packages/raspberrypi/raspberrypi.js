@@ -4,17 +4,13 @@
 var RaspberryPi = {};
 RaspberryPi.id = 'raspberrypi';
 RaspberryPi.series = 'raspberrypi';
-// RaspberryPi.seriesClass = 'rpiSeries';
-// RaspberryPi.kits = {
-//     // 'sensorkit': SensorKit,
-//     // 'switchbot': SwitchBot,
-// }
-// RaspberryPi.libs = [
-//     'sensorkit==v0.1',
-// ];
+
+RaspberryPi.libs = [
+];
+
 RaspberryPi.name = 'Raspberry Pi';
-// RaspberryPi.kitName = 'SensorKit For Pi';
-// RaspberryPi.nameEn = 'Raspberry Pi';
+RaspberryPi.libPath = `./packages/raspberrypi/lib`;
+
 RaspberryPi.width = 87;
 RaspberryPi.height = 58;
 RaspberryPi.pinWidth = 8;

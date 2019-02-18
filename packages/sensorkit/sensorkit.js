@@ -24,6 +24,16 @@ var SensorKit = {
     }
 };
 
+SensorKit.libs = Modules.libs;
+
+Object.defineProperty(SensorKit, 'path', {
+    get: function get() {
+        return Modules.libPath$
+    },
+    set: function set(newValue) {
+    }
+});
+
 SensorKit.functions = [
     "routing",
     "play",

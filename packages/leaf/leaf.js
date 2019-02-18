@@ -4,10 +4,9 @@
 var Leaf = {};
 Leaf.id = 'leaf';
 Leaf.series = 'leaf';
-Leaf.seriesClass = 'leafSeries';
-Leaf.kits = {
-    // 'sensorkit': SensorKit,
-}
+Leaf.libPath = "./packages/leaf/lib"
+
+
 Leaf.width = 64.14;
 Leaf.height = 40.65;
 Leaf.pinWidth = 8;
@@ -17,7 +16,6 @@ Leaf.kitName = "SensorKit For Leaf";
 Leaf.nameEn = "Leaf";
 Leaf.active = 'active';
 Leaf.libs = [
-    // 'sensorkit==v0.1',
 ];
 Leaf.functions = [
     "remote",

@@ -3,6 +3,7 @@
 var Jelly = {
     'name': 'Jelly',
     'id': 'jelly',
+    'libPath': "./packages/jelly/lib",
     'modules': {
         "distance-sensor": {
             'id': 0,

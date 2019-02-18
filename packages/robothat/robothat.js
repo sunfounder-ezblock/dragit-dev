@@ -7,6 +7,7 @@ RobotHat.kits = {}
 RobotHat.series = "raspberrypi";
 RobotHat.nameEn = "RobotHat";
 RobotHat.type = "raspberrypi";
+RobotHat.libPath = "./packages/robothat/lib"
 
 RobotHat.functions = [
     "remote",
@@ -16,7 +17,7 @@ RobotHat.functions = [
 ]
 
 RobotHat.libs = [
-    // 'pimobile==v0.2'
+    'robothat==v0.2',
 ];
 
 RobotHat.init = function() {
