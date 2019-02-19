@@ -216,7 +216,7 @@ Blockly.JavaScript['modules_joystick_get_value'] = function(block) {
     var Xpin = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
     var Ypin = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC);
     var BTnpin = Blockly.JavaScript.valueToCode(block, 'Btn', Blockly.JavaScript.ORDER_ATOMIC);
-    var joystick = Blockly.JavaScript.valueToCode(block, 'joystick', Blockly.JavaScript.ORDER_ATOMIC);
+    var joystick = block.getFieldValue('joystick');
 
     var code = '';
     code += 'Joystick_get_value(' + Xpin + ', ' + Ypin + ', ' + BTnpin + ', ' + joystick + ')';
