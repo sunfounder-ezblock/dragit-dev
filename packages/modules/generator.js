@@ -86,7 +86,7 @@ Blockly.Python['modules_joystick_get_value'] = function(block) {
     var Xpin = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC);
     var Ypin = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC);
     var BTnpin = Blockly.Python.valueToCode(block, 'Btn', Blockly.Python.ORDER_ATOMIC);
-    var joystick = Blockly.Python.valueToCode(block, 'joystick', Blockly.Python.ORDER_ATOMIC);
+    var joystick = block.getFieldValue('joystick');
     Blockly.Python.definitions_['import_modules'] = 'from modules import *';
 
     var code = '';
