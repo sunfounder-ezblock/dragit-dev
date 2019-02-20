@@ -120,7 +120,7 @@ def VibrationSwitch_get_value(pin):
 def Joystick_get_value(Xpin, Ypin, Btpin, pin_select):
 	array = [Xpin, Ypin, Btpin]
 	pin = array[pin_select]
-	if pinpin_select == 2:
+	if pin_select == 2:
 		pin = Pin(pin)
 		pin.value(value)
 	else:
@@ -132,7 +132,7 @@ def Joystick_get_value(Xpin, Ypin, Btpin, pin_select):
 def Joystick_get_status(Xpin, Ypin, Btpin):
 	X = ADC(Xpin)
 	Y = ADC(Ypin)
-	Bt = ADC(Btpin)
+	Bt = Pin(Btpin)
 	state = ['home', 'up', 'down', 'left', 'right', 'pressed']
 	i = 0
 	if X.read() <= 1900:
@@ -143,11 +143,11 @@ def Joystick_get_status(Xpin, Ypin, Btpin):
 		i = 3       #right
 	elif Y.read() >= 2200:
 		i = 4       #left
-	elif Bt.read() <= 100:
+	elif Bt.value() == 0:
 		i = 5       # Button pressed
 	if X.read() - 2048 < 200 and X.read() - 2048 > -200 and \
 		Y.read() - 2048 < 200 and Y.read() - 2048 > -200 and \
-		Bt.read() >= 2048:
+		Bt.value() == 1:
 		i = 0
 	return state[i]
 

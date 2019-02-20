@@ -231,6 +231,13 @@ RaspberryPi.toolboxText =
     '        </value>' +
     '    </block>' +
 
+    '<block type="raspberry_switchbot_s1_get_value"> ' +
+    '  <value name="mac"> ' +
+    '    <shadow type="text"> ' +
+    '      <field name="TEXT">aa:aa:aa:aa:aa:aa</field> ' +
+    '    </shadow> ' +
+    '  </value> ' +
+    '</block> ' +
 
 
     '  </category>' +

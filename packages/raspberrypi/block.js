@@ -62,6 +62,15 @@ Blockly.Constants.RaspberryPi.taskmgr = [
     ['disk used', 'disk_used'],
     ['ram used', 'ram_used'],
 ];
+
+Blockly.Constants.RaspberryPi.TTS_LANGUAGE = [
+    ['English-United States', 'en-US'],
+    ['English-United Kingdom', 'en-GB'],
+    ['Germany-Deutsch', 'de-DE'],
+    ['España-Español', 'es-ES'],
+    ['France-Le français', 'fr-FR'],
+    ['Italia-lingua italiana', 'it-IT'],
+];
 // system setup
 Blockly.Blocks['raspberrypi_connect_wifi'] = {
     init: function() {
@@ -453,6 +462,31 @@ Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = {
         this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.RaspberryPi.RGB);
         this.setTooltip(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
+
+
+Blockly.Constants.RaspberryPi.value = [
+    ["ON", "'on'"],
+    ["OFF", "'off'"],
+];
+
+Blockly.Blocks['raspberry_switchbot_s1_get_value'] = {
+    init: function init() {
+        this.appendValueInput("mac")
+            .setCheck("String")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.SWITCHBOT_S1_TITLE1);
+        this.appendDummyInput()
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.SWITCHBOT_S1_TITLE2)
+            .appendField(new Blockly.FieldDropdown(Blockly.Constants.RaspberryPi.value), "value");
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.SWITCHBOT_S1_TOOLTIP);
         this.setHelpUrl('');
     }
 };
