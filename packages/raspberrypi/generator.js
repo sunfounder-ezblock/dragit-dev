@@ -320,3 +320,25 @@ Blockly.Python['raspberrypi_period'] = function(block) {
     code += period + '.period(' + value + ')\n';
     return code
 };
+// TTS
+
+Blockly.Python['raspberrypi_tts_language'] = function(block) {
+    var lang = block.getFieldValue('language');
+
+    var code = '';
+    code += lang;
+    return [code, Blockly.Python.ORDER_ATOMIC];
+};
+
+Blockly.Python['raspberry_text_to_speech'] = function(block) {
+    var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    var lang = Blockly.Python.valueToCode(block, 'lang', Blockly.Python.ORDER_ATOMIC);
+
+    Blockly.Python.definitions_['import_TTS'] = 'from raspberrypi import TTS';
+
+    var tts = '';
+    tts += 'TTS()';
+    var code = '';
+    code += tts + '.lang(' + lang + ')\n' + tts + '.say(' + text + ')\n';
+    return code
+};

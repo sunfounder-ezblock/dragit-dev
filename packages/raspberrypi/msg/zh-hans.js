@@ -132,3 +132,10 @@ Local['zh-hans'].RASPBERRYPI_PWM_PRESCALER_TOOLTIP = "设置PWM预分频的值."
 Local['zh-hans'].RASPBERRYPI_PWM_PERIOD_TITLE1 = "PWM 设置";
 Local['zh-hans'].RASPBERRYPI_PWM_PERIOD_TITLE2 = "周期为";
 Local['zh-hans'].RASPBERRYPI_PWM_PERIOD_TOOLTIP = "设置PWM周期的值.";
+
+
+Local['zh-hans'].RASPBERRYPI_TTS_TOOLTIP = "文字转声音的语言选择模块.";
+
+Local['zh-hans'].RASPBERRYPI_TEXT_TO_SPEECH_TITLE1 = "文字转声音  语言选择";
+Local['zh-hans'].RASPBERRYPI_TEXT_TO_SPEECH_TITLE2 = "输入文字";
+Local['zh-hans'].RASPBERRYPI_TEXT_TO_SPEECH_TOOLTIP = "将输入的文字通过声音播放出来.";

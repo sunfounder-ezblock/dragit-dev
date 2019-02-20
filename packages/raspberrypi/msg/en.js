@@ -118,6 +118,13 @@ Local['en'].RASPBERRYPI_PWM_PERIOD_TITLE2 = "period to";
 Local['en'].RASPBERRYPI_PWM_PERIOD_TOOLTIP = "Set PWM period value.";
 
 
+Local['en'].RASPBERRYPI_TTS_TOOLTIP = "Text-to-speech language module.";
+
+Local['en'].RASPBERRYPI_TEXT_TO_SPEECH_TITLE1 = "Text to speech  language";
+Local['en'].RASPBERRYPI_TEXT_TO_SPEECH_TITLE2 = "text";
+Local['en'].RASPBERRYPI_TEXT_TO_SPEECH_TOOLTIP = "Play the written text out by voice.";
+
+
 // Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Send mail to";
 // Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "about object";
 // Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE3 = "and thing";

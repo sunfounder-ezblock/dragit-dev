@@ -231,6 +231,18 @@ RaspberryPi.toolboxText =
     '        </value>' +
     '    </block>' +
 
+    '<block type="raspberry_text_to_speech"> ' +
+    '  <value name="lang"> ' +
+    '    <shadow type="raspberrypi_tts_language"> ' +
+    '    </shadow> ' +
+    '  </value> ' +
+    '  <value name="text"> ' +
+    '    <shadow type="text"> ' +
+    '      <field name="TEXT">Hello</field> ' +
+    '    </shadow> ' +
+    '  </value> ' +
+    '</block> ' +
+
     '<block type="raspberry_switchbot_s1_get_value"> ' +
     '  <value name="mac"> ' +
     '    <shadow type="text"> ' +

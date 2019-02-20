@@ -31,8 +31,7 @@ Object.defineProperty(Modules, 'libPath', {
         var dev = window[Choice.current.device].series;
         return `./packages/modules/lib/${dev}`
     },
-    set: function set(newValue) {
-    }
+    set: function set(newValue) {}
 });
 
 
@@ -655,7 +654,7 @@ Modules["moisture-sensor"] = new Module({
             'x': 0.3,
             'y': 1,
             'isSource': true,
-            'property': ['din'],
+            'property': ['ain'],
             'type': 'analog'
         },
         "VCC": {

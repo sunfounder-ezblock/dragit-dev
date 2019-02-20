@@ -64,12 +64,12 @@ Blockly.Constants.RaspberryPi.taskmgr = [
 ];
 
 Blockly.Constants.RaspberryPi.TTS_LANGUAGE = [
-    ['English-United States', 'en-US'],
-    ['English-United Kingdom', 'en-GB'],
-    ['Germany-Deutsch', 'de-DE'],
-    ['España-Español', 'es-ES'],
-    ['France-Le français', 'fr-FR'],
-    ['Italia-lingua italiana', 'it-IT'],
+    ['English-United States', "'en-US'"],
+    ['English-United Kingdom', "'en-GB'"],
+    ['Germany-Deutsch', "'de-DE'"],
+    ['España-Español', "'es-ES'"],
+    ['France-Le français', "'fr-FR'"],
+    ['Italia-lingua italiana', "'it-IT'"],
 ];
 // system setup
 Blockly.Blocks['raspberrypi_connect_wifi'] = {
@@ -191,6 +191,18 @@ Blockly.Blocks['raspberrypi_pin_irq_trigger'] = {
     }
 };
 
+
+Blockly.Blocks['raspberrypi_tts_language'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField(new Blockly.FieldDropdown(Blockly.Constants.RaspberryPi.TTS_LANGUAGE), 'language');
+        this.setInputsInline(true);
+        this.setOutput(true, 'String');
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_TTS_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
 // ---- Pin functions blocks ---- //
 Blockly.Blocks['raspberrypi_pin_set_value'] = {
     init: function() {
@@ -465,6 +477,26 @@ Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = {
         this.setHelpUrl('');
     }
 };
+// Text-to-Speech
+
+Blockly.Blocks['raspberry_text_to_speech'] = {
+    init: function init() {
+        this.appendValueInput("lang")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TITLE1);
+        this.appendValueInput("text")
+            .setCheck("String")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TITLE2);
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
+
 
 
 Blockly.Constants.RaspberryPi.value = [
