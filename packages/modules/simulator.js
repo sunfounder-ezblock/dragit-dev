@@ -36,7 +36,7 @@ Modules.simulator.LEDModule_set_value = function(pin, value) {
         pin = Pin(pin)
         pin.value(value)
     } else if (pin.slice(0, 1) == "P") {
-        value = 4095 - value
+        // value = 4095 - value
         pin = PWM(pin)
         pin.pulse_width(value)
     }
@@ -335,7 +335,7 @@ Modules.simulator.SoundSensor_get_value = function(pin) {
     var value_list = [];
     for (i = 0; i = 50; i++) {
         var value = adc.read();
-        value_list.append(value);
+        value_list.push(value);
     }
     value = sum(value_list) / 50.0;
     return value;
