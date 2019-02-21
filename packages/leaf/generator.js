@@ -246,7 +246,7 @@ Blockly.Python['leaf_pwm_pulse_width'] = function(block) {
     `${channel} = tim${timer}.channel(Pwm_Pin_Dict[${value_pin}][1], Timer.PWM, pin=Pin(${value_pin}))`;
 
   var code = '';
-  code += `${channel}.pulse_width(${value_write})\n`;
+  code += `${channel}.pulse_width(int(${value_write}))\n`;
 
   return code;
 };

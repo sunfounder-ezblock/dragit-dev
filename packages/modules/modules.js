@@ -48,7 +48,9 @@ Modules["led-module"] = new Module({
     'simulator': {
         "type": "ValueOutput",
         "onHigh": "module-led_on.png",
-        "onLow": "module-led_off.png"
+        "onLow": "module-led_off.png",
+        "pin": "SIG",
+        "mode": 'opacity'
     },
     'pins': {
         "SIG": {
@@ -308,6 +310,13 @@ Modules["buzzer"] = new Module({
 Modules["joystick"] = new Module({
     'sname': 'joystick',
     'blocks': ['<block type="modules_joystick_get_status"> </block>', '<block type="modules_joystick_get_value"> </block>'],
+    "simulator": {
+        "type": "ModuleJoystick",
+        "Y": 'Y',
+        "X": "X",
+        "Btn": "Btn",
+        "initValue": 0
+    },
     'pins': {
         "Y": {
             'id': 0,
