@@ -43,10 +43,10 @@ def RGBLED_set_value(Rpin, Gpin, Bpin, color, common=1):
 def Button_get_value(pin):
 	pin = Pin(pin)
 	value = pin.value()
-	if value == 1:
-		value = 0
-	else:
-		value = 1
+	# if value == 1:
+	# 	value = 0
+	# else:
+	# 	value = 1
 	return value
 
 def Buzzer_play(pin, note, beat):
@@ -122,7 +122,7 @@ def Joystick_get_value(Xpin, Ypin, Btpin, pin_select):
 	pin = array[pin_select]
 	if pin_select == 2:
 		pin = Pin(pin)
-		pin.value(value)
+		value = pin.value()
 	else:
 		adc = ADC(pin)
 		value = adc.read()
@@ -135,18 +135,18 @@ def Joystick_get_status(Xpin, Ypin, Btpin):
 	Bt = Pin(Btpin)
 	state = ['home', 'up', 'down', 'left', 'right', 'pressed']
 	i = 0
-	if X.read() <= 1900:
+	if X.read() <= 1024:
 		i = 1       #up
-	elif X.read() >= 2200:
+	elif X.read() >= 3072:
 		i = 2       #down
-	elif Y.read() <= 1900:
+	elif Y.read() <= 1024:
 		i = 3       #right
-	elif Y.read() >= 2200:
+	elif Y.read() >= 3072:
 		i = 4       #left
 	elif Bt.value() == 0:
 		i = 5       # Button pressed
-	if X.read() - 2048 < 200 and X.read() - 2048 > -200 and \
-		Y.read() - 2048 < 200 and Y.read() - 2048 > -200 and \
+	if X.read() > 1024 and X.read() <3072 and \
+		Y.read() >1024 and Y.read() <3072 and \
 		Bt.value() == 1:
 		i = 0
 	return state[i]
@@ -176,18 +176,6 @@ def ADXL345_get_value(busnum=-1, debug=False):
 	ADXL345_REG_DATAX0       = 0x32 # X-axis data 0 (6 bytes for X/Y/Z)
 	ADXL345_REG_POWER_CTL    = 0x2D # Power-saving features control
 
-	# accel = I2C(ADXL345_ADDRESS, busnum, debug)
-	# if accel.readU8(ADXL345_REG_DEVID) == 0xE5:
-	# 	accel.write8(ADXL345_REG_POWER_CTL, 0x08)
-
-	# raw = accel.readList(ADXL345_REG_DATAX0, 6)
-	# value = []
-	# for i in range(0, 6, 2):
-	# 	g = raw[i] | (raw[i+1] << 8)
-	# 	if g > 32767: 
-	# 		g -= 65535
-	# 	value.append(g)
-	# return value 
 
 	result = i2c.recv(ADXL345_ADDRESS, ADXL345_REG_DEVID)
 	send1 = ADXL345_REG_POWER_CTL<< 8

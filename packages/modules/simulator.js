@@ -36,6 +36,7 @@ Modules.simulator.LEDModule_set_value = function(pin, value) {
         pin = Pin(pin)
         pin.value(value)
     } else if (pin.slice(0, 1) == "P") {
+        value = 4095 - value
         pin = PWM(pin)
         pin.pulse_width(value)
     }
@@ -188,10 +189,10 @@ Blockly.JavaScript['modules_buzzer_set_value'] = function(block) {
 };
 
 Modules.simulator.Buzzer_play = function(pin, note, beat) {
-    async function play(){
+    async function play() {
         pin = pin.toString();
         note = note.toString();
-        beat = parseInt(beat)
+        beat = parseInt(beat);
         var pwm = PWM(pin);
         pwm.freq(note);
         pwm.pulse_width_percentage(50);
@@ -230,8 +231,13 @@ Modules.simulator.Joystick_get_value = function(Xpin, Ypin, Btpin, pin_select) {
     pin_select = parseInt(pin_select);
     var array = [Xpin, Ypin, Btpin];
     var pin = array[pin_select];
-    var adc = ADC(pin);
-    var value = adc.read();
+    if (pin_select == 2) {
+        var pin = Pin(pin)
+        var value = pin.value()
+    } else {
+        var adc = ADC(pin);
+        var value = adc.read();
+    };
     return value;
 };
 
@@ -265,19 +271,19 @@ Modules.simulator.Joystick_get_status = function(Xpin, Ypin, Btpin) {
     var Bt = Pin(Btpin);
     var state = ['home', 'up', 'down', 'left', 'right', 'pressed'];
     var i = 0;
-    if (X.read() <= 1900) {
+    if (X.read() <= 1024) {
         i = 1; //up
-    } else if (X.read() >= 2200) {
+    } else if (X.read() >= 3072) {
         i = 2; //down
-    } else if (Y.read() <= 1900) {
+    } else if (Y.read() <= 1024) {
         i = 3; //right
-    } else if (Y.read() >= 2200) {
+    } else if (Y.read() >= 3072) {
         i = 4; //left
     } else if (Bt.value() == 0) {
         i = 5; // Button pressed
     }
-    if (X.read() - 2048 < 200 && X.read() - 2048 > -200 &&
-        Y.read() - 2048 < 200 && Y.read() - 2048 > -200 &&
+    if (read() > 1024 && X.read() < 3072 &&
+        Y.read() > 1024 && Y.read() < 3072 &&
         Bt.value() == 1) {
         i = 0;
     }
