@@ -9,16 +9,14 @@ RobotHat.nameEn = "RobotHat";
 RobotHat.type = "raspberrypi";
 RobotHat.libPath = "./packages/robothat/lib"
 
-RobotHat.functions = [
-    "remote",
-    "routing",
-    "bluetooth",
-    "play",
-]
-
 RobotHat.libs = [
     'robothat==v0.2',
 ];
+
+RobotHat.avalibleModules = [
+    'tilt-switch',
+    'vibration-switch',
+]
 
 RobotHat.width = 87;
 RobotHat.height = 58;
