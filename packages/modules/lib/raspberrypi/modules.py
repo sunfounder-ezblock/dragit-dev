@@ -81,7 +81,6 @@ def UltrasonicSensor_get_value( trig, echo, timeout=0.02):
 	trig.low()
 	pulse_end = 0
 	timeout_start = time.time()
-	pulse_start = time.time()
 	while echo.value()==0:
 		pulse_start = time.time()
 		if pulse_start - timeout_start > timeout:
