@@ -332,6 +332,17 @@ Blockly.Python['raspberrypi_tts_language'] = function(block) {
 
 Blockly.Python['raspberry_text_to_speech'] = function(block) {
     var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+
+    Blockly.Python.definitions_['import_TTS'] = 'from raspberrypi import TTS';
+
+    var tts = '';
+    tts += 'TTS()';
+    var code = '';
+    code += tts + '.say(' + text + ')\n';
+    return code
+};
+
+Blockly.Python['raspberry_text_to_speech_language'] = function(block) {
     var lang = Blockly.Python.valueToCode(block, 'lang', Blockly.Python.ORDER_ATOMIC);
 
     Blockly.Python.definitions_['import_TTS'] = 'from raspberrypi import TTS';
@@ -339,6 +350,6 @@ Blockly.Python['raspberry_text_to_speech'] = function(block) {
     var tts = '';
     tts += 'TTS()';
     var code = '';
-    code += tts + '.lang(' + lang + ')\n' + tts + '.say(' + text + ')\n';
+    code += tts + '.lang(' + lang + ')\n';
     return code
 };

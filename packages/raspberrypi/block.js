@@ -481,18 +481,29 @@ Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = {
 
 Blockly.Blocks['raspberry_text_to_speech'] = {
     init: function init() {
-        this.appendValueInput("lang")
-            .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TITLE1);
         this.appendValueInput("text")
             .setCheck("String")
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TITLE2);
+            .appendField(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TITLE1);
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.RaspberryPi.RGB);
         this.setTooltip(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
+
+Blockly.Blocks['raspberry_text_to_speech_language'] = {
+    init: function init() {
+        this.appendValueInput("lang")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_LANGUAGE_TITLE1);
+        this.setInputsInline(true);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_TEXT_TO_SPEECH_LANGUAGE_TOOLTIP);
         this.setHelpUrl('');
     }
 };
