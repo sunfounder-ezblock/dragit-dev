@@ -12,6 +12,8 @@ SensorKitForPi.list = {
 
 SensorKitForPi.name = '';
 
+SensorKitForPi.tutorials = {};
+
 SensorKitForPi.init = function() {
     SensorKitForPi.name = MSG.catSensorKitForPi;
     SensorKitForPi.description = MSG.sensorkitforpi_description;

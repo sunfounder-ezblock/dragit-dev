@@ -36,7 +36,6 @@
 
 	<link rel="stylesheet" type="text/css" href="./css/ezblock.min.css" />
 	<script src="./js/ezblock.min.js"></script>
-
 	<!-- 
 	<link rel="stylesheet" type="text/css" href="./src/css/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="./src/css/bootstrap.min.css" />
@@ -57,7 +56,6 @@
 	<link rel="stylesheet" type="text/css" href="./src/css/afterSaleProblem.css">
 	<link rel="stylesheet" type="text/css" href="./src/css/faq.css">
 	<link rel="stylesheet" type="text/css" href="./src/css/tutorials.css">
-
 	<script src="./node_modules/@babel/polyfill/dist/polyfill.min.js"></script>
 	<script src="./src/js/main/independentfunc.js"></script>
 	<script src="./src/js/main/utils.js"></script>
@@ -96,7 +94,6 @@
 	<script src="./blockly/packages/remote/generator.js"></script>
 	<script src="./blockly/packages/IOT/block.js"></script>
 	<script src="./blockly/packages/IOT/generator.js"></script>
-
 	<script src="./src/js/main/blockCode.js"></script>
 	<script src="./src/js/main/coding.js"></script>
 	<script src="./src/js/main/pInformation.js"></script>
@@ -142,7 +139,6 @@
 	<script src="./src/js/main/makeOption.js"></script>
 	<script src="./src/js/ace/ace.js"></script>
 	<script src="./src/js/ace/ext-language_tools.js"></script>
-
 	<script src="./packages/modules/block.js"></script>
 	<script src="./packages/modules/generator.js"></script>
 	<script src="./packages/modules/modules.js"></script>
@@ -189,6 +185,7 @@
 	<script src="./products/pimobile/toolbox.js"></script>
 	<script src="./products/sensorkit-for-pi/sensorkit-for-pi.js"></script>
 	<script src="./products/sensorkit-for-leaf/sensorkit-for-leaf.js"></script>
+	<script src="./products/sensorkit-for-pi/tutorials/block.js"></script>
 	<script src="./packages/sensorkit/tutorials/raspberrypi/block.js"></script>
 	<script src="./packages/sensorkit/examples/raspberrypi/block.js"></script>
 	<script src="./src/js/main/makeOption.js"></script>
@@ -233,7 +230,6 @@
 	<script src="./products/sensorkit-for-leaf/msg/en.js"></script>
 	<script src="./products/sensorkit-for-leaf/msg/zh-hans.js"></script>
 	 -->
-
 	<script src="./packages/modules/block.js"></script>
 	<script src="./packages/modules/generator.js"></script>
 	<script src="./packages/modules/modules.js"></script>
@@ -282,7 +278,6 @@
 	<script src="./products/sensorkit-for-leaf/sensorkit-for-leaf.js"></script>
 	<script src="./packages/sensorkit/tutorials/raspberrypi/block.js"></script>
 	<script src="./packages/sensorkit/examples/raspberrypi/block.js"></script>
-
 	<script src="./src/js/msg/en.js"></script>
 	<script src="./src/js/msg/zh-hans.js"></script>
 	<script src="./blockly/msg/en.js"></script>
@@ -319,9 +314,7 @@
 	<script src="./products/sensorkit-for-pi/msg/zh-hans.js"></script>
 	<script src="./products/sensorkit-for-leaf/msg/en.js"></script>
 	<script src="./products/sensorkit-for-leaf/msg/zh-hans.js"></script>
-
 </head>
-
 
 <body oncontextmenu="return false;" onselectstart="return false;">
 	<div class="dragheader1 container-fluid clearfix">
@@ -347,7 +340,7 @@
 	<div class="dragheader2 container-fluid">
 
 		<div href="#" class="col-xs-6 col-md-6 parent_brand">
-			<img src="./img/logo_ezblock_title_inline.png" class="brand dis_none" alt="logo" onclick="Home.renderDevice();EzBlock.renderPage('home');">
+			<img src="./img/logo_ezblock_title_inline.png" class="brand dis_none" alt="logo" onclick="Coding.returnIndex();">
 			<!-- 轮播图返回首页功能 -->
 			<div class="goBack dis_none" onclick="EzBlock.back()">
 				<img class="goBackImg" src="./img/goBack.png" alt="goBack">
@@ -504,7 +497,19 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- timeout to remind -->
+	<div id="timeout" class="modal fade">
+		<div class="modal-dialog timeout-dialog">
+			<div class="modal-content">
+				<div class="modal-header timeout-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+				</div>
+				<div class="modal-body timeout-body">
+					%{timeout}
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- new project window -->
 	<div id="newProjectWindow" class="modal fade">
 		<div class="modal-dialog new-project-dialog">
@@ -586,7 +591,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- 选择添加的sensorkit选项 -->
+	<!-- 选择添加的kit选项 -->
 	<div id="add-kit-mode" class="modal fade">
 		<div class="modal-dialog add-kit-dialog" style="width: 800px;">
 			<div class="modal-content add-kit-mode-content">
@@ -607,7 +612,78 @@
 						</div>
 						<div class="add-kit-image"></div>
 					</div>
+					<div class="isAddKit"></div>
 					<div class="add-kit-btn-ok" onclick="SelectBoard.addKitSuccess()">
+						<img src="./img/OK.png" alt="OK">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- 选择添加的module选项 -->
+		<div id="add-module-mode" class="modal fade">
+			<div class="modal-dialog add-module-dialog" style="width: 800px;">
+				<div class="modal-content add-module-mode-content">
+					<div class="modal-header module-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+						<h4 class="model-title choose-mode-title" id="addModule-title">Select Module</h4>
+					</div>
+					<div class="modal-body add-module-mode-body">
+						<div class="choose-type">   
+							<div class="choose-name">
+								<div class="choose-name-box choose-name-position">
+									<span class="choose-name-text">Module: </span>
+									<input class="choose-name-input dropdown-toggle choose-name-btn add-module-mode-ipt" data-toggle="dropdown" type="button" value="Name"
+									 style="width: 71%">
+									<span class="glyphicon glyphicon-play iotRotate"></span>
+									<ul class="dropdown-menu type-menu add-module-ul" role="menu"></ul>
+								</div>
+							</div>
+							<div class="add-module-image">
+								<img src="" alt="">
+							</div>
+						</div>
+						<div class="isAddModule"></div>
+						<div class="add-module-btn-ok" onclick="SelectBoard.addModuleSuccess()">
+							<img src="./img/OK.png" alt="OK">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- 套件或者模块添加成功与否提示框-->
+	<div id="add-tip-mode" class="modal fade">
+		<div class="modal-dialog add-tip-mode-dialog">
+			<div class="modal-content add-tip-mode-content">
+				<div class="modal-header add-tip-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+				</div>
+				<div class="modal-body add-tip-mode-body"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 选择添加的modules选项 -->
+	<div id="add-module-mode" class="modal fade">
+		<div class="modal-dialog add-kit-dialog" style="width: 800px;">
+			<div class="modal-content add-kit-mode-content">
+				<div class="modal-header kit-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+					<h4 class="model-title choose-mode-title" id="addKit-title">Select modules</h4>
+				</div>
+				<div class="modal-body add-kit-mode-body">
+					<div class="choose-type">
+						<div class="choose-name">
+							<div class="choose-name-box choose-name-position">
+								<span class="choose-name-text">Modules: </span>
+								<input class="choose-name-input dropdown-toggle choose-name-btn add-kit-mode-ipt" data-toggle="dropdown" type="button" value="Name"
+								 style="width: 71%">
+								<span class="glyphicon glyphicon-play iotRotate"></span>
+								<ul class="dropdown-menu type-menu add-kit-ul" role="menu"></ul>
+							</div>
+						</div>
+						<div class="add-module-image"></div>
+					</div>
+					<div class="add-kit-btn-ok" onclick="">
 						<img src="./img/OK.png" alt="OK">
 					</div>
 				</div>
@@ -896,7 +972,7 @@
 		</div>
 	</div>
 	<!-- messsage -->
-	<div id="message" class="modal fade">
+	<div id="message" class="modal fade" data-backdrop="static">
 		<div class="modal-dialog message-dialog">
 			<div class="modal-content">
 				<div class="modal-header package-header projectName-header">
@@ -1477,21 +1553,23 @@
 			<div class="faqCont">
 				<div class="clearfix">
 					<div class="search_faq">
-						<div onclick="Faq.getMessage(Faq.getAllMsgUrl,$('.faqIpt').val())">
+						<div onclick="Faq.getMessage(Faq.getAllMsgUrl, $('.faqIpt').val())">
 							<span class="glyphicon glyphicon-search"></span>
 						</div>
 
-						<input type="text" class="faqIpt" onchange="javascript:if(this.value==''){Faq.getMessage(Faq.getAllMsgUrl,'')};">
+						<input type="text" class="faqIpt" onchange="javascript:if(this.value==''){Faq.getMessage(Faq.getAllMsgUrl, '')};">
 					</div>
 
-					<button class="contact_faq" onclick="EzBlock.renderPage('afterSaleProblem')">联系我们</button>
+					<button class="contact_faq" onclick="EzBlock.renderPage('afterSaleProblem')">%{contact_us}</button>
 				</div>
 				<div class="faqPage">
 					<ul></ul>
 					<div class="pager">
-						<button class="prevMsg" onclick="Faq.changePageNo(--Faq.pageno)">上一页</button>
+						<button class="prevMsg" onclick="Faq.changePageNo(--Faq.pageno)">%{prev}</button>
+						<!-- <button class="prevMsg" onclick="Faq.pageno;Faq.getMessage(Faq.getAllMsgUrl, '')">%{prev}</button> -->
 						<span class="pageNum">1</span>
-						<button class="nextMsg" onclick="Faq.changePageNo(++Faq.pageno)">下一页</button>
+						<!-- <button class="nextMsg" onclick="++Faq.pageno;Faq.getMessage(Faq.getAllMsgUrl, '')">%{next}</button> -->
+						<button class="prevMsg" onclick="Faq.getMessage(Faq.getAllMsgUrl, '', Faq.pageno)">%{next}</button>
 					</div>
 				</div>
 				<div class="faqAnswer dis_none">
