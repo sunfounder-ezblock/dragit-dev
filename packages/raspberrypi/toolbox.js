@@ -253,10 +253,9 @@ RaspberryPi.toolboxText =
     '    </shadow> ' +
     '  </value> ' +
     '</block> ' +
+    '</category>';
 
-
-    '  </category>' +
-
+RaspberryPi.timeToolboxText = 
     '  <category name="%{BKY_CATTIME}" colour="292">' +
     '    <block type="time_localtime">' +
     '    </block>' +
@@ -271,5 +270,4 @@ RaspberryPi.toolboxText =
     '    </block>' +
     '    <block type="time_time">' +
     '    </block>' +
-    '  </category>' +
-    '  <sep></sep>'
+    '  </category>'

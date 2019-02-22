@@ -87,5 +87,5 @@ RobotHat.toolboxText =
     '       </value> ' +
     '   </block> ' +
 
-    '  </category>' +
-    '  <sep></sep>'
+    '  </category>'
+RobotHat.timeToolboxText = RaspberryPi.timeToolboxText;

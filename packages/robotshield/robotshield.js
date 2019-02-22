@@ -537,6 +537,6 @@ RobotShield.pins = [
 ]
 
 RobotShield.init = function() {
-    RobotShield.name = MSG.catRobothat;
+    RobotShield.name = MSG.catRobotshield;
     RobotShield.description = MSG.robotshield_description;
 }

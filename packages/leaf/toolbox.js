@@ -211,8 +211,9 @@ Leaf.toolboxText =
     '    </value>' +
     '  </block>' +
     '  <sep></sep>' +
-    '</category>' +
+    '</category>';
 
+Leaf.timeToolboxText = 
     '<category name="%{BKY_CATTIME}" colour="292">' +
     '  <block type="time_localtime">' +
     '  </block>' +
