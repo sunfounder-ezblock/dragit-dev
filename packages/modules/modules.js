@@ -48,7 +48,9 @@ Modules["led-module"] = new Module({
     'simulator': {
         "type": "ValueOutput",
         "onHigh": "module-led_on.png",
-        "onLow": "module-led_off.png"
+        "onLow": "module-led_off.png",
+        "pin": "SIG",
+        "mode": 'opacity'
     },
     'pins': {
         "SIG": {
@@ -223,6 +225,12 @@ Modules["tilt-switch"] = new Module({
 Modules["vibration-switch"] = new Module({
     'sname': 'vibration-switch',
     'blocks': ['<block type="modules_vibrationswitch_get_value"> </block> '],
+    'simulator': {
+        "type": "ValueInput",
+        "mode": 'toggle',
+        "initValue": 0,
+        "pin": "SIG",
+    },
     'pins': {
         "SIG": {
             'id': 0,
@@ -308,6 +316,13 @@ Modules["buzzer"] = new Module({
 Modules["joystick"] = new Module({
     'sname': 'joystick',
     'blocks': ['<block type="modules_joystick_get_status"> </block>', '<block type="modules_joystick_get_value"> </block>'],
+    "simulator": {
+        "type": "ModuleJoystick",
+        "Y": 'Y',
+        "X": "X",
+        "Btn": "Btn",
+        "initValue": 0
+    },
     'pins': {
         "Y": {
             'id': 0,
@@ -521,7 +536,16 @@ Modules["touch-switch"] = new Module({
 
 Modules["ultrasonic"] = new Module({
     'sname': 'ultrasonic',
-    'blocks': ['<block type="modules_ultrasonic_get_value"></block> '],
+    'blocks': ['<block type="modules_ultrasonic_get_value"></block>'],
+    'simulator': {
+        "type": "ValueInput",
+        "pin": "Trig",
+        "mode": "slider",
+        "min": 0,
+        "max": 700,
+        "unit": "mm",
+        "initValue": 0
+    },
     'pins': {
         "Trig": {
             'id': 0,
@@ -565,6 +589,15 @@ Modules["ultrasonic"] = new Module({
 Modules["ds18b20"] = new Module({
     'sname': "ds18b20",
     'blocks': ['<block type="modules_ds18b20_get_value"></block> '],
+    'simulator': {
+        "type": "ValueInput",
+        "pin": "SIG",
+        "mode": "slider",
+        "min": -55,
+        "max": 125,
+        "unit": "℃",
+        "initValue": 0
+    },
     'pins': {
         "SIG": {
             'id': 0,

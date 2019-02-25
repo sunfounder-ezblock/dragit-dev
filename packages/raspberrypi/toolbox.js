@@ -231,11 +231,14 @@ RaspberryPi.toolboxText =
     '        </value>' +
     '    </block>' +
 
-    '<block type="raspberry_text_to_speech"> ' +
+    '<block type="raspberry_text_to_speech_language"> ' +
     '  <value name="lang"> ' +
     '    <shadow type="raspberrypi_tts_language"> ' +
     '    </shadow> ' +
     '  </value> ' +
+    '</block> ' +
+
+    '<block type="raspberry_text_to_speech"> ' +
     '  <value name="text"> ' +
     '    <shadow type="text"> ' +
     '      <field name="TEXT">Hello</field> ' +
@@ -250,10 +253,9 @@ RaspberryPi.toolboxText =
     '    </shadow> ' +
     '  </value> ' +
     '</block> ' +
+    '</category>';
 
-
-    '  </category>' +
-
+RaspberryPi.timeToolboxText = 
     '  <category name="%{BKY_CATTIME}" colour="292">' +
     '    <block type="time_localtime">' +
     '    </block>' +
@@ -268,5 +270,4 @@ RaspberryPi.toolboxText =
     '    </block>' +
     '    <block type="time_time">' +
     '    </block>' +
-    '  </category>' +
-    '  <sep></sep>'
+    '  </category>'

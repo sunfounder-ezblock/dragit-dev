@@ -61,16 +61,6 @@ Blockly.Python['robothat_pwm_pin'] = function(block) { // digital pin number
 //     return code;
 // };
 
-Blockly.Python['raspberrypi_digital_pin'] = function(block) { //digital pin number
-    var pin = block.getFieldValue('pin');
-
-    // Blockly.Python.definitions_['import_raspberrypi_pin'] = 'from raspberrypi import Pin';
-
-    var code = '';
-    code += pin;
-    return [code, Blockly.Python.ORDER_ATOMIC];
-};
-
 // Blockly.Python['robothat_line_follower'] = function(block) {
 //     var chn = Blockly.Python.valueToCode(block, 'line', Blockly.Python.ORDER_ATOMIC);
 //     Blockly.Python.definitions_['import_robothat'] = 'import robothat';

@@ -67,10 +67,10 @@ Local['en'].MODULES_TOUCHSWITCH_GET_VALUE_TITLE2 = "value";
 Local['en'].MODULES_TOUCHSWITCH_GET_VALUE_TOOLTIP = "Get touch switch value.";
 
 Local['en'].MODULES_ULTRASONIC_NAME = "Ultrasonic";
-Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE1 = "Ultrasonic ranging get distance";
+Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE1 = "Ultrasonic get distance";
 Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE2 = "trig";
 Local['en'].MODULES_ULTRASONIC_GET_VALUE_TITLE3 = "echo";
-Local['en'].MODULES_ULTRASONIC_VALUE_TOOLTIP = " Get ultrasonic ranging value.";
+Local['en'].MODULES_ULTRASONIC_VALUE_TOOLTIP = " Get ultrasonic value.";
 
 Local['en'].MODULES_DS18B20_NAME = "DS18B20";
 Local['en'].MODULES_DS18B20_GET_VALUE_TITLE1 = "DS18B20 Get temperature(to GPIO 4)";

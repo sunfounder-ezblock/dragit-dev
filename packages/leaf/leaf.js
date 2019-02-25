@@ -17,12 +17,6 @@ Leaf.nameEn = "Leaf";
 Leaf.active = 'active';
 Leaf.libs = [
 ];
-Leaf.functions = [
-    "remote",
-    // "routing",
-    "bluetooth",
-    // "play",
-]
 Leaf.avalibleKits = [
     "SensorKit",
 ]

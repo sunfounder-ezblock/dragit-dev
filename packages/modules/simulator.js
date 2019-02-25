@@ -36,6 +36,7 @@ Modules.simulator.LEDModule_set_value = function(pin, value) {
         pin = Pin(pin)
         pin.value(value)
     } else if (pin.slice(0, 1) == "P") {
+        // value = 4095 - value
         pin = PWM(pin)
         pin.pulse_width(value)
     }
@@ -146,7 +147,7 @@ Simulator.interpreterFunctions['TiltSwitch_get_value'] = {
     name: "TiltSwitch_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.TiltSwitch_get_value(pin);
+        return Modules.simulator.TiltSwitch_get_value(pin);
     },
 }
 
@@ -170,7 +171,7 @@ Simulator.interpreterFunctions['VibrationSwitch_get_value'] = {
     name: "VibrationSwitch_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.VibrationSwitch_get_value(pin);
+        return Modules.simulator.VibrationSwitch_get_value(pin);
     },
 }
 
@@ -188,10 +189,10 @@ Blockly.JavaScript['modules_buzzer_set_value'] = function(block) {
 };
 
 Modules.simulator.Buzzer_play = function(pin, note, beat) {
-    async function play(){
+    async function play() {
         pin = pin.toString();
         note = note.toString();
-        beat = parseInt(beat)
+        beat = parseInt(beat);
         var pwm = PWM(pin);
         pwm.freq(note);
         pwm.pulse_width_percentage(50);
@@ -230,8 +231,13 @@ Modules.simulator.Joystick_get_value = function(Xpin, Ypin, Btpin, pin_select) {
     pin_select = parseInt(pin_select);
     var array = [Xpin, Ypin, Btpin];
     var pin = array[pin_select];
-    var adc = ADC(pin);
-    var value = adc.read();
+    if (pin_select == 2) {
+        var pin = Pin(pin)
+        var value = pin.value()
+    } else {
+        var adc = ADC(pin);
+        var value = adc.read();
+    };
     return value;
 };
 
@@ -239,12 +245,9 @@ Simulator.interpreterFunctions['Joystick_get_value'] = {
     name: "Joystick_get_value",
     type: "createNativeFunction",
     func: function(Xpin, Ypin, Btpin, pin_select) {
-        Modules.simulator.Joystick_get_value(Xpin, Ypin, Btpin, pin_select);
+        return Modules.simulator.Joystick_get_value(Xpin, Ypin, Btpin, pin_select);
     },
 }
-
-
-
 
 Blockly.JavaScript['modules_joystick_get_status'] = function(block) {
     var Xpin = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC);
@@ -265,19 +268,19 @@ Modules.simulator.Joystick_get_status = function(Xpin, Ypin, Btpin) {
     var Bt = Pin(Btpin);
     var state = ['home', 'up', 'down', 'left', 'right', 'pressed'];
     var i = 0;
-    if (X.read() <= 1900) {
+    if (X.read() <= 1024) {
         i = 1; //up
-    } else if (X.read() >= 2200) {
+    } else if (X.read() >= 3072) {
         i = 2; //down
-    } else if (Y.read() <= 1900) {
+    } else if (Y.read() <= 1024) {
         i = 3; //right
-    } else if (Y.read() >= 2200) {
+    } else if (Y.read() >= 3072) {
         i = 4; //left
     } else if (Bt.value() == 0) {
         i = 5; // Button pressed
     }
-    if (X.read() - 2048 < 200 && X.read() - 2048 > -200 &&
-        Y.read() - 2048 < 200 && Y.read() - 2048 > -200 &&
+    if (read() > 1024 && X.read() < 3072 &&
+        Y.read() > 1024 && Y.read() < 3072 &&
         Bt.value() == 1) {
         i = 0;
     }
@@ -288,7 +291,7 @@ Simulator.interpreterFunctions['Joystick_get_status'] = {
     name: "Joystick_get_status",
     type: "createNativeFunction",
     func: function(Xpin, Ypin, Btpin) {
-        Modules.simulator.Joystick_get_status(Xpin, Ypin, Btpin);
+        return Modules.simulator.Joystick_get_status(Xpin, Ypin, Btpin);
     },
 }
 
@@ -312,7 +315,7 @@ Simulator.interpreterFunctions['Potentiometer_get_value'] = {
     name: "Potentiometer_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.Potentiometer_get_value(pin);
+        return Modules.simulator.Potentiometer_get_value(pin);
     },
 }
 
@@ -332,7 +335,7 @@ Modules.simulator.SoundSensor_get_value = function(pin) {
     var value_list = [];
     for (i = 0; i = 50; i++) {
         var value = adc.read();
-        value_list.append(value);
+        value_list.push(value);
     }
     value = sum(value_list) / 50.0;
     return value;
@@ -342,7 +345,7 @@ Simulator.interpreterFunctions['SoundSensor_get_value'] = {
     name: "SoundSensor_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.SoundSensor_get_value(pin);
+        return Modules.simulator.SoundSensor_get_value(pin);
     },
 }
 
@@ -366,7 +369,7 @@ Simulator.interpreterFunctions['Photoresistor_get_value'] = {
     name: "Photoresistor_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.Photoresistor_get_value(pin);
+        return Modules.simulator.Photoresistor_get_value(pin);
     },
 }
 
@@ -389,7 +392,7 @@ Simulator.interpreterFunctions['TouchSwitch_get_value'] = {
     name: "TouchSwitch_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.TouchSwitch_get_value(pin);
+        return Modules.simulator.TouchSwitch_get_value(pin);
     },
 }
 
@@ -440,7 +443,7 @@ Simulator.interpreterFunctions['UltrasonicSensor_get_value'] = {
     name: "UltrasonicSensor_get_value",
     type: "createNativeFunction",
     func: function(trig, echo, timeout) {
-        Modules.simulator.UltrasonicSensor_get_value(trig, echo, timeout);
+        return Modules.simulator.UltrasonicSensor_get_value(trig, echo, timeout);
     },
 }
 
@@ -458,7 +461,7 @@ Simulator.interpreterFunctions['DS18B20_get_value'] = {
     name: "DS18B20_get_value",
     type: "createNativeFunction",
     func: function() {
-        Modules.simulator.DS18B20_get_value();
+        return Modules.simulator.DS18B20_get_value();
     },
 }
 
@@ -493,7 +496,7 @@ Simulator.interpreterFunctions['Servo_set_value'] = {
     name: "Servo_set_value",
     type: "createNativeFunction",
     func: function(pin, angle) {
-        Modules.simulator.Servo_set_value(pin, angle);
+        return Modules.simulator.Servo_set_value(pin, angle);
     },
 }
 
@@ -516,7 +519,7 @@ Simulator.interpreterFunctions['MoistureSensor_get_value'] = {
     name: "MoistureSensor_get_value",
     type: "createNativeFunction",
     func: function(pin) {
-        Modules.simulator.MoistureSensor_get_value(pin);
+        return Modules.simulator.MoistureSensor_get_value(pin);
     },
 }
 
@@ -535,6 +538,6 @@ Simulator.interpreterFunctions['ADXL345_get_value'] = {
     name: "ADXL345_get_value",
     type: "createNativeFunction",
     func: function() {
-        Modules.simulator.ADXL345_get_value();
+        return Modules.simulator.ADXL345_get_value();
     },
 }
