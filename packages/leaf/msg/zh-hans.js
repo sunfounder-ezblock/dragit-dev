@@ -52,6 +52,12 @@ Local['zh-hans'].LEAF_PIN_IRQ_TOOLTIP   = "There are a total of 22 interrupt lin
         callback is the function to call when the interrupt triggers. \n\
         The callback function must accept exactly 1 argument, which is the line that triggered the interrupt.";
 
+//#################################################
+// class PWM - analog to digital conversion
+//#################################################
+Local['zh-hans'].RASPBERRYPI_PWM_PIN_TITLE = "PWM"
+Local['zh-hans'].RASPBERRYPI_PWM_PIN_TOOLTIP = "PWM 引脚";
+
 
 //#################################################
 // class ADC - analog to digital conversion
@@ -81,7 +87,7 @@ Local['zh-hans'].LEAF_SERVO_GET_ANGLE_TOOLTIP       = "获取舵机的角度"
 Local['zh-hans'].LEAF_SERVO_SET_ANGLE_TITLE1        = "设置舵机"
 Local['zh-hans'].LEAF_SERVO_SET_ANGLE_TITLE2        = "的角度"
 Local['zh-hans'].LEAF_SERVO_SET_ANGLE_TITLE3        = "time"
-Local['zh-hans'].LEAF_SERVO_SET_ANGLE_TOOLTIP       = "Sets the angle of the servo:\n\
+Local['zh-hans'].LEAF_SERVO_SET_ANGLE_TOOLTIP       = "设置舵机的角度:\n\
      angle is the angle to move to in degrees.\n\
      time is the number of milliseconds to take to get to the specified angle. If omitted, then the servo moves as quickly as possible to its new position."
 
@@ -92,7 +98,7 @@ Local['zh-hans'].LEAF_SERVO_GET_SPEED_TOOLTIP       = "获取舵机的速度"
 Local['zh-hans'].LEAF_SERVO_SET_SPEED_TITLE1        = "设置舵机"
 Local['zh-hans'].LEAF_SERVO_SET_SPEED_TITLE2        = "的速度"
 Local['zh-hans'].LEAF_SERVO_SET_SPEED_TITLE3        = "time"
-Local['zh-hans'].LEAF_SERVO_SET_SPEED_TOOLTIP       = "Sets the angle of the servo:\n\
+Local['zh-hans'].LEAF_SERVO_SET_SPEED_TOOLTIP       = "设置舵机的速度:\n\
      speed is the speed to change to, between -100 and 100.\n\
      time is the number of milliseconds to take to get to the specified speed. If omitted, then the servo accelerates as quickly as possible."
 
@@ -106,7 +112,7 @@ Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TITLE3  = "最小脉宽"
 Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TITLE4  = "最大脉宽"
 Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TITLE5  = "中心脉宽"
 Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TITLE6  = "90度的脉宽"
-Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TITLE7  = "pulse_speed_100"
+Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TITLE7  = "舵机速度为100的脉宽"
 Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TOOLTIP = "Sets the angle of the servo:\n\
       pulse_min is the minimum allowed pulse width.\n\
       pulse_max is the maximum allowed pulse width.\n\
@@ -116,9 +122,22 @@ Local['zh-hans'].LEAF_SERVO_SET_CALIBRATION_TOOLTIP = "Sets the angle of the ser
 
 Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_TITLE1 = "PWM设置";
 Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_TITLE2 = "脉冲宽度的值为";
-Local['zh-hans'].LEAF_SPI_TOOLTIP = "设置PWM脉冲宽度的值为（0 ~ 4095）.";
+Local['zh-hans'].LEAF_PWM_TOOLTIP = "设置PWM脉冲宽度的值为（0 ~ 4095）.";
       
 Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "PWM设置";
 Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1 = "脉冲宽度的百分比为";
 Local['zh-hans'].LEAF_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2 = "%";
+
+Local['zh-hans'].LEAF_PWM_FREQ_TITLE1 = "PWM 设置";
+Local['zh-hans'].LEAF_PWM_FREQ_TITLE2 = "频率为";
+Local['zh-hans'].LEAF_PWM_FREQ_TOOLTIP = "设置PWM的频率(HZ).";
+
+Local['zh-hans'].LEAF_PWM_PRESCALER_TITLE1 = "PWM 设置";
+Local['zh-hans'].LEAF_PWM_PRESCALER_TITLE2 = "预分频为";
+Local['zh-hans'].LEAF_PWM_PRESCALER_TOOLTIP = "设置PWM预分频的值.";
+
+Local['zh-hans'].LEAF_PWM_PERIOD_TITLE1 = "PWM 设置";
+Local['zh-hans'].LEAF_PWM_PERIOD_TITLE2 = "周期为";
+Local['zh-hans'].LEAF_PWM_PERIOD_TOOLTIP = "设置PWM周期的值.";
+
 
