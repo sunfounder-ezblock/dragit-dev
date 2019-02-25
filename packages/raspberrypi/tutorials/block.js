@@ -116,7 +116,7 @@ RaspberryPi.tutorials.blockcode['Advance']['Wiring'] = {
         "image": "",
     },
 }
-RaspberryPi.tutorials.blockly['Getting Start']['Hello World'] = {
+RaspberryPi.tutorials.blockcode['Getting Start']['Hello World'] = {
     "name": 'Hello World', // Name: Blink LED
     "steps": { // All Steps
         "Introduction": { // Step 1
