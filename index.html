@@ -435,7 +435,7 @@
 					<button class="close" data-dismiss="modal">
 						<span>X</span>
 					</button>
-					<span>Language</span>
+					<span>%{language_language}</span>
 				</div>
 				<div class="modal-body lan_modal"></div>
 			</div>
@@ -494,13 +494,16 @@
 	<div id="projectName" class="modal fade">
 		<div class="modal-dialog project-name-dialog">
 			<div class="modal-content">
-				<div class="modal-header package-header projectName-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+				<div class="modal-body modal-text">
+					<button class="close" data-dismiss="modal">
+						<span>X</span>
+					</button>
+					<span>%{new_project_new_project}</span>
 				</div>
 				<div class="modal-body projectName-body">
-					<input type="text" class="nameInput" placeholder="Project Name">
+					<input type="text" class="nameInput" placeholder="%{new_project_project_name}">
 					<div class="ensure">
-						<button class="ensureBtn" onclick="Home.newProject();">Next</button>
+						<button class="ensureBtn" onclick="Home.newProject();">%{new_project_next}</button>
 					</div>
 				</div>
 			</div>
@@ -1376,8 +1379,9 @@
 		<div class="codingContent dis_none">
 			<div class="col-sm-4 col-lg-3 board hidden-xs">
 				<div class="boardmove">
-					<div class="render_page">
-						<img class="boardname">
+					<div class="productName">
+						<img class="icon">
+						<div class="name"></div>
 					</div>
 					<img class="selectImg" />
 					<div class="clearfix dconbtn dis_none">

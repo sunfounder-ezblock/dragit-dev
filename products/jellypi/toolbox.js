@@ -83,5 +83,4 @@ JellyPi.toolboxText =
 '    </block>'+
 '    <block type="time_time">'+
 '    </block>'+
-'  </category>'+
-'  <sep></sep>'
+'  </category>'

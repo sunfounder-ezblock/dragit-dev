@@ -51,8 +51,9 @@ Blockly.Constants.Sloth.ACTIONS = [
     // [Blockly.Msg.SLOTH_TURN_RIGHT_TITLE1, '"turn right"'],
     ["forward", '"forward"'],
     ["backward", '"backward"'],
-    ["turn left", '"turn left"'],
-    ["turn right", '"turn right"'],
+    ["turn left", '"turn_left"'],
+    ["turn right", '"turn_right"'],
+    ["stop", '"stop"'],
   ];
 
   Blockly.Blocks['sloth_do_action'] = {

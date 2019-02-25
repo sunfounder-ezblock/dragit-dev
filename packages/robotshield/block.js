@@ -39,7 +39,7 @@ Blockly.Blocks['robotshield_sensor_pin'] = {
                     Blockly.Constants.RobotShield.SENSOR_PINS),
                 'pin');
         this.setInputsInline(true);
-        this.setOutput(true, 'Analog_Pin');
+        this.setOutput(true, ['Analog_Pin', 'Digital_Pin']);
         this.setColour(Blockly.Constants.RobotShield.RGB);
         this.setTooltip(Blockly.Msg.ROBOTSHIELD_SENSOR_PIN_TOOLTIP);
         this.setHelpUrl('');

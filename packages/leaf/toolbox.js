@@ -210,7 +210,6 @@ Leaf.toolboxText =
     '      </shadow>' +
     '    </value>' +
     '  </block>' +
-    '  <sep></sep>' +
     '</category>';
 
 Leaf.timeToolboxText = 
@@ -269,6 +268,4 @@ Leaf.timeToolboxText =
     '  </block>' +
     '  <block type="time_time">' +
     '  </block>' +
-    '</category>' +
-
-    '<sep></sep>'
+    '</category>'

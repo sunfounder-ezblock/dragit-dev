@@ -536,7 +536,7 @@ Modules["touch-switch"] = new Module({
 
 Modules["ultrasonic"] = new Module({
     'sname': 'ultrasonic',
-    'blocks': ['<block type="modules_ultrasonic_get_value"></block> '],
+    'blocks': ['<block type="modules_ultrasonic_get_value"></block>'],
     'simulator': {
         "type": "ValueInput",
         "pin": "Trig",
