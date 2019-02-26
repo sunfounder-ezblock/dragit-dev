@@ -333,11 +333,15 @@ Modules.simulator.SoundSensor_get_value = function(pin) {
     pin = pin.toString();
     var adc = ADC(pin);
     var value_list = [];
-    for (i = 0; i = 50; i++) {
+    var sum = 0;
+    for (i = 0; i < 50; i++) {
         var value = adc.read();
         value_list.push(value);
     }
-    value = sum(value_list) / 50.0;
+    value_list.forEach(function(item) {
+        sum += parseInt(item);
+    })
+    value = sum / 50.0;
     return value;
 }
 
