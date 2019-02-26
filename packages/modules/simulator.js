@@ -443,19 +443,19 @@ Blockly.JavaScript['modules_ultrasonic_get_value'] = function(block) {
 //     return during * 340 / 2 * 100;
 // };
 
-Modules.simulator.UltrasonicSensor_get_value = function(trig) {
+Modules.simulator.UltrasonicSensor_get_value = function(trig, echo) {
     trig = trig.toString();
+    echo = echo.toString();
     pin = Pin(trig);
     var value = pin.value();
-    value = value / 5.0 * 700
-    return value + 'mm';
+    return value;
 };
 
 Simulator.interpreterFunctions['UltrasonicSensor_get_value'] = {
     name: "UltrasonicSensor_get_value",
     type: "createNativeFunction",
-    func: function(trig) {
-        return Modules.simulator.UltrasonicSensor_get_value(trig);
+    func: function(trig, echo) {
+        return Modules.simulator.UltrasonicSensor_get_value(trig, echo);
     },
 }
 
@@ -471,8 +471,7 @@ Modules.simulator.DS18B20_get_value = function(pin) {
     pin = pin.toString();
     var adc = ADC(pin);
     var value = adc.read();
-    // value = value / 5.0 * 180 - 55
-    return value + '℃';
+    return value;
 };
 
 
