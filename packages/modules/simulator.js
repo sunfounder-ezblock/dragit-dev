@@ -411,8 +411,8 @@ Blockly.JavaScript['modules_ultrasonic_get_value'] = function(block) {
 };
 
 // Modules.simulator.UltrasonicSensor_get_value = function(trig, echo, timeout) {
-//     trig = trig.toString(trig);
-//     echo = trig.toString(echo);
+//     trig = trig.toString();
+//     echo = trig.toString();
 //     if (timeout === undefined) {
 //         timeout = 0.02;
 //     } else {
@@ -444,18 +444,18 @@ Blockly.JavaScript['modules_ultrasonic_get_value'] = function(block) {
 // };
 
 Modules.simulator.UltrasonicSensor_get_value = function(trig) {
-    trig = trig.toString(trig);
+    trig = trig.toString();
     pin = Pin(trig);
     var value = pin.value();
     value = value / 5.0 * 700
-    return value;
+    return value + 'mm';
 };
 
 Simulator.interpreterFunctions['UltrasonicSensor_get_value'] = {
     name: "UltrasonicSensor_get_value",
     type: "createNativeFunction",
-    func: function(trig, echo, timeout) {
-        return Modules.simulator.UltrasonicSensor_get_value(trig, echo, timeout);
+    func: function(trig) {
+        return Modules.simulator.UltrasonicSensor_get_value(trig);
     },
 }
 
@@ -471,8 +471,8 @@ Modules.simulator.DS18B20_get_value = function(pin) {
     pin = pin.toString();
     var adc = ADC(pin);
     var value = adc.read();
-    value = value / 5.0 * 180 - 55
-    return value;
+    // value = value / 5.0 * 180 - 55
+    return value + '℃';
 };
 
 
@@ -480,8 +480,8 @@ Modules.simulator.DS18B20_get_value = function(pin) {
 Simulator.interpreterFunctions['DS18B20_get_value'] = {
     name: "DS18B20_get_value",
     type: "createNativeFunction",
-    func: function() {
-        return Modules.simulator.DS18B20_get_value();
+    func: function(pin) {
+        return Modules.simulator.DS18B20_get_value(pin);
     },
 }
 

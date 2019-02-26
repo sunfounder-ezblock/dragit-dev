@@ -453,7 +453,7 @@ RobotHat.pins = [
         'height': RobotHat.pinHeight,
         'isSource': false,
         'property': ["GND"],
-        'type': 'grpund',
+        'type': 'ground',
     },
     {
         'id': 38,

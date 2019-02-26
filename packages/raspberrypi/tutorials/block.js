@@ -93,27 +93,27 @@ RaspberryPi.tutorials.blockcode['Advance']['Wiring'] = {
     "name": 'Wiring',
     "step1": {
         "description": "step1",
-        "image": "",
+        "image": "tutorial-basic-hello-world-print-string.png",
     },
     "step2": {
         "description": "step2",
-        "image": "",
+        "image": "tutorial-basic-hello-world-debug-monitor.png",
     },
     "step3": {
         "description": "step3",
-        "image": "",
+        "image": "tutorial-basic-hello-world-print-string.png",
     },
     "step4": {
         "description": "step4",
-        "image": "",
+        "image": "tutorial-basic-hello-world-debug-monitor.png",
     },
     "step5": {
         "description": "step5",
-        "image": "",
+        "image": "tutorial-basic-hello-world-print-string.png",
     },
     "step6": {
         "description": "step6",
-        "image": "",
+        "image": "tutorial-basic-hello-world-debug-monitor.png",
     },
 }
 RaspberryPi.tutorials.blockcode['Getting Start']['Hello World'] = {
