@@ -406,37 +406,45 @@ Blockly.JavaScript['modules_ultrasonic_get_value'] = function(block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Modules.simulator.UltrasonicSensor_get_value = function(trig, echo, timeout) {
+// Modules.simulator.UltrasonicSensor_get_value = function(trig, echo, timeout) {
+//     trig = trig.toString(trig);
+//     echo = trig.toString(echo);
+//     if (timeout === undefined) {
+//         timeout = 0.02;
+//     } else {
+//         timeout = parseFloat(timeout);
+//     }
+//     trig = Pin(trig);
+//     echo = Pin(echo);
+//     trig.low();
+//     time.sleep(0.01);
+//     trig.high();
+//     time.sleep(0.00001);
+//     trig.low();
+//     var pulse_end = 0;
+//     var timeout_start = time.time();
+//     while (echo.value() == 0) {
+//         var pulse_start = time.time();
+//         if (pulse_start - timeout_start > timeout) {
+//             return -1;
+//         }
+//     }
+//     while (echo.value() == 1) {
+//         var pulse_end = time.time();
+//         if (pulse_end - timeout_start > timeout) {
+//             return -1;
+//         }
+//     }
+//     var during = pulse_end - pulse_start;
+//     return during * 340 / 2 * 100;
+// };
+
+Modules.simulator.UltrasonicSensor_get_value = function(trig) {
     trig = trig.toString(trig);
-    echo = trig.toString(echo);
-    if (timeout === undefined) {
-        timeout = 0.02;
-    } else {
-        timeout = parseFloat(timeout);
-    }
-    trig = Pin(trig);
-    echo = Pin(echo);
-    trig.low();
-    time.sleep(0.01);
-    trig.high();
-    time.sleep(0.00001);
-    trig.low();
-    var pulse_end = 0;
-    var timeout_start = time.time();
-    while (echo.value() == 0) {
-        var pulse_start = time.time();
-        if (pulse_start - timeout_start > timeout) {
-            return -1;
-        }
-    }
-    while (echo.value() == 1) {
-        var pulse_end = time.time();
-        if (pulse_end - timeout_start > timeout) {
-            return -1;
-        }
-    }
-    var during = pulse_end - pulse_start;
-    return during * 340 / 2 * 100;
+    pin = Pin(trig);
+    var value = pin.value();
+    value = value / 5.0 * 700
+    return value;
 };
 
 Simulator.interpreterFunctions['UltrasonicSensor_get_value'] = {
@@ -455,7 +463,15 @@ Blockly.JavaScript['modules_ds18b20_get_value'] = function(block) {
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Modules.simulator.DS18B20_get_value = function() {};
+Modules.simulator.DS18B20_get_value = function(pin) {
+    pin = pin.toString();
+    var adc = ADC(pin);
+    var value = adc.read();
+    value = value / 5.0 * 180 - 55
+    return value;
+};
+
+
 
 Simulator.interpreterFunctions['DS18B20_get_value'] = {
     name: "DS18B20_get_value",
