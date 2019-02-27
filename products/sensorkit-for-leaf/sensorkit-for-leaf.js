@@ -2,7 +2,7 @@
  * create a object of SensorKitForLeaf and contain it's id and name
  */
 var SensorKitForLeaf = {}
-SensorKitForLeaf.id = 'sensorkitforleaf';
+SensorKitForLeaf.id = 'sensorkit-for-leaf';
 SensorKitForLeaf.list = {
     "device": "Leaf",
     "kits": [

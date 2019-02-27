@@ -1,5 +1,4 @@
 RobotShield.toolboxText =
-    '  <category name="%{BKY_CATROBOTSHIELD}" colour="#3F34D1">' +
     '    <block type="robotshield_sensor_pin"></block>' +
     '    <block type="robotshield_servo_pin"></block>' +
 
@@ -20,8 +19,6 @@ RobotShield.toolboxText =
     '        <shadow type="robotshield_sensor_pin">' +
     '        </shadow>' +
     '      </value>' +
-    '    </block>' +
-
-    '  </category>'
+    '    </block>'
 
 RobotShield.timeToolboxText = Leaf.timeToolboxText;
