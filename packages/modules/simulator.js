@@ -411,8 +411,8 @@ Blockly.JavaScript['modules_ultrasonic_get_value'] = function(block) {
 };
 
 // Modules.simulator.UltrasonicSensor_get_value = function(trig, echo, timeout) {
-//     trig = trig.toString(trig);
-//     echo = trig.toString(echo);
+//     trig = trig.toString();
+//     echo = trig.toString();
 //     if (timeout === undefined) {
 //         timeout = 0.02;
 //     } else {
@@ -479,8 +479,8 @@ Modules.simulator.DS18B20_get_value = function(pin) {
 Simulator.interpreterFunctions['DS18B20_get_value'] = {
     name: "DS18B20_get_value",
     type: "createNativeFunction",
-    func: function() {
-        return Modules.simulator.DS18B20_get_value();
+    func: function(pin) {
+        return Modules.simulator.DS18B20_get_value(pin);
     },
 }
 

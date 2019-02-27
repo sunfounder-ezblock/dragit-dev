@@ -188,6 +188,7 @@
 	<script src="./products/lizard/generator.js"></script>
 	<script src="./products/lizard/toolbox.js"></script>
 	<script src="./products/pimobile/pimobile.js"></script>
+	<script src="./products/pimobile/toolbox.js"></script>
 	<script src="./products/sloth/block.js"></script>
 	<script src="./products/sloth/generator.js"></script>
 	<script src="./products/sloth/sloth.js"></script>
@@ -288,6 +289,7 @@
 	<script src="./products/lizard/generator.js"></script>
 	<script src="./products/lizard/toolbox.js"></script>
 	<script src="./products/pimobile/pimobile.js"></script>
+	<script src="./products/pimobile/toolbox.js"></script>
 	<script src="./products/sloth/block.js"></script>
 	<script src="./products/sloth/generator.js"></script>
 	<script src="./products/sloth/sloth.js"></script>
@@ -419,6 +421,9 @@
 					</ul>
 				</div>
 			</div>
+			<div class="bug_print" style="display: none;">
+				<img src="./img/保存.png" />
+			</div>
 			<button class="kitRun dis_none">
 				<img src="./img/stop.png" class="kitstop dis_none">
 				<img src="./img/play.png" class="kitplay dis_none">
@@ -467,7 +472,7 @@
 						<button onclick="Coding.platform.replace()">Replace</button>
 						<button onclick="Coding.platform.replaceAll()">All</button>
 					</div>
-				</div>-
+				</div>
 			</div>
 		</div>
 	</div>
@@ -477,14 +482,14 @@
 			<div class="modal-content">
 				<div class="modal-header created-packages-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-					<h4 class="model-title created-packages-title" id="addPackage-title">Please Select packages</h4>
+					<h4 class="model-title created-packages-title" id="addPackage-title">%{selectPageages}</h4>
 				</div>
 				<div class="modal-body created-packages-body">
 					<ul class="created-packages-name-list">
 
 					</ul>
 					<div class="created-packages-btn-block" style="overflow:hidden">
-						<button class="created-packages-btn" onclick="AddPackage.selectPackages()">OK</button>
+						<button class="created-packages-btn" onclick="AddPackage.selectPackages()">%{ok}</button>
 					</div>
 				</div>
 			</div>
@@ -520,7 +525,7 @@
 				<div class="modal-body projectName-body">
 					<input type="text" class="saveAsNameInput" placeholder="Project Name">
 					<div class="ensure">
-						<button class="saveAsBtn">Save As</button>
+						<button class="saveAsBtn">%{save_as}</button>
 					</div>
 				</div>
 			</div>
@@ -547,9 +552,9 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
 				</div>
 				<div class="modal-body projectName-body">
-					<p class="textRemind">是否保存此项目?</p>
-					<button class="remindCancelBtn remindBtn" data-id="false">Cancel</button>
-					<button class="remindSaveBtn remindBtn" data-id="true">Save</button>
+					<p class="textRemind">%{isSaveProject}</p>
+					<button class="remindCancelBtn remindBtn" data-id="false">%{cancel}</button>
+					<button class="remindSaveBtn remindBtn" data-id="true">%{save}</button>
 				</div>
 			</div>
 		</div>
@@ -566,7 +571,7 @@
 				<div class="modal-body projectName-body">
 					<input type="text" class="promptInput" placeholder="">
 					<div class="ensure">
-						<button class="promptBtn">OK</button>
+						<button class="promptBtn">%{ok}</button>
 					</div>
 				</div>
 			</div>
@@ -579,7 +584,7 @@
 			<div class="modal-content choose-mode-content">
 				<div class="modal-header package-header projectName-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-					<h4 class="model-title choose-mode-title" id="addPackage-title">Select programming environment</h4>
+					<h4 class="model-title choose-mode-title" id="addPackage-title">%{selectProgramEnv}</h4>
 				</div>
 				<div class="modal-body choose-mode-body">
 				</div>
@@ -592,14 +597,14 @@
 			<div class="modal-content add-kit-mode-content">
 				<div class="modal-header kit-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-					<h4 class="model-title choose-mode-title" id="addKit-title">Select kit</h4>
+					<h4 class="model-title choose-mode-title" id="addKit-title">%{selectKit}</h4>
 				</div>
 				<div class="modal-body add-kit-mode-body">
 					<div class="choose-type">
 						<div class="choose-name">
 							<div class="choose-name-box choose-name-position">
-								<span class="choose-name-text">Kit: </span>
-								<input class="choose-name-input dropdown-toggle choose-name-btn add-kit-mode-ipt" data-toggle="dropdown" type="button" value="Name"
+								<span class="choose-name-text">%{kit}:</span>
+								<input class="choose-name-input dropdown-toggle choose-name-btn add-kit-mode-ipt" data-toggle="dropdown" type="button"
 								 style="width: 71%">
 								<span class="glyphicon glyphicon-play iotRotate"></span>
 								<ul class="dropdown-menu type-menu add-kit-ul" role="menu"></ul>
@@ -621,15 +626,15 @@
 			<div class="modal-content add-module-mode-content">
 				<div class="modal-header module-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-					<h4 class="model-title choose-mode-title" id="addModule-title">Select Module</h4>
+					<h4 class="model-title choose-mode-title" id="addModule-title">%{selectModule}</h4>
 				</div>
 				<div class="modal-body add-module-mode-body">
 					<div class="choose-type">
 						<div class="choose-name">
 							<div class="choose-name-box choose-name-position">
-								<span class="choose-name-text">Module: </span>
+								<span class="choose-name-text">%{module}: </span>
 								<input class="choose-name-input dropdown-toggle choose-name-btn add-module-mode-ipt" data-toggle="dropdown" type="button"
-								 value="Name" style="width: 71%">
+								 style="width: 71%">
 								<span class="glyphicon glyphicon-play iotRotate"></span>
 								<ul class="dropdown-menu type-menu add-module-ul" role="menu"></ul>
 							</div>
@@ -657,6 +662,7 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- 注册弹窗 -->
 	<div id="register" class="modal fade">
 		<div class="modal-dialog register-width">
@@ -825,7 +831,7 @@
 					<button class="close" data-dismiss="modal">
 						<span>X</span>
 					</button>
-					<span>About Us</span>
+					<span>%{aboutUsHeader}</span>
 				</div>
 				<div class="modal-body about-us-height about-us-body">
 					<img src="./img/sunfounder-steam-education-large.png" alt="sunfounder"> %{aboutUs}
@@ -1080,21 +1086,21 @@
 		<div class="selectBoardContent dis_none">
 			<div class="selectBoard clearfix">
 				<div style="text-align: center" class="clearfix visible-xs selectBoardTitle">
-					<p style="width: 50%;float: left;color:rgb(255,202,75);margin-top: 10px;font-size: 18px;" onclick="$('.selectBoardLeft').show();$('.selectBoardRight').hide();$(this).css('color','rgb(255,202,75)');$(this).siblings('p').css('color','#727272');">Products</p>
-					<p style="width: 50%;float: left;margin-top: 10px;font-size: 18px;" onclick="$('.selectBoardRight').show();$('.selectBoardLeft').hide();$(this).css('color','rgb(255,202,75)');$(this).siblings('p').css('color','#727272');">Recently Used</p>
+					<p style="width: 50%;float: left;color:rgb(255,202,75);margin-top: 10px;font-size: 18px;" onclick="$('.selectBoardLeft').show();$('.selectBoardRight').hide();$(this).css('color','rgb(255,202,75)');$(this).siblings('p').css('color','#727272');">%{products}</p>
+					<p style="width: 50%;float: left;margin-top: 10px;font-size: 18px;" onclick="$('.selectBoardRight').show();$('.selectBoardLeft').hide();$(this).css('color','rgb(255,202,75)');$(this).siblings('p').css('color','#727272');">%{recentlyUsed}</p>
 				</div>
 				<div class="selectBoardLeft  clearfix">
 					<div>
-						<button class="select_return" onclick="SelectBoard.return();">Return</button>
+						<button class="select_return" onclick="SelectBoard.return();">%{returnHome}</button>
 					</div>
 				</div>
 				<div class="selectLine"></div>
 				<div class="selectBoardRight">
-					<p class="recentUsed">Recently Used</p>
+					<p class="recentUsed">%{recentlyUsed}</p>
 					<ul class="recentUsedUl clearfix">
 					</ul>
 					<div class="visible-xs">
-						<button onclick="SelectBoard.return();" class="select_right_return">Return</button>
+						<button onclick="SelectBoard.return();" class="select_right_return">%{returnHome}</button>
 					</div>
 				</div>
 			</div>
@@ -1329,14 +1335,14 @@
 				</div>
 				<div class="system_msg dis_none">
 					<div class="sMessage">
-						<h1>系统消息</h1>
+						<h1>%{systemMessages}</h1>
 						<hr />
 					</div>
 					<ul></ul>
 					<div class="pager">
-						<button class="prevMsg" onclick="PInformation.changePageNo(--PInformation.pageno)">上一页</button>
+						<button class="prevMsg" onclick="PInformation.changePageNo(--PInformation.pageno)">%{prev}</button>
 						<span class="pageNum">1</span>
-						<button class="nextMsg" onclick="PInformation.changePageNo(++PInformation.pageno)">下一页</button>
+						<button class="nextMsg" onclick="PInformation.changePageNo(++PInformation.pageno)">%{next}</button>
 					</div>
 				</div>
 			</div>
@@ -1354,7 +1360,7 @@
 					</div>
 				</div>
 				<div class="searchFile">
-					<input class="searchFileInput" type="text" placeholder="Search Files...">
+				<input class="searchFileInput" type="text" placeholder="%{searchFiles}">
 				</div>
 			</div>
 			<div class="myProject-main">
@@ -1407,7 +1413,7 @@
 					</div>
 					<div class="WebBLE_debugIpt">
 						<div class="clearfix topTitle">
-							<button onclick="WebBLE.debugClear()">Clear</button>
+							<button onclick="WebBLE.debugClear()">%{clear}</button>
 							<button onclick="WebBLE.expand()" class="toggleExpand">
 								<img src="./img/shrink.png">
 								<img src="./img/expand.png">
@@ -1423,12 +1429,12 @@
 				<div class="scriptcode dis_none">
 					<div id="main" class="vbox">
 						<div class="ace-cmd-btn clearfix">
-							<button onclick="Coding.platform.selectMore()">select</button>
-							<button onclick="Coding.platform.undo()">undo</button>
-							<button onclick="Coding.platform.redo()">redo</button>
-							<button onclick="Coding.platform.findIptShow()">find</button>
-							<button onclick="Coding.platform.setKeyboard()" class="dis_none">keyborad</button>
-							<button onclick="Coding.platform.tab()" class="ace-tab-btn dis_none">tab</button>
+							<button onclick="Coding.platform.selectMore()">%{select}</button>
+							<button onclick="Coding.platform.undo()">%{undo}</button>
+							<button onclick="Coding.platform.redo()">%{redo}</button>
+							<button onclick="Coding.platform.findIptShow()">%{find}</button>
+							<button onclick="Coding.platform.setKeyboard()" class="dis_none">%{keyborad}</button>
+							<button onclick="Coding.platform.tab()" class="ace-tab-btn dis_none">%{tab}</button>
 							<select id="ace-selectheme" onchange="Coding.platform.setTheme()"></select>
 						</div>
 						<div class="hbox flex1">
@@ -1438,9 +1444,9 @@
 			</div>
 		</div>
 
-		<div class="routingDebug">
+		<div class="routingDebug debug">
 			<div class="clearfix routingTopic">
-				<button onclick="Routing.debugClear()">Clear</button>
+				<button onclick="Routing.debugClear()">%{clear}</button>
 				<button onclick="Routing.expand()" class="toggleExpand">
 					<img src="./img/shrink.png">
 					<img src="./img/expand.png">
@@ -1498,8 +1504,8 @@
 			</div>
 			<div class="to clearfix">
 				<div>%{to}：</div>
-				<span></span>
-				<input type="email" placeholder="%{enterEmail}" class="commonArea" onchange="this.style.color='rgb(102,102,102)'">
+				<span>support@sunfounder.com</span>
+				<!-- <input type="email" placeholder="%{enterEmail}" class="commonArea" onchange="this.style.color='rgb(102,102,102)'"> -->
 				<br />
 			</div>
 			<div class="theme clearfix">
@@ -1543,9 +1549,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="debugPrompt">
+		<div class="debugPrompt debug">
 			<div class="clearfix debugTopic">
-				<button onclick="WebBLE.debugClear()">Clear</button>
+				<button onclick="WebBLE.debugClear()">%{clear}</button>
 				<button onclick="WebBLE.expand()" class="toggleExpand">
 					<img src="./img/shrink.png">
 					<img src="./img/expand.png">
@@ -1555,9 +1561,9 @@
 			</div>
 		</div>
 
-		<div class="iotDebug dis_none">
+		<div class="iotDebug debug dis_none">
 			<div class="clearfix iotTopic">
-				<button onclick="WebBLE.debugClear()">Clear</button>
+				<button onclick="WebBLE.debugClear()">%{clear}</button>
 				<button onclick="WebBLE.expand()" class="toggleExpand">
 					<img src="./img/shrink.png">
 					<img src="./img/expand.png">
@@ -1653,11 +1659,11 @@
 		</div>
 		<div class="tutorials_block">
 			<div>
-				<button class="tutorials_back">返回</button>
+				<button class="tutorials_back">%{return}</button>
 			</div>
 			<div id="tutorials_tips" class="tutorials_tips_text"></div>
 			<div>
-				<button class="tutorials_next">下一步</button>
+				<button class="tutorials_next">%{nextStup}</button>
 			</div>
 			<ul class="dot">
 
@@ -1675,7 +1681,7 @@
 							<img src="./img/pythoncode.png" alt="">
 						</div>
 						<div class="tutorials_modal_btn_block">
-							<button class="tutorials_modal_btn">OK</button>
+							<button class="tutorials_modal_btn">%{ok}</button>
 						</div>
 					</div>
 				</div>

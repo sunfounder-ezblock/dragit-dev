@@ -2,7 +2,7 @@
  * create a object of SensorKitForPi and contain it's id and name
  */
 var SensorKitForPi = {}
-SensorKitForPi.id = 'sensorkitforpi';
+SensorKitForPi.id = 'sensorkit-for-pi';
 SensorKitForPi.list = {
     "device": "RaspberryPi",
     "kits": [

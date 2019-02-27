@@ -1,6 +1,4 @@
 RobotHat.toolboxText =
-    '  <category name="%{BKY_CATROBOTHAT}" colour="#3F34D1">' +
-
     '    <block type="robothat_digital_pin"></block>' +
     '    <block type="robothat_analog_pin"></block>' +
     '    <block type="robothat_pwm_pin"></block>' +
@@ -85,7 +83,5 @@ RobotHat.toolboxText =
     '               <field name="NUM">0</field> ' +
     '           </shadow> ' +
     '       </value> ' +
-    '   </block> ' +
-
-    '  </category>'
+    '   </block> '
 RobotHat.timeToolboxText = RaspberryPi.timeToolboxText;

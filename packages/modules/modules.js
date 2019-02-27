@@ -538,9 +538,7 @@ Modules["ultrasonic"] = new Module({
     'sname': 'ultrasonic',
     'blocks': ['<block type="modules_ultrasonic_get_value"></block>'],
     'simulator': {
-        "type": "ValueInput",
-        "pin": "Trig",
-        "mode": "slider",
+        "type": "ModuleUltrasonic",
         "min": 0,
         "max": 700,
         "unit": "mm",
@@ -710,6 +708,12 @@ Modules["moisture-sensor"] = new Module({
         }
     }
 })
+
+Modules["switchbot-s1"] = new Module({
+    'sname':'switchbot-s1',
+    'blocks': ['<block type="switchbot_s1_get_value"><value name="port"></value></block >'],
+    'pins': null,
+}),
 
 Modules["adxl345"] = new Module({
     'sname': 'adxl345',
