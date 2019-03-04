@@ -136,18 +136,18 @@ def Joystick_get_status(Xpin, Ypin, Btpin):
 	Bt = Pin(Btpin)
 	state = ['home', 'up', 'down', 'left', 'right', 'pressed']
 	i = 0
-	if X.read() <= 1024:
+	if Y.read() <= 1024:
 		i = 1       #up
-	elif X.read() >= 3072:
-		i = 2       #down
-	elif Y.read() <= 1024:
-		i = 3       #right
 	elif Y.read() >= 3072:
+		i = 2       #down
+	elif X.read() <= 1024:
+		i = 3       #right
+	elif X.read() >= 3072:
 		i = 4       #left
 	elif Bt.value() == 0:
 		i = 5       # Button pressed
-	if X.read() > 1024 and X.read() <3072 and \
-		Y.read() >1024 and Y.read() <3072 and \
+	if Y.read() > 1024 and Y.read() <3072 and \
+		X.read() >1024 and X.read() <3072 and \
 		Bt.value() == 1:
 		i = 0
 	return state[i]

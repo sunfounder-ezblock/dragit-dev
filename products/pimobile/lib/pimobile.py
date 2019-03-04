@@ -31,6 +31,7 @@ def get_distance(trig=17, echo=18):
     time.sleep(0.00001)
     trig.low()
     pulse_end = 0
+	pulse_start = 0
     timeout_start = time.time()
     while echo.value()==0:
         pluse_start = time.time()

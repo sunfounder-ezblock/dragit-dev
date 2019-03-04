@@ -212,9 +212,11 @@ Blockly.Blocks['robothat_motor_speed_calibration'] = {
             .setCheck(null)
             .appendField(Blockly.Msg.ROBOTHAT_MOTOR_SPEED_CALIBRATION_TITLE1);
         this.setInputsInline(true);
-        this.setOutput(true, "Number");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.RobotHat.RGB);
-        this.setTooltip(Blockly.Msg.ROBOTHAT_MOTOR_SPEED_CALIBRATION_TOOLTIP);
+        this.setTooltip(Blockly.Msg.ROBOTHAT_MOTOR_DIRECTION_CALIBRATION_TOOLTIP);
         this.setHelpUrl('');
     }
 };
