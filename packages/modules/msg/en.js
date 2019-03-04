@@ -36,8 +36,9 @@ Local['en'].MODULES_BUZZER_SET_STATUS_TOOLTIP = "Buzzer play note for a beat";
 Local['en'].MODULES_JOYSTICK_NAME = "Joystick";
 Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE1 = "Joystick  X";
 Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE2 = "Y";
-Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE3 = "Btn get";
-Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE4 = "value";
+Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE3 = " Btn";
+Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE4 = "get";
+Local['en'].MODULES_JOYSTICK_GET_VALUE_TITLE5 = "value";
 Local['en'].MODULES_JOYSTICK_GET_VALUE_TOOLTIP = "Get joystick X/Y/Btn value";
 
 Local['en'].MODULES_JOYSTICK_NAME = "Joystick";

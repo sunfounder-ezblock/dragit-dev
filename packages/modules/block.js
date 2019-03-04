@@ -193,8 +193,9 @@ Blockly.Blocks['modules_joystick_get_value'] = {
             .setCheck("Digital_Pin")
             .appendField(Blockly.Msg.MODULES_JOYSTICK_GET_VALUE_TITLE3);
         this.appendDummyInput()
+            .appendField(Blockly.Msg.MODULES_JOYSTICK_GET_VALUE_TITLE4)
             .appendField(new Blockly.FieldDropdown(Blockly.Constants.Modules.joystick), 'joystick')
-            .appendField(Blockly.Msg.MODULES_JOYSTICK_GET_VALUE_TITLE4);
+            .appendField(Blockly.Msg.MODULES_JOYSTICK_GET_VALUE_TITLE5);
         this.setInputsInline(true);
         this.setOutput(true, null);
         this.setColour(Blockly.Constants.Modules.RGB);
