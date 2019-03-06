@@ -94,7 +94,7 @@ RaspberryPi.toolboxText =
     '        </shadow>' +
     '      </value>' +
     '    </block>' +
-    '    <block type="raspberrypi_pwm_pulse_width_precentage">' +
+    '    <block type="raspberrypi_pwm_pulse_width_percentage">' +
     '        <value name="SIG">' +
     '            <shadow type="raspberrypi_pwm_pin">' +
     '            </shadow>' +
@@ -255,7 +255,7 @@ RaspberryPi.toolboxText =
     '</block> ' +
     '</category>';
 
-RaspberryPi.timeToolboxText = 
+RaspberryPi.timeToolboxText =
     '  <category name="%{BKY_CATTIME}" colour="292">' +
     '    <block type="time_localtime">' +
     '    </block>' +

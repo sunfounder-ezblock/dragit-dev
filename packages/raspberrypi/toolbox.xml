@@ -76,7 +76,7 @@
       </value>
     </block>
     
-    <block type="raspberrypi_pwm_pulse_width_precentage">
+    <block type="raspberrypi_pwm_pulse_width_percentage">
       <value name="SIG">
         <shadow type="raspberrypi_pwm_pin">
         </shadow>

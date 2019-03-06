@@ -44,6 +44,8 @@ Blockly.Python['raspberrypi_device_pin'] = function(block) {
 Blockly.Python['raspberrypi_pwm_pin'] = function(block) {
     var pin = block.getFieldValue('pin');
 
+    Blockly.Python.definitions_['import_raspberrypi_pin'] =
+        'from raspberrypi import PWM';
     var code = '';
     code += pin;
     return [code, Blockly.Python.ORDER_ATOMIC];
@@ -276,7 +278,7 @@ Blockly.Python['raspberrypi_pwm_pulse_width'] = function(block) {
 };
 
 
-Blockly.Python['raspberrypi_pwm_pulse_width_precentage'] = function(block) {
+Blockly.Python['raspberrypi_pwm_pulse_width_percentage'] = function(block) {
     var SIG = Blockly.Python.valueToCode(block, 'SIG', Blockly.Python.ORDER_ATOMIC);
     var value = Blockly.Python.valueToCode(block, 'value', Blockly.Python.ORDER_ATOMIC);
 
@@ -351,5 +353,13 @@ Blockly.Python['raspberry_text_to_speech_language'] = function(block) {
     tts += 'TTS()';
     var code = '';
     code += tts + '.lang(' + lang + ')\n';
+    return code
+};
+
+Blockly.Python['raspberry_switchbot_s1_get_value'] = function(block) {
+    Blockly.Python.definitions_['import_TTS'] = 'from raspberrypi import *';
+
+    var code = '';
+    code += '\n';
     return code
 };

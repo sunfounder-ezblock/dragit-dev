@@ -452,28 +452,28 @@ Blockly.Blocks.raspberrypi_pwm = function(module) {
 };
 
 Blockly.Blocks['raspberrypi_pwm_pulse_width'] = Blockly.Blocks.raspberrypi_pwm('PULSE_WIDTH');
-// Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = Blockly.Blocks.raspberrypi_pwm('PULSE_WIDTH_PRECENTAGE');
+// Blockly.Blocks['raspberrypi_pwm_pulse_width_percentage'] = Blockly.Blocks.raspberrypi_pwm('PULSE_WIDTH_PERCENTAGE');
 Blockly.Blocks['raspberrypi_freq'] = Blockly.Blocks.raspberrypi_pwm('FREQ');
 Blockly.Blocks['raspberrypi_prescaler'] = Blockly.Blocks.raspberrypi_pwm('PRESCALER');
 Blockly.Blocks['raspberrypi_period'] = Blockly.Blocks.raspberrypi_pwm('PERIOD');
 
 
-Blockly.Blocks['raspberrypi_pwm_pulse_width_precentage'] = {
+Blockly.Blocks['raspberrypi_pwm_pulse_width_percentage'] = {
     init: function() {
         this.appendValueInput('SIG')
             .setCheck('PWM_Pin')
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE1);
+            .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PERCENTAGE_TITLE1);
         this.appendValueInput('value')
             .setCheck('Number')
-            .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE2);
+            .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PERCENTAGE_TITLE2);
         this.appendDummyInput()
-            .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TITLE3);
+            .appendField(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PERCENTAGE_TITLE3);
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(Blockly.Constants.RaspberryPi.RGB);
-        this.setTooltip(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PRECENTAGE_TOOLTIP);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_PWM_PULSE_WIDTH_PERCENTAGE_TOOLTIP);
         this.setHelpUrl('');
     }
 };

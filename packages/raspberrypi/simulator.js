@@ -263,7 +263,7 @@ Blockly.JavaScript['raspberrypi_pwm_pulse_width'] = function(block) {
 };
 
 
-Blockly.JavaScript['raspberrypi_pwm_pulse_width_precentage'] = function(block) {
+Blockly.JavaScript['raspberrypi_pwm_pulse_width_percentage'] = function(block) {
     var value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
     var code = '';
     var code = 'pulse_width_percentage(' + value + ')\n';
