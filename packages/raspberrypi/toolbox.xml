@@ -216,9 +216,25 @@
         </shadow>
       </value>
     </block>
+
     <block type="raspberry_text_to_speech_language">
       <value name="lang">
         <shadow type="raspberrypi_tts_language">
+        </shadow>
+      </value>
+    </block>
+
+
+
+    <block type="raspberry_send_email">
+      <value name="addressee">
+        <shadow type="text">
+          <field name="TEXT">XXX@XXX.com</field>
+        </shadow>
+      </value>
+      <value name="msg">
+        <shadow type="text">
+          <field name="TEXT">Hello</field>
         </shadow>
       </value>
     </block>

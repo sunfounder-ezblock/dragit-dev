@@ -246,6 +246,20 @@ RaspberryPi.toolboxText =
     '  </value> ' +
     '</block> ' +
 
+    '<block type="raspberry_send_email"> ' +
+    '  <value name="addressee"> ' +
+    '    <shadow type="text"> ' +
+    '      <field name="TEXT">XXX@XXX.com</field> ' +
+    '    </shadow> ' +
+    '  </value> ' +
+    '  <value name="msg"> ' +
+    '    <shadow type="text"> ' +
+    '      <field name="TEXT">Hello</field> ' +
+    '    </shadow> ' +
+    '  </value> ' +
+    '</block> ' +
+
+
     '<block type="raspberry_switchbot_s1_get_value"> ' +
     '  <value name="mac"> ' +
     '    <shadow type="text"> ' +

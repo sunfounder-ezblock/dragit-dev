@@ -126,6 +126,10 @@ Local['en'].RASPBERRYPI_TEXT_TO_SPEECH_TOOLTIP = "Play the written text out by v
 Local['en'].RASPBERRYPI_TEXT_TO_SPEECH_LANGUAGE_TITLE1 = "TTS  language";
 Local['en'].RASPBERRYPI_TEXT_TO_SPEECH_LANGUAGE_TOOLTIP = "Play the written text out by voice.";
 
+Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Email  addressee";
+Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "message";
+Local['en'].RASPBERRYPI_SEND_EMAIL_TOOLTIP = "Enter the recipient address and send the message.";
+
 
 // Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "Send mail to";
 // Local['en'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "about object";

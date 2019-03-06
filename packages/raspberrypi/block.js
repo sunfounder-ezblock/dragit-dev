@@ -509,6 +509,26 @@ Blockly.Blocks['raspberry_text_to_speech_language'] = {
 };
 
 
+Blockly.Blocks['raspberry_send_email'] = {
+    init: function init() {
+        this.appendValueInput("addressee")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE1);
+        this.appendValueInput("msg")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TITLE2);
+        this.setInputsInline(false);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(Blockly.Constants.RaspberryPi.RGB);
+        this.setTooltip(Blockly.Msg.RASPBERRYPI_SEND_EMAIL_TOOLTIP);
+        this.setHelpUrl('');
+    }
+};
+
+
 
 Blockly.Constants.RaspberryPi.value = [
     ["ON", "'on'"],

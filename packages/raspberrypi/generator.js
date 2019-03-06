@@ -356,6 +356,20 @@ Blockly.Python['raspberry_text_to_speech_language'] = function(block) {
     return code
 };
 
+Blockly.Python['raspberry_send_email'] = function(block) {
+    var addressee = Blockly.Python.valueToCode(block, 'addressee', Blockly.Python.ORDER_ATOMIC);
+    var msg = Blockly.Python.valueToCode(block, 'msg', Blockly.Python.ORDER_ATOMIC);
+
+    Blockly.Python.definitions_['import_send_email'] = 'from raspberrypi import email';
+
+
+    var code = '';
+    code += 'SendMail().send(' + addressee + ', ' + msg + ')\n';
+    return code
+};
+
+
+
 Blockly.Python['raspberry_switchbot_s1_get_value'] = function(block) {
     Blockly.Python.definitions_['import_TTS'] = 'from raspberrypi import *';
 

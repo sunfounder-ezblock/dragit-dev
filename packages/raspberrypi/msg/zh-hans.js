@@ -141,3 +141,7 @@ Local['zh-hans'].RASPBERRYPI_TEXT_TO_SPEECH_TOOLTIP = "将输入的文字通过�
 
 Local['zh-hans'].RASPBERRYPI_TEXT_TO_SPEECH_LANGUAGE_TITLE1 = "文字转声音  语言选择";
 Local['zh-hans'].RASPBERRYPI_TEXT_TO_SPEECH_LANGUAGE_TOOLTIP = "选择语言.";
+
+Local['zh-hans'].RASPBERRYPI_SEND_EMAIL_TITLE1 = "发邮件  收件人邮箱";
+Local['zh-hans'].RASPBERRYPI_SEND_EMAIL_TITLE2 = "内容";
+Local['zh-hans'].RASPBERRYPI_SEND_EMAIL_TOOLTIP = "输入收件人邮箱，发送内容。";
